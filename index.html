@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAVEN - Wear Different</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="brand">
+        <img src="zaven-logo.png" alt="ZAVEN Logo" class="logo">
+    </div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#order">Order</a>
+
+        <button class="cart-button" onclick="openCart()">
+            🛒 Cart
+            <span id="cartCount">0</span>
+        </button>
+    </nav>
+
+</header>
+
+
+<main class="products" id="shop">
+
+
+    <!-- PRODUCT 1 -->
+
+    <section class="product" data-name="Premium T-Shirt" data-price="2499">
+
+        <div class="product-image">
+            <img src="shirt-new.jpg" alt="ZAVEN Premium T-Shirt">
+        </div>
+
+        <div class="product-info">
+
+            <h2>Premium T-Shirt</h2>
+
+            <p class="price">Rs. 2,499</p>
+
+            <p>
+                Premium quality T-shirt.
+                Comfortable, stylish and perfect
+                for everyday wear.
+            </p>
+
+            <div class="option-group">
+
+                <label>Size:</label>
+
+                <div class="options">
+                    <button class="option size-option">S</button>
+                    <button class="option size-option">M</button>
+                    <button class="option size-option">L</button>
+                    <button class="option size-option">XL</button>
+                </div>
+
+            </div>
+
+            <div class="option-group">
+
+                <label>Color:</label>
+
+                <div class="options">
+                    <button class="option color-option">Black</button>
+                    <button class="option color-option">White</button>
+                    <button class="option color-option">Blue</button>
+                </div>
+
+            </div>
+
+            <div class="quantity">
+
+                <button onclick="changeProductQuantity(this,-1)">−</button>
+
+                <span>1</span>
+
+                <button onclick="changeProductQuantity(this,1)">+</button>
+
+            </div>
+
+            <button class="buy-button" onclick="addToCart(this)">
+                Add to Cart
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCT 2 -->
+
+    <section class="product" data-name="Classic T-Shirt" data-price="1999">
+
+        <div class="product-image">
+            <img src="shirt2.jpg" alt="ZAVEN Classic T-Shirt">
+        </div>
+
+        <div class="product-info">
+
+            <h2>Classic T-Shirt</h2>
+
+            <p class="price">Rs. 1,999</p>
+
+            <p>
+                Clean, comfortable and stylish.
+                A classic everyday T-shirt
+                made for your look.
+            </p>
+
+            <div class="option-group">
+
+                <label>Size:</label>
+
+                <div class="options">
+                    <button class="option size-option">S</button>
+                    <button class="option size-option">M</button>
+                    <button class="option size-option">L</button>
+                    <button class="option size-option">XL</button>
+                </div>
+
+            </div>
+
+            <div class="option-group">
+
+                <label>Color:</label>
+
+                <div class="options">
+                    <button class="option color-option">Black</button>
+                    <button class="option color-option">White</button>
+                    <button class="option color-option">Blue</button>
+                </div>
+
+            </div>
+
+            <div class="quantity">
+
+                <button onclick="changeProductQuantity(this,-1)">−</button>
+
+                <span>1</span>
+
+                <button onclick="changeProductQuantity(this,1)">+</button>
+
+            </div>
+
+            <button class="buy-button" onclick="addToCart(this)">
+                Add to Cart
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCT 3 -->
+
+    <section class="product" data-name="ZAVEN T-Shirt" data-price="2199">
+
+        <div class="product-image">
+            <img src="shirt3.jpg" alt="ZAVEN T-Shirt">
+        </div>
+
+        <div class="product-info">
+
+            <h2>ZAVEN T-Shirt</h2>
+
+            <p class="price">Rs. 2,199</p>
+
+            <p>
+                Stylish and comfortable.
+                Perfect for everyday wear.
+            </p>
+
+            <div class="option-group">
+
+                <label>Size:</label>
+
+                <div class="options">
+                    <button class="option size-option">S</button>
+                    <button class="option size-option">M</button>
+                    <button class="option size-option">L</button>
+                    <button class="option size-option">XL</button>
+                </div>
+
+            </div>
+
+            <div class="option-group">
+
+                <label>Color:</label>
+
+                <div class="options">
+                    <button class="option color-option">Black</button>
+                    <button class="option color-option">White</button>
+                    <button class="option color-option">Blue</button>
+                </div>
+
+            </div>
+
+            <div class="quantity">
+
+                <button onclick="changeProductQuantity(this,-1)">−</button>
+
+                <span>1</span>
+
+                <button onclick="changeProductQuantity(this,1)">+</button>
+
+            </div>
+
+            <button class="buy-button" onclick="addToCart(this)">
+                Add to Cart
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCT 4 -->
+
+    <section class="product" data-name="ZAVEN Signature T-Shirt" data-price="2299">
+
+        <div class="product-image">
+            <img src="shirt4.jpg" alt="ZAVEN Signature T-Shirt">
+        </div>
+
+        <div class="product-info">
+
+            <h2>ZAVEN Signature T-Shirt</h2>
+
+            <p class="price">Rs. 2,299</p>
+
+            <p>
+                Premium ZAVEN design with a clean
+                and stylish look. Comfortable for
+                everyday wear.
+            </p>
+
+            <div class="option-group">
+
+                <label>Size:</label>
+
+                <div class="options">
+                    <button class="option size-option">S</button>
+                    <button class="option size-option">M</button>
+                    <button class="option size-option">L</button>
+                    <button class="option size-option">XL</button>
+                </div>
+
+            </div>
+
+            <div class="option-group">
+
+                <label>Color:</label>
+
+                <div class="options">
+                    <button class="option color-option">Black</button>
+                    <button class="option color-option">White</button>
+                    <button class="option color-option">Blue</button>
+                </div>
+
+            </div>
+
+            <div class="quantity">
+
+                <button onclick="changeProductQuantity(this,-1)">−</button>
+
+                <span>1</span>
+
+                <button onclick="changeProductQuantity(this,1)">+</button>
+
+            </div>
+
+            <button class="buy-button" onclick="addToCart(this)">
+                Add to Cart
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ================= CART ================= -->
+
+<div class="cart-overlay" id="cartOverlay" onclick="closeCartOutside(event)">
+
+    <div class="cart-box" onclick="event.stopPropagation()">
+
+        <div class="cart-header">
+
+            <h2>🛒 Your Cart</h2>
+
+            <button class="close-cart" onclick="closeCart()">
+                ×
+            </button>
+
+        </div>
+
+
+        <div id="cartItems" class="cart-items">
+
+            <p class="empty-cart">
+                Your cart is empty.
+            </p>
+
+        </div>
+
+
+        <div class="cart-summary">
+
+            <div>
+                <span>Products Total:</span>
+                <strong id="productsTotal">Rs. 0</strong>
+            </div>
+
+            <div>
+                <span>Delivery Charges:</span>
+                <strong>Rs. 200</strong>
+            </div>
+
+            <div class="grand-total">
+                <span>Grand Total:</span>
+                <strong id="cartTotal">Rs. 0</strong>
+            </div>
+
+        </div>
+
+
+        <button class="checkout-button" onclick="checkout()">
+            Checkout
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= ORDER ================= -->
+
+<section class="order-section" id="order">
+
+    <div class="order-box">
+
+        <h2>Complete Your Order</h2>
+
+        <p class="order-note">
+            Payment Method: <strong>Cash on Delivery</strong>
+        </p>
+
+        <p class="order-note">
+            Delivery Charges: <strong>Rs. 200</strong>
+        </p>
+
+
+        <div class="final-summary">
+
+            <p>
+                Products Total:
+                <strong id="orderProductsTotal">
+                    Rs. 0
+                </strong>
+            </p>
+
+            <p>
+                Delivery:
+                <strong>
+                    Rs. 200
+                </strong>
+            </p>
+
+            <p class="final-total">
+                Grand Total:
+                <strong id="orderGrandTotal">
+                    Rs. 0
+                </strong>
+            </p>
+
+        </div>
+
+
+        <form onsubmit="sendOrder(event)">
+
+            <label for="customerName">
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter your name"
+                required
+            >
+
+
+            <label for="customerPhone">
+                Phone Number
+            </label>
+
+            <input
+                type="tel"
+                id="customerPhone"
+                placeholder="03XXXXXXXXX"
+                required
+            >
+
+
+            <label for="customerCity">
+                City
+            </label>
+
+            <input
+                type="text"
+                id="customerCity"
+                placeholder="Enter your city"
+                required
+            >
+
+
+            <label for="customerAddress">
+                Delivery Address
+            </label>
+
+            <textarea
+                id="customerAddress"
+                placeholder="Enter complete delivery address"
+                rows="4"
+                required
+            ></textarea>
+
+
+            <label>
+                Payment Method
+            </label>
+
+            <div class="cod-box">
+
+                <input
+                    type="radio"
+                    checked
+                    disabled
+                >
+
+                <span>
+                    💵 Cash on Delivery
+                </span>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="order-button"
+            >
+                Confirm Order on WhatsApp
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<script>
+
+    /* ================= CART ================= */
+
+    let cart = [];
+
+    const DELIVERY_CHARGES = 200;
+
+
+    /* ================= PRODUCT QUANTITY ================= */
+
+    function changeProductQuantity(button, amount) {
+
+        const quantity =
+            button.parentElement.querySelector("span");
+
+        let value =
+            parseInt(quantity.innerText);
+
+        value += amount;
+
+        if (value < 1) {
+            value = 1;
+        }
+
+        quantity.innerText = value;
+    }
+
+
+    /* ================= SIZE / COLOR ================= */
+
+    document.querySelectorAll(".option").forEach(function(option) {
+
+        option.addEventListener("click", function() {
+
+            const group = this.parentElement;
+
+            group.querySelectorAll(".option").forEach(function(item) {
+
+                item.classList.remove("selected");
+
+            });
+
+            this.classList.add("selected");
+
+        });
+
+    });
+
+
+    /* ================= ADD TO CART ================= */
+
+    function addToCart(button) {
+
+        const product =
+            button.closest(".product");
+
+        const name =
+            product.dataset.name;
+
+        const price =
+            parseInt(product.dataset.price);
+
+        const image =
+            product.querySelector("img").src;
+
+        const quantity =
+            parseInt(
+                product.querySelector(
+                    ".quantity span"
+                ).innerText
+            );
+
+
+        const selectedSize =
+            product.querySelector(
+                ".size-option.selected"
+            );
+
+        const size =
+            selectedSize
+                ? selectedSize.innerText
+                : "Not selected";
+
+
+        const selectedColor =
+            product.querySelector(
+                ".color-option.selected"
+            );
+
+        const color =
+            selectedColor
+                ? selectedColor.innerText
+                : "Not selected";
+
+
+        const existing =
+            cart.find(function(item) {
+
+                return (
+                    item.name === name &&
+                    item.size === size &&
+                    item.color === color
+                );
+
+            });
+
+
+        if (existing) {
+
+            existing.quantity += quantity;
+
+        } else {
+
+            cart.push({
+
+                name: name,
+                price: price,
+                image: image,
+                size: size,
+                color: color,
+                quantity: quantity
+
+            });
+
+        }
+
+
+        product.querySelector(
+            ".quantity span"
+        ).innerText = "1";
+
+
+        updateCart();
+
+        openCart();
+
+    }
+
+
+    /* ================= UPDATE CART ================= */
+
+    function updateCart() {
+
+        const cartItems =
+            document.getElementById("cartItems");
+
+        const cartCount =
+            document.getElementById("cartCount");
+
+        const productsTotalElement =
+            document.getElementById("productsTotal");
+
+        const cartTotalElement =
+            document.getElementById("cartTotal");
+
+
+        cartItems.innerHTML = "";
+
+
+        let productsTotal = 0;
+
+        let count = 0;
+
+
+        if (cart.length === 0) {
+
+            cartItems.innerHTML =
+                '<p class="empty-cart">Your cart is empty.</p>';
+
+        }
+
+
+        cart.forEach(function(item, index) {
+
+            const itemTotal =
+                item.price * item.quantity;
+
+            productsTotal += itemTotal;
+
+            count += item.quantity;
+
+
+            const div =
+                document.createElement("div");
+
+            div.className = "cart-item";
+
+
+            div.innerHTML = `
+
+                <img
+                    src="${item.image}"
+                    alt="${item.name}"
+                >
+
+                <div class="cart-item-info">
+
+                    <h3>${item.name}</h3>
+
+                    <p>
+                        Rs. ${item.price.toLocaleString()}
+                    </p>
+
+                    <p>
+                        Size: ${item.size}
+                    </p>
+
+                    <p>
+                        Color: ${item.color}
+                    </p>
+
+                    <div class="cart-quantity">
+
+                        <button
+                            onclick="changeCartQuantity(${index},-1)"
+                        >
+                            −
+                        </button>
+
+                        <span>
+                            ${item.quantity}
+                        </span>
+
+                        <button
+                            onclick="changeCartQuantity(${index},1)"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                    <button
+                        class="remove-button"
+                        onclick="removeFromCart(${index})"
+                    >
+                        Remove
+                    </button>
+
+                </div>
+            `;
+
+
+            cartItems.appendChild(div);
+
+        });
+
+
+        const grandTotal =
+            productsTotal + DELIVERY_CHARGES;
+
+
+        cartCount.innerText =
+            count;
+
+
+        productsTotalElement.innerText =
+            "Rs. " +
+            productsTotal.toLocaleString();
+
+
+        cartTotalElement.innerText =
+            "Rs. " +
+            grandTotal.toLocaleString();
+
+
+        document.getElementById(
+            "orderProductsTotal"
+        ).innerText =
+            "Rs. " +
+            productsTotal.toLocaleString();
+
+
+        document.getElementById(
+            "orderGrandTotal"
+        ).innerText =
+            "Rs. " +
+            grandTotal.toLocaleString();
+
+    }
+
+
+    /* ================= CART QUANTITY ================= */
+
+    function changeCartQuantity(index, amount) {
+
+        cart[index].quantity += amount;
+
+
+        if (cart[index].quantity <= 0) {
+
+            cart.splice(index, 1);
+
+        }
+
+
+        updateCart();
+
+    }
+
+
+    /* ================= REMOVE ================= */
+
+    function removeFromCart(index) {
+
+        cart.splice(index, 1);
+
+        updateCart();
+
+    }
+
+
+    /* ================= OPEN CART ================= */
+
+    function openCart() {
+
+        document
+            .getElementById("cartOverlay")
+            .classList.add("show");
+
+    }
+
+
+    /* ================= CLOSE CART ================= */
+
+    function closeCart() {
+
+        document
+            .getElementById("cartOverlay")
+            .classList.remove("show");
+
+    }
+
+
+    function closeCartOutside(event) {
+
+        if (
+            event.target ===
+            document.getElementById("cartOverlay")
+        ) {
+
+            closeCart();
+
+        }
+
+    }
+
+
+    /* ================= CHECKOUT ================= */
+
+    function checkout() {
+
+        if (cart.length === 0) {
+
+            alert(
+                "Your cart is empty. Please add a product first."
+            );
+
+            return;
+
+        }
+
+
+        closeCart();
+
+
+        document
+            .getElementById("order")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+    }
+
+
+    /* ================= WHATSAPP ORDER ================= */
+
+    function sendOrder(event) {
+
+        event.preventDefault();
+
+
+        if (cart.length === 0) {
+
+            alert(
+                "Please add a product to cart first."
+            );
+
+            return;
+
+        }
+
+
+        const name =
+            document.getElementById(
+                "customerName"
+            ).value;
+
+        const phone =
+            document.getElementById(
+                "customerPhone"
+            ).value;
+
+        const city =
+            document.getElementById(
+                "customerCity"
+            ).value;
+
+        const address =
+            document.getElementById(
+                "customerAddress"
+            ).value;
+
+
+        let productsTotal = 0;
+
+
+        let message =
+            "Hello ZAVEN!%0A%0A" +
+            "NEW ORDER%0A" +
+            "====================%0A";
+
+
+        cart.forEach(function(item, index) {
+
+            const itemTotal =
+                item.price * item.quantity;
+
+            productsTotal += itemTotal;
+
+
+            message +=
+
+                "%0A" +
+
+                (index + 1) +
+                ". " +
+                item.name +
+
+                "%0A" +
+
+                "Price: Rs. " +
+                item.price.toLocaleString() +
+
+                "%0A" +
+
+                "Size: " +
+                item.size +
+
+                "%0A" +
+
+                "Color: " +
+                item.color +
+
+                "%0A" +
+
+                "Quantity: " +
+                item.quantity +
+
+                "%0A" +
+
+                "Item Total: Rs. " +
+                itemTotal.toLocaleString() +
+
+                "%0A";
+
+        });
+
+
+        const grandTotal =
+            productsTotal + DELIVERY_CHARGES;
+
+
+        message +=
+
+            "%0A====================%0A" +
+
+            "Products Total: Rs. " +
+            productsTotal.toLocaleString() +
+
+            "%0A" +
+
+            "Delivery Charges: Rs. " +
+            DELIVERY_CHARGES +
+
+            "%0A" +
+
+            "GRAND TOTAL: Rs. " +
+            grandTotal.toLocaleString() +
+
+            "%0A%0A" +
+
+            "Payment Method: Cash on Delivery" +
+
+            "%0A%0A" +
+
+            "CUSTOMER DETAILS" +
+
+            "%0A====================%0A" +
+
+            "Name: " +
+            name +
+
+            "%0A" +
+
+            "Phone: " +
+            phone +
+
+            "%0A" +
+
+            "City: " +
+            city +
+
+            "%0A" +
+
+            "Address: " +
+            address;
+
+
+        /* ==============================
+           APNA WHATSAPP NUMBER YAHAN LAGAO
+           ============================== */
+
+        const whatsappNumber =
+            "923374521644";
+
+
+        window.open(
+
+            "https://wa.me/" +
+            whatsappNumber +
+            "?text=" +
+            message,
+
+            "_blank"
+
+        );
+
+    }
+
+
+    /* INITIAL */
+
+    updateCart();
+
+</script>
+
+</body>
+</html>
