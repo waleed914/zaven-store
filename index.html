@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ZAVEN - Wear Different</title>
+    <title>Zaven Store</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
 
     <div class="brand">
-        <img
-            src="zaven-logo.png"
-            alt="ZAVEN Logo"
-            class="logo"
-        >
+        <img src="zaven-logo.png" class="logo" alt="Zaven">
     </div>
 
     <nav>
-        <a href="#">Home</a>
-        <a href="#shop">Shop</a>
-        <a href="#order">Order</a>
+        <a href="#products">Home</a>
+        <a href="#products">Products</a>
 
-        <button class="cart-button" onclick="openCart()">
+        <button class="cart-header" onclick="openCart()">
             🛒 Cart
             <span id="cartCount">0</span>
         </button>
@@ -36,337 +32,179 @@
 </header>
 
 
-<main class="products" id="shop">
+<!-- ================= PRODUCTS ================= -->
 
+<main>
 
-    <!-- PRODUCT 1 -->
+<section class="products" id="products">
 
-    <section class="product" data-name="Premium T-Shirt" data-price="2499">
+    <!-- SHIRT 1 -->
+
+    <div class="product">
 
         <div class="product-image">
-            <img
-                src="shirt-new.jpg"
-                alt="ZAVEN Premium T-Shirt"
-            >
+            <img src="shirt-new.jpg" alt="Zaven Shirt">
         </div>
 
         <div class="product-info">
 
-            <h2>Premium T-Shirt</h2>
+            <h2>Zaven Premium Shirt</h2>
 
-            <p class="price">
+            <div class="price">
                 Rs. 2,499
-            </p>
+            </div>
 
             <p>
-                Premium quality T-shirt.
-                Comfortable, stylish and perfect
-                for everyday wear.
+                Premium quality shirt by Zaven.
+                Comfortable, stylish and perfect for everyday wear.
             </p>
 
-            <div class="option-group">
-
-                <label>Size:</label>
-
-                <div class="options">
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-                </div>
-
-            </div>
-
-            <div class="option-group">
-
-                <label>Color:</label>
-
-                <div class="options">
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-                </div>
-
-            </div>
-
-            <div class="quantity">
-                <button onclick="changeProductQuantity(this,-1)">−</button>
-                <span>1</span>
-                <button onclick="changeProductQuantity(this,1)">+</button>
-            </div>
-
-            <button class="buy-button" onclick="addToCart(this)">
+            <button
+                class="buy-button"
+                onclick="addToCart('Zaven Premium Shirt', 2499, 'shirt-new.jpg')">
                 Add to Cart
             </button>
 
         </div>
 
-    </section>
+    </div>
 
 
-    <!-- PRODUCT 2 -->
+    <!-- SHIRT 2 -->
 
-    <section class="product" data-name="Classic T-Shirt" data-price="1999">
+    <div class="product">
 
         <div class="product-image">
-            <img
-                src="shirt2.jpg"
-                alt="ZAVEN Classic T-Shirt"
-            >
+            <img src="shirt2.jpg" alt="Zaven Shirt 2">
         </div>
 
         <div class="product-info">
 
-            <h2>Classic T-Shirt</h2>
+            <h2>Zaven Classic Shirt</h2>
 
-            <p class="price">
-                Rs. 1,999
-            </p>
+            <div class="price">
+                Rs. 2,499
+            </div>
 
             <p>
-                Clean, comfortable and stylish.
-                A classic everyday T-shirt
-                made for your look.
+                Stylish and comfortable Zaven classic shirt.
+                Perfect for casual and daily wear.
             </p>
 
-            <div class="option-group">
-
-                <label>Size:</label>
-
-                <div class="options">
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-                </div>
-
-            </div>
-
-            <div class="option-group">
-
-                <label>Color:</label>
-
-                <div class="options">
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-                </div>
-
-            </div>
-
-            <div class="quantity">
-                <button onclick="changeProductQuantity(this,-1)">−</button>
-                <span>1</span>
-                <button onclick="changeProductQuantity(this,1)">+</button>
-            </div>
-
-            <button class="buy-button" onclick="addToCart(this)">
+            <button
+                class="buy-button"
+                onclick="addToCart('Zaven Classic Shirt', 2499, 'shirt2.jpg')">
                 Add to Cart
             </button>
 
         </div>
 
-    </section>
+    </div>
 
 
-    <!-- PRODUCT 3 -->
+    <!-- SHIRT 3 -->
 
-    <section class="product" data-name="ZAVEN T-Shirt" data-price="2199">
+    <div class="product">
 
         <div class="product-image">
-            <img
-                src="shirt3.jpg"
-                alt="ZAVEN T-Shirt"
-            >
+            <img src="shirt3.jpg" alt="Zaven Shirt 3">
         </div>
 
         <div class="product-info">
 
-            <h2>ZAVEN T-Shirt</h2>
+            <h2>Zaven Style Shirt</h2>
 
-            <p class="price">
-                Rs. 2,199
-            </p>
+            <div class="price">
+                Rs. 2,499
+            </div>
 
             <p>
-                Stylish and comfortable.
-                Perfect for everyday wear.
+                Modern Zaven shirt with a clean and stylish look.
+                Made for comfort and everyday fashion.
             </p>
 
-            <div class="option-group">
-
-                <label>Size:</label>
-
-                <div class="options">
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-                </div>
-
-            </div>
-
-            <div class="option-group">
-
-                <label>Color:</label>
-
-                <div class="options">
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-                </div>
-
-            </div>
-
-            <div class="quantity">
-                <button onclick="changeProductQuantity(this,-1)">−</button>
-                <span>1</span>
-                <button onclick="changeProductQuantity(this,1)">+</button>
-            </div>
-
-            <button class="buy-button" onclick="addToCart(this)">
+            <button
+                class="buy-button"
+                onclick="addToCart('Zaven Style Shirt', 2499, 'shirt3.jpg')">
                 Add to Cart
             </button>
 
         </div>
 
-    </section>
+    </div>
 
 
-    <!-- PRODUCT 4 -->
+    <!-- SHIRT 4 -->
 
-    <section class="product" data-name="ZAVEN Signature T-Shirt" data-price="2299">
+    <div class="product">
 
         <div class="product-image">
-            <img
-                src="shirt4.jpg"
-                alt="ZAVEN Signature T-Shirt"
-            >
+            <img src="shirt4.jpg" alt="Zaven Shirt 4">
         </div>
 
         <div class="product-info">
 
-            <h2>ZAVEN Signature T-Shirt</h2>
+            <h2>Zaven Premium Style</h2>
 
-            <p class="price">
-                Rs. 2,299
-            </p>
+            <div class="price">
+                Rs. 2,499
+            </div>
 
             <p>
-                Premium ZAVEN design with a clean
-                and stylish look. Comfortable for
-                everyday wear.
+                Premium Zaven style with a smart modern design.
+                Comfortable and suitable for every occasion.
             </p>
 
-            <div class="option-group">
-
-                <label>Size:</label>
-
-                <div class="options">
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-                </div>
-
-            </div>
-
-            <div class="option-group">
-
-                <label>Color:</label>
-
-                <div class="options">
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-                </div>
-
-            </div>
-
-            <div class="quantity">
-                <button onclick="changeProductQuantity(this,-1)">−</button>
-                <span>1</span>
-                <button onclick="changeProductQuantity(this,1)">+</button>
-            </div>
-
-            <button class="buy-button" onclick="addToCart(this)">
+            <button
+                class="buy-button"
+                onclick="addToCart('Zaven Premium Style', 2499, 'shirt4.jpg')">
                 Add to Cart
             </button>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 </main>
 
 
 <!-- ================= CART ================= -->
 
-<div class="cart-overlay" id="cartOverlay">
+<div id="cartOverlay" class="overlay">
 
     <div class="cart-box">
 
-        <div class="cart-header">
+        <button class="close-button" onclick="closeCart()">×</button>
 
-            <h2>🛒 Your Cart</h2>
+        <h2>🛒 Your Cart</h2>
 
-            <button
-                class="close-cart"
-                onclick="closeCart()"
-            >
-                ×
-            </button>
-
-        </div>
-
-
-        <div id="cartItems" class="cart-items">
-
-            <p class="empty-cart">
-                Your cart is empty.
-            </p>
-
-        </div>
-
-
-        <!-- TOTAL ONLY INSIDE CART -->
+        <div id="cartItems"></div>
 
         <div class="cart-summary">
 
             <div>
                 <span>Products Total:</span>
-
-                <strong id="productsTotal">
-                    Rs. 0
-                </strong>
+                <strong>Rs. <span id="productsTotal">0</span></strong>
             </div>
 
             <div>
-                <span>Delivery Charges:</span>
-
-                <strong>
-                    Rs. 200
-                </strong>
+                <span>Delivery:</span>
+                <strong>Rs. <span id="delivery">200</span></strong>
             </div>
 
+            <hr>
+
             <div class="grand-total">
-
                 <span>Grand Total:</span>
-
-                <strong id="cartTotal">
-                    Rs. 0
-                </strong>
-
+                <strong>Rs. <span id="grandTotal">200</span></strong>
             </div>
 
         </div>
 
-
-        <button
-            class="checkout-button"
-            onclick="checkout()"
-        >
-            Checkout
+        <button class="checkout-button" onclick="openCheckout()">
+            📦 Checkout
         </button>
 
     </div>
@@ -374,248 +212,136 @@
 </div>
 
 
-<!-- ================= ORDER ================= -->
+<!-- ================= CHECKOUT ================= -->
 
-<section class="order-section" id="order">
+<div id="checkoutOverlay" class="overlay">
 
-    <div class="order-box">
+    <div class="checkout-box">
 
-        <h2>
-            Complete Your Order
-        </h2>
+        <button class="close-button" onclick="closeCheckout()">×</button>
 
-        <p class="order-note">
-            Payment Method:
-            <strong>Cash on Delivery</strong>
-        </p>
+        <h2>📦 Complete Your Order</h2>
 
-        <p class="order-note">
-            Delivery Charges:
-            <strong>Rs. 200</strong>
-        </p>
-
-
-        <div class="final-summary">
+        <div class="payment-info">
 
             <p>
-                Products Total:
-
-                <strong id="orderProductsTotal">
-                    Rs. 0
-                </strong>
+                <strong>Payment Method:</strong>
+                Cash on Delivery
             </p>
 
             <p>
-                Delivery:
-
-                <strong>
-                    Rs. 200
-                </strong>
-            </p>
-
-            <p class="final-total">
-
-                Grand Total:
-
-                <strong id="orderGrandTotal">
-                    Rs. 0
-                </strong>
-
+                <strong>Delivery Charges:</strong>
+                Rs. 200
             </p>
 
         </div>
 
 
-        <form onsubmit="sendOrder(event)">
+        <div class="checkout-summary">
 
-            <label>
-                Full Name
-            </label>
+            <div>
+                <span>Products Total:</span>
+                <strong>Rs. <span id="checkoutProductsTotal">0</span></strong>
+            </div>
+
+            <div>
+                <span>Delivery:</span>
+                <strong>Rs. 200</strong>
+            </div>
+
+            <hr>
+
+            <div class="grand-total">
+                <span>Grand Total:</span>
+                <strong>Rs. <span id="checkoutGrandTotal">200</span></strong>
+            </div>
+
+        </div>
+
+
+        <!-- ORDER FORM -->
+
+        <form id="orderForm" onsubmit="sendOrder(event)">
+
+            <label>Full Name</label>
 
             <input
                 type="text"
                 id="customerName"
                 placeholder="Enter your name"
-                required
-            >
+                required>
 
 
-            <label>
-                Phone Number
-            </label>
+            <label>Phone Number</label>
 
             <input
                 type="tel"
                 id="customerPhone"
                 placeholder="03XXXXXXXXX"
-                required
-            >
+                required>
 
 
-            <label>
-                City
-            </label>
+            <label>City</label>
 
             <input
                 type="text"
                 id="customerCity"
                 placeholder="Enter your city"
-                required
-            >
+                required>
 
 
-            <label>
-                Delivery Address
-            </label>
+            <label>Delivery Address</label>
 
             <textarea
                 id="customerAddress"
                 placeholder="Enter complete delivery address"
-                rows="4"
-                required
-            ></textarea>
+                required></textarea>
 
 
-            <label>
-                Payment Method
-            </label>
+            <label>Payment Method</label>
 
-            <div class="cod-box">
+            <select id="paymentMethod">
 
-                <input
-                    type="radio"
-                    checked
-                    disabled
-                >
+                <option value="Cash on Delivery">
+                    Cash on Delivery
+                </option>
 
-                <span>
-                    💵 Cash on Delivery
-                </span>
-
-            </div>
+            </select>
 
 
-            <button
-                type="submit"
-                class="order-button"
-            >
-                Confirm Order on WhatsApp
+            <button type="submit" class="whatsapp-button">
+                📲 Place Order on WhatsApp
             </button>
 
         </form>
 
     </div>
 
-</section>
+</div>
 
+
+<!-- ================= JAVASCRIPT ================= -->
 
 <script>
 
 let cart = [];
 
-const DELIVERY_CHARGES = 200;
+const deliveryCharge = 200;
+
+const whatsappNumber = "923374521644";
 
 
-/* PRODUCT QUANTITY */
+/* ================= ADD TO CART ================= */
 
-function changeProductQuantity(button, amount) {
+function addToCart(name, price, image) {
 
-    const quantity =
-        button.parentElement.querySelector("span");
+    const existingProduct = cart.find(
+        item => item.name === name
+    );
 
-    let value =
-        parseInt(quantity.innerText);
+    if (existingProduct) {
 
-    value += amount;
-
-    if (value < 1) {
-        value = 1;
-    }
-
-    quantity.innerText = value;
-}
-
-
-/* SIZE / COLOR */
-
-document.querySelectorAll(".option").forEach(function(option) {
-
-    option.addEventListener("click", function() {
-
-        const group = this.parentElement;
-
-        group.querySelectorAll(".option").forEach(function(item) {
-            item.classList.remove("selected");
-        });
-
-        this.classList.add("selected");
-
-    });
-
-});
-
-
-/* ADD TO CART */
-
-function addToCart(button) {
-
-    const product =
-        button.closest(".product");
-
-    const name =
-        product.dataset.name;
-
-    const price =
-        parseInt(product.dataset.price);
-
-    const image =
-        product.querySelector("img").src;
-
-    const quantity =
-        parseInt(
-            product.querySelector(
-                ".quantity span"
-            ).innerText
-        );
-
-
-    const selectedSize =
-        product.querySelector(
-            ".size-option.selected"
-        );
-
-    const size =
-        selectedSize
-            ? selectedSize.innerText
-            : "Not selected";
-
-
-    const selectedColor =
-        product.querySelector(
-            ".color-option.selected"
-        );
-
-    const color =
-        selectedColor
-            ? selectedColor.innerText
-            : "Not selected";
-
-
-    const existing =
-        cart.find(function(item) {
-
-            return (
-                item.name === name &&
-                item.size === size &&
-                item.color === color
-            );
-
-        });
-
-
-    if (existing) {
-
-        existing.quantity += quantity;
+        existingProduct.quantity++;
 
     } else {
 
@@ -623,49 +349,29 @@ function addToCart(button) {
             name: name,
             price: price,
             image: image,
-            size: size,
-            color: color,
-            quantity: quantity
+            quantity: 1
         });
 
     }
 
-
-    product.querySelector(
-        ".quantity span"
-    ).innerText = "1";
-
-
     updateCart();
 
-    openCart();
+    alert(name + " added to cart!");
 
 }
 
 
-/* UPDATE CART */
+/* ================= UPDATE CART ================= */
 
 function updateCart() {
 
-    const cartItems =
-        document.getElementById("cartItems");
-
-    const cartCount =
-        document.getElementById("cartCount");
-
-    const productsTotalElement =
-        document.getElementById("productsTotal");
-
-    const cartTotalElement =
-        document.getElementById("cartTotal");
-
+    const cartItems = document.getElementById("cartItems");
 
     cartItems.innerHTML = "";
 
-
     let productsTotal = 0;
 
-    let count = 0;
+    let totalQuantity = 0;
 
 
     if (cart.length === 0) {
@@ -676,62 +382,40 @@ function updateCart() {
     }
 
 
-    cart.forEach(function(item, index) {
+    cart.forEach((item, index) => {
 
         const itemTotal =
             item.price * item.quantity;
 
         productsTotal += itemTotal;
 
-        count += item.quantity;
+        totalQuantity += item.quantity;
 
 
-        const div =
-            document.createElement("div");
+        const cartItem = document.createElement("div");
 
-        div.className = "cart-item";
+        cartItem.className = "cart-item";
 
 
-        div.innerHTML = `
+        cartItem.innerHTML = `
 
-            <img
-                src="${item.image}"
-                alt="${item.name}"
-            >
+            <img src="${item.image}" alt="${item.name}">
 
             <div class="cart-item-info">
 
-                <h3>
-                    ${item.name}
-                </h3>
+                <h3>${item.name}</h3>
 
-                <p>
-                    Rs. ${item.price.toLocaleString()}
-                </p>
+                <p>Rs. ${item.price.toLocaleString()}</p>
 
-                <p>
-                    Size: ${item.size}
-                </p>
+                <div class="quantity">
 
-                <p>
-                    Color: ${item.color}
-                </p>
-
-                <div class="cart-quantity">
-
-                    <button
-                        onclick="changeCartQuantity(${index},-1)"
-                    >
+                    <button onclick="changeQuantity(${index}, -1)">
                         −
                     </button>
 
-                    <span>
-                        ${item.quantity}
-                    </span>
+                    <span>${item.quantity}</span>
 
-                    <button
-                        onclick="changeCartQuantity(${index},1)"
-                    >
+                    <button onclick="changeQuantity(${index}, 1)">
                         +
                     </button>
 
@@ -739,70 +423,69 @@ function updateCart() {
 
                 <button
                     class="remove-button"
-                    onclick="removeFromCart(${index})"
-                >
-                    Remove
+                    onclick="removeFromCart(${index})">
+
+                    ❌ Remove
+
                 </button>
 
             </div>
+
+            <strong>
+                Rs. ${itemTotal.toLocaleString()}
+            </strong>
+
         `;
 
 
-        cartItems.appendChild(div);
+        cartItems.appendChild(cartItem);
 
     });
 
 
     const grandTotal =
-        productsTotal + DELIVERY_CHARGES;
+        productsTotal + deliveryCharge;
 
 
-    cartCount.innerText =
-        count;
+    document.getElementById("cartCount").textContent =
+        totalQuantity;
 
-
-    productsTotalElement.innerText =
-        "Rs. " +
+    document.getElementById("productsTotal").textContent =
         productsTotal.toLocaleString();
 
-
-    cartTotalElement.innerText =
-        "Rs. " +
+    document.getElementById("grandTotal").textContent =
         grandTotal.toLocaleString();
 
 
-    document.getElementById(
-        "orderProductsTotal"
-    ).innerText =
-        "Rs. " +
+    document.getElementById("checkoutProductsTotal").textContent =
         productsTotal.toLocaleString();
 
-
-    document.getElementById(
-        "orderGrandTotal"
-    ).innerText =
-        "Rs. " +
+    document.getElementById("checkoutGrandTotal").textContent =
         grandTotal.toLocaleString();
 
 }
 
 
-/* CART QUANTITY */
+/* ================= CHANGE QUANTITY ================= */
 
-function changeCartQuantity(index, amount) {
+function changeQuantity(index, amount) {
 
     cart[index].quantity += amount;
 
+
     if (cart[index].quantity <= 0) {
+
         cart.splice(index, 1);
+
     }
+
 
     updateCart();
 
 }
 
 
-/* REMOVE */
+/* ================= REMOVE ================= */
 
 function removeFromCart(index) {
 
@@ -813,56 +496,62 @@ function removeFromCart(index) {
 }
 
 
-/* OPEN CART */
+/* ================= OPEN CART ================= */
 
 function openCart() {
 
-    document
-        .getElementById("cartOverlay")
+    updateCart();
+
+    document.getElementById("cartOverlay")
         .classList.add("show");
 
 }
 
 
-/* CLOSE CART */
+/* ================= CLOSE CART ================= */
 
 function closeCart() {
 
-    document
-        .getElementById("cartOverlay")
+    document.getElementById("cartOverlay")
         .classList.remove("show");
 
 }
 
 
-/* CHECKOUT */
+/* ================= OPEN CHECKOUT ================= */
 
-function checkout() {
+function openCheckout() {
 
     if (cart.length === 0) {
 
-        alert(
-            "Your cart is empty. Please add a product first."
-        );
+        alert("Please add a product to cart first.");
 
         return;
 
     }
 
 
+    updateCart();
+
     closeCart();
 
-
-    document
-        .getElementById("order")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
+    document.getElementById("checkoutOverlay")
+        .classList.add("show");
 
 }
 
 
-/* WHATSAPP */
+/* ================= CLOSE CHECKOUT ================= */
+
+function closeCheckout() {
+
+    document.getElementById("checkoutOverlay")
+        .classList.remove("show");
+
+}
+
+
+/* ================= SEND WHATSAPP ORDER ================= */
 
 function sendOrder(event) {
 
@@ -871,9 +560,7 @@ function sendOrder(event) {
 
     if (cart.length === 0) {
 
-        alert(
-            "Please add a product to cart first."
-        );
+        alert("Your cart is empty.");
 
         return;
 
@@ -881,36 +568,48 @@ function sendOrder(event) {
 
 
     const name =
-        document.getElementById(
-            "customerName"
-        ).value;
+        document.getElementById("customerName").value;
 
     const phone =
-        document.getElementById(
-            "customerPhone"
-        ).value;
+        document.getElementById("customerPhone").value;
 
     const city =
-        document.getElementById(
-            "customerCity"
-        ).value;
+        document.getElementById("customerCity").value;
 
     const address =
-        document.getElementById(
-            "customerAddress"
-        ).value;
+        document.getElementById("customerAddress").value;
+
+    const payment =
+        document.getElementById("paymentMethod").value;
 
 
     let productsTotal = 0;
 
-
-    let message =
-        "Hello ZAVEN!%0A%0A" +
-        "NEW ORDER%0A" +
-        "====================%0A";
+    let orderText =
+        "🛍️ *NEW ZAVEN STORE ORDER*%0A%0A";
 
 
-    cart.forEach(function(item, index) {
+    orderText +=
+        "*Customer Information*%0A";
+
+    orderText +=
+        "Name: " + encodeURIComponent(name) + "%0A";
+
+    orderText +=
+        "Phone: " + encodeURIComponent(phone) + "%0A";
+
+    orderText +=
+        "City: " + encodeURIComponent(city) + "%0A";
+
+    orderText +=
+        "Address: " + encodeURIComponent(address) + "%0A%0A";
+
+
+    orderText +=
+        "*Products*%0A";
+
+
+    cart.forEach((item) => {
 
         const itemTotal =
             item.price * item.quantity;
@@ -918,112 +617,60 @@ function sendOrder(event) {
         productsTotal += itemTotal;
 
 
-        message +=
-
-            "%0A" +
-
-            (index + 1) +
-            ". " +
-            item.name +
-
-            "%0A" +
-
-            "Price: Rs. " +
-            item.price.toLocaleString() +
-
-            "%0A" +
-
-            "Size: " +
-            item.size +
-
-            "%0A" +
-
-            "Color: " +
-            item.color +
-
-            "%0A" +
-
-            "Quantity: " +
+        orderText +=
+            "• " +
+            encodeURIComponent(item.name) +
+            " × " +
             item.quantity +
-
-            "%0A" +
-
-            "Item Total: Rs. " +
-            itemTotal.toLocaleString() +
-
+            " = Rs. " +
+            itemTotal +
             "%0A";
 
     });
 
 
     const grandTotal =
-        productsTotal + DELIVERY_CHARGES;
+        productsTotal + deliveryCharge;
 
 
-    message +=
+    orderText += "%0A";
 
-        "%0A====================%0A" +
-
+    orderText +=
         "Products Total: Rs. " +
-        productsTotal.toLocaleString() +
+        productsTotal +
+        "%0A";
 
-        "%0A" +
+    orderText +=
+        "Delivery Charges: Rs. " +
+        deliveryCharge +
+        "%0A";
 
-        "Delivery Charges: Rs. 200" +
+    orderText +=
+        "*Grand Total: Rs. " +
+        grandTotal +
+        "*%0A%0A";
 
-        "%0A" +
-
-        "GRAND TOTAL: Rs. " +
-        grandTotal.toLocaleString() +
-
-        "%0A%0A" +
-
-        "Payment Method: Cash on Delivery" +
-
-        "%0A%0A" +
-
-        "CUSTOMER DETAILS" +
-
-        "%0A====================%0A" +
-
-        "Name: " +
-        name +
-
-        "%0A" +
-
-        "Phone: " +
-        phone +
-
-        "%0A" +
-
-        "City: " +
-        city +
-
-        "%0A" +
-
-        "Address: " +
-        address;
+    orderText +=
+        "Payment: " +
+        encodeURIComponent(payment);
 
 
-    /* APNA WHATSAPP NUMBER */
-
-    const whatsappNumber =
-        "923001234567";
-
-
-    window.open(
-
+    const whatsappURL =
         "https://wa.me/" +
         whatsappNumber +
         "?text=" +
-        message,
+        orderText;
 
+
+    window.open(
+        whatsappURL,
         "_blank"
-
     );
 
 }
 
+
+/* ================= INITIAL ================= */
 
 updateCart();
 
@@ -1032,34 +679,30 @@ updateCart();
 </body>
 </html><!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ZAVEN - Wear Different</title>
+    <title>Zaven Store</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
 
     <div class="brand">
-        <img
-            src="zaven-logo.png"
-            alt="ZAVEN Logo"
-            class="logo"
-        >
+        <img src="zaven-logo.png" class="logo" alt="Zaven">
     </div>
 
     <nav>
-        <a href="#">Home</a>
-        <a href="#shop">Shop</a>
-        <a href="#order">Order</a>
+        <a href="#products">Home</a>
+        <a href="#products">Products</a>
 
-        <button class="cart-button" onclick="openCart()">
+        <button class="cart-header" onclick="openCart()">
             🛒 Cart
             <span id="cartCount">0</span>
         </button>
@@ -1068,337 +711,179 @@ updateCart();
 </header>
 
 
-<main class="products" id="shop">
+<!-- ================= PRODUCTS ================= -->
 
+<main>
 
-    <!-- PRODUCT 1 -->
+<section class="products" id="products">
 
-    <section class="product" data-name="Premium T-Shirt" data-price="2499">
+    <!-- SHIRT 1 -->
+
+    <div class="product">
 
         <div class="product-image">
-            <img
-                src="shirt-new.jpg"
-                alt="ZAVEN Premium T-Shirt"
-            >
+            <img src="shirt-new.jpg" alt="Zaven Shirt">
         </div>
 
         <div class="product-info">
 
-            <h2>Premium T-Shirt</h2>
+            <h2>Zaven Premium Shirt</h2>
 
-            <p class="price">
+            <div class="price">
                 Rs. 2,499
-            </p>
+            </div>
 
             <p>
-                Premium quality T-shirt.
-                Comfortable, stylish and perfect
-                for everyday wear.
+                Premium quality shirt by Zaven.
+                Comfortable, stylish and perfect for everyday wear.
             </p>
 
-            <div class="option-group">
-
-                <label>Size:</label>
-
-                <div class="options">
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-                </div>
-
-            </div>
-
-            <div class="option-group">
-
-                <label>Color:</label>
-
-                <div class="options">
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-                </div>
-
-            </div>
-
-            <div class="quantity">
-                <button onclick="changeProductQuantity(this,-1)">−</button>
-                <span>1</span>
-                <button onclick="changeProductQuantity(this,1)">+</button>
-            </div>
-
-            <button class="buy-button" onclick="addToCart(this)">
+            <button
+                class="buy-button"
+                onclick="addToCart('Zaven Premium Shirt', 2499, 'shirt-new.jpg')">
                 Add to Cart
             </button>
 
         </div>
 
-    </section>
+    </div>
 
 
-    <!-- PRODUCT 2 -->
+    <!-- SHIRT 2 -->
 
-    <section class="product" data-name="Classic T-Shirt" data-price="1999">
+    <div class="product">
 
         <div class="product-image">
-            <img
-                src="shirt2.jpg"
-                alt="ZAVEN Classic T-Shirt"
-            >
+            <img src="shirt2.jpg" alt="Zaven Shirt 2">
         </div>
 
         <div class="product-info">
 
-            <h2>Classic T-Shirt</h2>
+            <h2>Zaven Classic Shirt</h2>
 
-            <p class="price">
-                Rs. 1,999
-            </p>
+            <div class="price">
+                Rs. 2,499
+            </div>
 
             <p>
-                Clean, comfortable and stylish.
-                A classic everyday T-shirt
-                made for your look.
+                Stylish and comfortable Zaven classic shirt.
+                Perfect for casual and daily wear.
             </p>
 
-            <div class="option-group">
-
-                <label>Size:</label>
-
-                <div class="options">
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-                </div>
-
-            </div>
-
-            <div class="option-group">
-
-                <label>Color:</label>
-
-                <div class="options">
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-                </div>
-
-            </div>
-
-            <div class="quantity">
-                <button onclick="changeProductQuantity(this,-1)">−</button>
-                <span>1</span>
-                <button onclick="changeProductQuantity(this,1)">+</button>
-            </div>
-
-            <button class="buy-button" onclick="addToCart(this)">
+            <button
+                class="buy-button"
+                onclick="addToCart('Zaven Classic Shirt', 2499, 'shirt2.jpg')">
                 Add to Cart
             </button>
 
         </div>
 
-    </section>
+    </div>
 
 
-    <!-- PRODUCT 3 -->
+    <!-- SHIRT 3 -->
 
-    <section class="product" data-name="ZAVEN T-Shirt" data-price="2199">
+    <div class="product">
 
         <div class="product-image">
-            <img
-                src="shirt3.jpg"
-                alt="ZAVEN T-Shirt"
-            >
+            <img src="shirt3.jpg" alt="Zaven Shirt 3">
         </div>
 
         <div class="product-info">
 
-            <h2>ZAVEN T-Shirt</h2>
+            <h2>Zaven Style Shirt</h2>
 
-            <p class="price">
-                Rs. 2,199
-            </p>
+            <div class="price">
+                Rs. 2,499
+            </div>
 
             <p>
-                Stylish and comfortable.
-                Perfect for everyday wear.
+                Modern Zaven shirt with a clean and stylish look.
+                Made for comfort and everyday fashion.
             </p>
 
-            <div class="option-group">
-
-                <label>Size:</label>
-
-                <div class="options">
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-                </div>
-
-            </div>
-
-            <div class="option-group">
-
-                <label>Color:</label>
-
-                <div class="options">
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-                </div>
-
-            </div>
-
-            <div class="quantity">
-                <button onclick="changeProductQuantity(this,-1)">−</button>
-                <span>1</span>
-                <button onclick="changeProductQuantity(this,1)">+</button>
-            </div>
-
-            <button class="buy-button" onclick="addToCart(this)">
+            <button
+                class="buy-button"
+                onclick="addToCart('Zaven Style Shirt', 2499, 'shirt3.jpg')">
                 Add to Cart
             </button>
 
         </div>
 
-    </section>
+    </div>
 
 
-    <!-- PRODUCT 4 -->
+    <!-- SHIRT 4 -->
 
-    <section class="product" data-name="ZAVEN Signature T-Shirt" data-price="2299">
+    <div class="product">
 
         <div class="product-image">
-            <img
-                src="shirt4.jpg"
-                alt="ZAVEN Signature T-Shirt"
-            >
+            <img src="shirt4.jpg" alt="Zaven Shirt 4">
         </div>
 
         <div class="product-info">
 
-            <h2>ZAVEN Signature T-Shirt</h2>
+            <h2>Zaven Premium Style</h2>
 
-            <p class="price">
-                Rs. 2,299
-            </p>
+            <div class="price">
+                Rs. 2,499
+            </div>
 
             <p>
-                Premium ZAVEN design with a clean
-                and stylish look. Comfortable for
-                everyday wear.
+                Premium Zaven style with a smart modern design.
+                Comfortable and suitable for every occasion.
             </p>
 
-            <div class="option-group">
-
-                <label>Size:</label>
-
-                <div class="options">
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-                </div>
-
-            </div>
-
-            <div class="option-group">
-
-                <label>Color:</label>
-
-                <div class="options">
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-                </div>
-
-            </div>
-
-            <div class="quantity">
-                <button onclick="changeProductQuantity(this,-1)">−</button>
-                <span>1</span>
-                <button onclick="changeProductQuantity(this,1)">+</button>
-            </div>
-
-            <button class="buy-button" onclick="addToCart(this)">
+            <button
+                class="buy-button"
+                onclick="addToCart('Zaven Premium Style', 2499, 'shirt4.jpg')">
                 Add to Cart
             </button>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 </main>
 
 
 <!-- ================= CART ================= -->
 
-<div class="cart-overlay" id="cartOverlay">
+<div id="cartOverlay" class="overlay">
 
     <div class="cart-box">
 
-        <div class="cart-header">
+        <button class="close-button" onclick="closeCart()">×</button>
 
-            <h2>🛒 Your Cart</h2>
+        <h2>🛒 Your Cart</h2>
 
-            <button
-                class="close-cart"
-                onclick="closeCart()"
-            >
-                ×
-            </button>
-
-        </div>
-
-
-        <div id="cartItems" class="cart-items">
-
-            <p class="empty-cart">
-                Your cart is empty.
-            </p>
-
-        </div>
-
-
-        <!-- TOTAL ONLY INSIDE CART -->
+        <div id="cartItems"></div>
 
         <div class="cart-summary">
 
             <div>
                 <span>Products Total:</span>
-
-                <strong id="productsTotal">
-                    Rs. 0
-                </strong>
+                <strong>Rs. <span id="productsTotal">0</span></strong>
             </div>
 
             <div>
-                <span>Delivery Charges:</span>
-
-                <strong>
-                    Rs. 200
-                </strong>
+                <span>Delivery:</span>
+                <strong>Rs. <span id="delivery">200</span></strong>
             </div>
 
+            <hr>
+
             <div class="grand-total">
-
                 <span>Grand Total:</span>
-
-                <strong id="cartTotal">
-                    Rs. 0
-                </strong>
-
+                <strong>Rs. <span id="grandTotal">200</span></strong>
             </div>
 
         </div>
 
-
-        <button
-            class="checkout-button"
-            onclick="checkout()"
-        >
-            Checkout
+        <button class="checkout-button" onclick="openCheckout()">
+            📦 Checkout
         </button>
 
     </div>
@@ -1406,248 +891,136 @@ updateCart();
 </div>
 
 
-<!-- ================= ORDER ================= -->
+<!-- ================= CHECKOUT ================= -->
 
-<section class="order-section" id="order">
+<div id="checkoutOverlay" class="overlay">
 
-    <div class="order-box">
+    <div class="checkout-box">
 
-        <h2>
-            Complete Your Order
-        </h2>
+        <button class="close-button" onclick="closeCheckout()">×</button>
 
-        <p class="order-note">
-            Payment Method:
-            <strong>Cash on Delivery</strong>
-        </p>
+        <h2>📦 Complete Your Order</h2>
 
-        <p class="order-note">
-            Delivery Charges:
-            <strong>Rs. 200</strong>
-        </p>
-
-
-        <div class="final-summary">
+        <div class="payment-info">
 
             <p>
-                Products Total:
-
-                <strong id="orderProductsTotal">
-                    Rs. 0
-                </strong>
+                <strong>Payment Method:</strong>
+                Cash on Delivery
             </p>
 
             <p>
-                Delivery:
-
-                <strong>
-                    Rs. 200
-                </strong>
-            </p>
-
-            <p class="final-total">
-
-                Grand Total:
-
-                <strong id="orderGrandTotal">
-                    Rs. 0
-                </strong>
-
+                <strong>Delivery Charges:</strong>
+                Rs. 200
             </p>
 
         </div>
 
 
-        <form onsubmit="sendOrder(event)">
+        <div class="checkout-summary">
 
-            <label>
-                Full Name
-            </label>
+            <div>
+                <span>Products Total:</span>
+                <strong>Rs. <span id="checkoutProductsTotal">0</span></strong>
+            </div>
+
+            <div>
+                <span>Delivery:</span>
+                <strong>Rs. 200</strong>
+            </div>
+
+            <hr>
+
+            <div class="grand-total">
+                <span>Grand Total:</span>
+                <strong>Rs. <span id="checkoutGrandTotal">200</span></strong>
+            </div>
+
+        </div>
+
+
+        <!-- ORDER FORM -->
+
+        <form id="orderForm" onsubmit="sendOrder(event)">
+
+            <label>Full Name</label>
 
             <input
                 type="text"
                 id="customerName"
                 placeholder="Enter your name"
-                required
-            >
+                required>
 
 
-            <label>
-                Phone Number
-            </label>
+            <label>Phone Number</label>
 
             <input
                 type="tel"
                 id="customerPhone"
                 placeholder="03XXXXXXXXX"
-                required
-            >
+                required>
 
 
-            <label>
-                City
-            </label>
+            <label>City</label>
 
             <input
                 type="text"
                 id="customerCity"
                 placeholder="Enter your city"
-                required
-            >
+                required>
 
 
-            <label>
-                Delivery Address
-            </label>
+            <label>Delivery Address</label>
 
             <textarea
                 id="customerAddress"
                 placeholder="Enter complete delivery address"
-                rows="4"
-                required
-            ></textarea>
+                required></textarea>
 
 
-            <label>
-                Payment Method
-            </label>
+            <label>Payment Method</label>
 
-            <div class="cod-box">
+            <select id="paymentMethod">
 
-                <input
-                    type="radio"
-                    checked
-                    disabled
-                >
+                <option value="Cash on Delivery">
+                    Cash on Delivery
+                </option>
 
-                <span>
-                    💵 Cash on Delivery
-                </span>
-
-            </div>
+            </select>
 
 
-            <button
-                type="submit"
-                class="order-button"
-            >
-                Confirm Order on WhatsApp
+            <button type="submit" class="whatsapp-button">
+                📲 Place Order on WhatsApp
             </button>
 
         </form>
 
     </div>
 
-</section>
+</div>
 
+
+<!-- ================= JAVASCRIPT ================= -->
 
 <script>
 
 let cart = [];
 
-const DELIVERY_CHARGES = 200;
+const deliveryCharge = 200;
+
+const whatsappNumber = "923374521644";
 
 
-/* PRODUCT QUANTITY */
+/* ================= ADD TO CART ================= */
 
-function changeProductQuantity(button, amount) {
+function addToCart(name, price, image) {
 
-    const quantity =
-        button.parentElement.querySelector("span");
+    const existingProduct = cart.find(
+        item => item.name === name
+    );
 
-    let value =
-        parseInt(quantity.innerText);
+    if (existingProduct) {
 
-    value += amount;
-
-    if (value < 1) {
-        value = 1;
-    }
-
-    quantity.innerText = value;
-}
-
-
-/* SIZE / COLOR */
-
-document.querySelectorAll(".option").forEach(function(option) {
-
-    option.addEventListener("click", function() {
-
-        const group = this.parentElement;
-
-        group.querySelectorAll(".option").forEach(function(item) {
-            item.classList.remove("selected");
-        });
-
-        this.classList.add("selected");
-
-    });
-
-});
-
-
-/* ADD TO CART */
-
-function addToCart(button) {
-
-    const product =
-        button.closest(".product");
-
-    const name =
-        product.dataset.name;
-
-    const price =
-        parseInt(product.dataset.price);
-
-    const image =
-        product.querySelector("img").src;
-
-    const quantity =
-        parseInt(
-            product.querySelector(
-                ".quantity span"
-            ).innerText
-        );
-
-
-    const selectedSize =
-        product.querySelector(
-            ".size-option.selected"
-        );
-
-    const size =
-        selectedSize
-            ? selectedSize.innerText
-            : "Not selected";
-
-
-    const selectedColor =
-        product.querySelector(
-            ".color-option.selected"
-        );
-
-    const color =
-        selectedColor
-            ? selectedColor.innerText
-            : "Not selected";
-
-
-    const existing =
-        cart.find(function(item) {
-
-            return (
-                item.name === name &&
-                item.size === size &&
-                item.color === color
-            );
-
-        });
-
-
-    if (existing) {
-
-        existing.quantity += quantity;
+        existingProduct.quantity++;
 
     } else {
 
@@ -1655,49 +1028,29 @@ function addToCart(button) {
             name: name,
             price: price,
             image: image,
-            size: size,
-            color: color,
-            quantity: quantity
+            quantity: 1
         });
 
     }
 
-
-    product.querySelector(
-        ".quantity span"
-    ).innerText = "1";
-
-
     updateCart();
 
-    openCart();
+    alert(name + " added to cart!");
 
 }
 
 
-/* UPDATE CART */
+/* ================= UPDATE CART ================= */
 
 function updateCart() {
 
-    const cartItems =
-        document.getElementById("cartItems");
-
-    const cartCount =
-        document.getElementById("cartCount");
-
-    const productsTotalElement =
-        document.getElementById("productsTotal");
-
-    const cartTotalElement =
-        document.getElementById("cartTotal");
-
+    const cartItems = document.getElementById("cartItems");
 
     cartItems.innerHTML = "";
 
-
     let productsTotal = 0;
 
-    let count = 0;
+    let totalQuantity = 0;
 
 
     if (cart.length === 0) {
@@ -1708,62 +1061,40 @@ function updateCart() {
     }
 
 
-    cart.forEach(function(item, index) {
+    cart.forEach((item, index) => {
 
         const itemTotal =
             item.price * item.quantity;
 
         productsTotal += itemTotal;
 
-        count += item.quantity;
+        totalQuantity += item.quantity;
 
 
-        const div =
-            document.createElement("div");
+        const cartItem = document.createElement("div");
 
-        div.className = "cart-item";
+        cartItem.className = "cart-item";
 
 
-        div.innerHTML = `
+        cartItem.innerHTML = `
 
-            <img
-                src="${item.image}"
-                alt="${item.name}"
-            >
+            <img src="${item.image}" alt="${item.name}">
 
             <div class="cart-item-info">
 
-                <h3>
-                    ${item.name}
-                </h3>
+                <h3>${item.name}</h3>
 
-                <p>
-                    Rs. ${item.price.toLocaleString()}
-                </p>
+                <p>Rs. ${item.price.toLocaleString()}</p>
 
-                <p>
-                    Size: ${item.size}
-                </p>
+                <div class="quantity">
 
-                <p>
-                    Color: ${item.color}
-                </p>
-
-                <div class="cart-quantity">
-
-                    <button
-                        onclick="changeCartQuantity(${index},-1)"
-                    >
+                    <button onclick="changeQuantity(${index}, -1)">
                         −
                     </button>
 
-                    <span>
-                        ${item.quantity}
-                    </span>
+                    <span>${item.quantity}</span>
 
-                    <button
-                        onclick="changeCartQuantity(${index},1)"
-                    >
+                    <button onclick="changeQuantity(${index}, 1)">
                         +
                     </button>
 
@@ -1771,70 +1102,69 @@ function updateCart() {
 
                 <button
                     class="remove-button"
-                    onclick="removeFromCart(${index})"
-                >
-                    Remove
+                    onclick="removeFromCart(${index})">
+
+                    ❌ Remove
+
                 </button>
 
             </div>
+
+            <strong>
+                Rs. ${itemTotal.toLocaleString()}
+            </strong>
+
         `;
 
 
-        cartItems.appendChild(div);
+        cartItems.appendChild(cartItem);
 
     });
 
 
     const grandTotal =
-        productsTotal + DELIVERY_CHARGES;
+        productsTotal + deliveryCharge;
 
 
-    cartCount.innerText =
-        count;
+    document.getElementById("cartCount").textContent =
+        totalQuantity;
 
-
-    productsTotalElement.innerText =
-        "Rs. " +
+    document.getElementById("productsTotal").textContent =
         productsTotal.toLocaleString();
 
-
-    cartTotalElement.innerText =
-        "Rs. " +
+    document.getElementById("grandTotal").textContent =
         grandTotal.toLocaleString();
 
 
-    document.getElementById(
-        "orderProductsTotal"
-    ).innerText =
-        "Rs. " +
+    document.getElementById("checkoutProductsTotal").textContent =
         productsTotal.toLocaleString();
 
-
-    document.getElementById(
-        "orderGrandTotal"
-    ).innerText =
-        "Rs. " +
+    document.getElementById("checkoutGrandTotal").textContent =
         grandTotal.toLocaleString();
 
 }
 
 
-/* CART QUANTITY */
+/* ================= CHANGE QUANTITY ================= */
 
-function changeCartQuantity(index, amount) {
+function changeQuantity(index, amount) {
 
     cart[index].quantity += amount;
 
+
     if (cart[index].quantity <= 0) {
+
         cart.splice(index, 1);
+
     }
+
 
     updateCart();
 
 }
 
 
-/* REMOVE */
+/* ================= REMOVE ================= */
 
 function removeFromCart(index) {
 
@@ -1845,56 +1175,62 @@ function removeFromCart(index) {
 }
 
 
-/* OPEN CART */
+/* ================= OPEN CART ================= */
 
 function openCart() {
 
-    document
-        .getElementById("cartOverlay")
+    updateCart();
+
+    document.getElementById("cartOverlay")
         .classList.add("show");
 
 }
 
 
-/* CLOSE CART */
+/* ================= CLOSE CART ================= */
 
 function closeCart() {
 
-    document
-        .getElementById("cartOverlay")
+    document.getElementById("cartOverlay")
         .classList.remove("show");
 
 }
 
 
-/* CHECKOUT */
+/* ================= OPEN CHECKOUT ================= */
 
-function checkout() {
+function openCheckout() {
 
     if (cart.length === 0) {
 
-        alert(
-            "Your cart is empty. Please add a product first."
-        );
+        alert("Please add a product to cart first.");
 
         return;
 
     }
 
 
+    updateCart();
+
     closeCart();
 
-
-    document
-        .getElementById("order")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
+    document.getElementById("checkoutOverlay")
+        .classList.add("show");
 
 }
 
 
-/* WHATSAPP */
+/* ================= CLOSE CHECKOUT ================= */
+
+function closeCheckout() {
+
+    document.getElementById("checkoutOverlay")
+        .classList.remove("show");
+
+}
+
+
+/* ================= SEND WHATSAPP ORDER ================= */
 
 function sendOrder(event) {
 
@@ -1903,9 +1239,7 @@ function sendOrder(event) {
 
     if (cart.length === 0) {
 
-        alert(
-            "Please add a product to cart first."
-        );
+        alert("Your cart is empty.");
 
         return;
 
@@ -1913,36 +1247,48 @@ function sendOrder(event) {
 
 
     const name =
-        document.getElementById(
-            "customerName"
-        ).value;
+        document.getElementById("customerName").value;
 
     const phone =
-        document.getElementById(
-            "customerPhone"
-        ).value;
+        document.getElementById("customerPhone").value;
 
     const city =
-        document.getElementById(
-            "customerCity"
-        ).value;
+        document.getElementById("customerCity").value;
 
     const address =
-        document.getElementById(
-            "customerAddress"
-        ).value;
+        document.getElementById("customerAddress").value;
+
+    const payment =
+        document.getElementById("paymentMethod").value;
 
 
     let productsTotal = 0;
 
-
-    let message =
-        "Hello ZAVEN!%0A%0A" +
-        "NEW ORDER%0A" +
-        "====================%0A";
+    let orderText =
+        "🛍️ *NEW ZAVEN STORE ORDER*%0A%0A";
 
 
-    cart.forEach(function(item, index) {
+    orderText +=
+        "*Customer Information*%0A";
+
+    orderText +=
+        "Name: " + encodeURIComponent(name) + "%0A";
+
+    orderText +=
+        "Phone: " + encodeURIComponent(phone) + "%0A";
+
+    orderText +=
+        "City: " + encodeURIComponent(city) + "%0A";
+
+    orderText +=
+        "Address: " + encodeURIComponent(address) + "%0A%0A";
+
+
+    orderText +=
+        "*Products*%0A";
+
+
+    cart.forEach((item) => {
 
         const itemTotal =
             item.price * item.quantity;
@@ -1950,112 +1296,60 @@ function sendOrder(event) {
         productsTotal += itemTotal;
 
 
-        message +=
-
-            "%0A" +
-
-            (index + 1) +
-            ". " +
-            item.name +
-
-            "%0A" +
-
-            "Price: Rs. " +
-            item.price.toLocaleString() +
-
-            "%0A" +
-
-            "Size: " +
-            item.size +
-
-            "%0A" +
-
-            "Color: " +
-            item.color +
-
-            "%0A" +
-
-            "Quantity: " +
+        orderText +=
+            "• " +
+            encodeURIComponent(item.name) +
+            " × " +
             item.quantity +
-
-            "%0A" +
-
-            "Item Total: Rs. " +
-            itemTotal.toLocaleString() +
-
+            " = Rs. " +
+            itemTotal +
             "%0A";
 
     });
 
 
     const grandTotal =
-        productsTotal + DELIVERY_CHARGES;
+        productsTotal + deliveryCharge;
 
 
-    message +=
+    orderText += "%0A";
 
-        "%0A====================%0A" +
-
+    orderText +=
         "Products Total: Rs. " +
-        productsTotal.toLocaleString() +
+        productsTotal +
+        "%0A";
 
-        "%0A" +
+    orderText +=
+        "Delivery Charges: Rs. " +
+        deliveryCharge +
+        "%0A";
 
-        "Delivery Charges: Rs. 200" +
+    orderText +=
+        "*Grand Total: Rs. " +
+        grandTotal +
+        "*%0A%0A";
 
-        "%0A" +
-
-        "GRAND TOTAL: Rs. " +
-        grandTotal.toLocaleString() +
-
-        "%0A%0A" +
-
-        "Payment Method: Cash on Delivery" +
-
-        "%0A%0A" +
-
-        "CUSTOMER DETAILS" +
-
-        "%0A====================%0A" +
-
-        "Name: " +
-        name +
-
-        "%0A" +
-
-        "Phone: " +
-        phone +
-
-        "%0A" +
-
-        "City: " +
-        city +
-
-        "%0A" +
-
-        "Address: " +
-        address;
+    orderText +=
+        "Payment: " +
+        encodeURIComponent(payment);
 
 
-    /* APNA WHATSAPP NUMBER */
-
-    const whatsappNumber =
-        "923001234567";
-
-
-    window.open(
-
+    const whatsappURL =
         "https://wa.me/" +
         whatsappNumber +
         "?text=" +
-        message,
+        orderText;
 
+
+    window.open(
+        whatsappURL,
         "_blank"
-
     );
 
 }
 
+
+/* ================= INITIAL ================= */
 
 updateCart();
 
@@ -2064,34 +1358,30 @@ updateCart();
 </body>
 </html><!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ZAVEN - Wear Different</title>
+    <title>Zaven Store</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
 
     <div class="brand">
-        <img
-            src="zaven-logo.png"
-            alt="ZAVEN Logo"
-            class="logo"
-        >
+        <img src="zaven-logo.png" class="logo" alt="Zaven">
     </div>
 
     <nav>
-        <a href="#">Home</a>
-        <a href="#shop">Shop</a>
-        <a href="#order">Order</a>
+        <a href="#products">Home</a>
+        <a href="#products">Products</a>
 
-        <button class="cart-button" onclick="openCart()">
+        <button class="cart-header" onclick="openCart()">
             🛒 Cart
             <span id="cartCount">0</span>
         </button>
@@ -2100,337 +1390,179 @@ updateCart();
 </header>
 
 
-<main class="products" id="shop">
+<!-- ================= PRODUCTS ================= -->
 
+<main>
 
-    <!-- PRODUCT 1 -->
+<section class="products" id="products">
 
-    <section class="product" data-name="Premium T-Shirt" data-price="2499">
+    <!-- SHIRT 1 -->
+
+    <div class="product">
 
         <div class="product-image">
-            <img
-                src="shirt-new.jpg"
-                alt="ZAVEN Premium T-Shirt"
-            >
+            <img src="shirt-new.jpg" alt="Zaven Shirt">
         </div>
 
         <div class="product-info">
 
-            <h2>Premium T-Shirt</h2>
+            <h2>Zaven Premium Shirt</h2>
 
-            <p class="price">
+            <div class="price">
                 Rs. 2,499
-            </p>
+            </div>
 
             <p>
-                Premium quality T-shirt.
-                Comfortable, stylish and perfect
-                for everyday wear.
+                Premium quality shirt by Zaven.
+                Comfortable, stylish and perfect for everyday wear.
             </p>
 
-            <div class="option-group">
-
-                <label>Size:</label>
-
-                <div class="options">
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-                </div>
-
-            </div>
-
-            <div class="option-group">
-
-                <label>Color:</label>
-
-                <div class="options">
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-                </div>
-
-            </div>
-
-            <div class="quantity">
-                <button onclick="changeProductQuantity(this,-1)">−</button>
-                <span>1</span>
-                <button onclick="changeProductQuantity(this,1)">+</button>
-            </div>
-
-            <button class="buy-button" onclick="addToCart(this)">
+            <button
+                class="buy-button"
+                onclick="addToCart('Zaven Premium Shirt', 2499, 'shirt-new.jpg')">
                 Add to Cart
             </button>
 
         </div>
 
-    </section>
+    </div>
 
 
-    <!-- PRODUCT 2 -->
+    <!-- SHIRT 2 -->
 
-    <section class="product" data-name="Classic T-Shirt" data-price="1999">
+    <div class="product">
 
         <div class="product-image">
-            <img
-                src="shirt2.jpg"
-                alt="ZAVEN Classic T-Shirt"
-            >
+            <img src="shirt2.jpg" alt="Zaven Shirt 2">
         </div>
 
         <div class="product-info">
 
-            <h2>Classic T-Shirt</h2>
+            <h2>Zaven Classic Shirt</h2>
 
-            <p class="price">
-                Rs. 1,999
-            </p>
+            <div class="price">
+                Rs. 2,499
+            </div>
 
             <p>
-                Clean, comfortable and stylish.
-                A classic everyday T-shirt
-                made for your look.
+                Stylish and comfortable Zaven classic shirt.
+                Perfect for casual and daily wear.
             </p>
 
-            <div class="option-group">
-
-                <label>Size:</label>
-
-                <div class="options">
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-                </div>
-
-            </div>
-
-            <div class="option-group">
-
-                <label>Color:</label>
-
-                <div class="options">
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-                </div>
-
-            </div>
-
-            <div class="quantity">
-                <button onclick="changeProductQuantity(this,-1)">−</button>
-                <span>1</span>
-                <button onclick="changeProductQuantity(this,1)">+</button>
-            </div>
-
-            <button class="buy-button" onclick="addToCart(this)">
+            <button
+                class="buy-button"
+                onclick="addToCart('Zaven Classic Shirt', 2499, 'shirt2.jpg')">
                 Add to Cart
             </button>
 
         </div>
 
-    </section>
+    </div>
 
 
-    <!-- PRODUCT 3 -->
+    <!-- SHIRT 3 -->
 
-    <section class="product" data-name="ZAVEN T-Shirt" data-price="2199">
+    <div class="product">
 
         <div class="product-image">
-            <img
-                src="shirt3.jpg"
-                alt="ZAVEN T-Shirt"
-            >
+            <img src="shirt3.jpg" alt="Zaven Shirt 3">
         </div>
 
         <div class="product-info">
 
-            <h2>ZAVEN T-Shirt</h2>
+            <h2>Zaven Style Shirt</h2>
 
-            <p class="price">
-                Rs. 2,199
-            </p>
+            <div class="price">
+                Rs. 2,499
+            </div>
 
             <p>
-                Stylish and comfortable.
-                Perfect for everyday wear.
+                Modern Zaven shirt with a clean and stylish look.
+                Made for comfort and everyday fashion.
             </p>
 
-            <div class="option-group">
-
-                <label>Size:</label>
-
-                <div class="options">
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-                </div>
-
-            </div>
-
-            <div class="option-group">
-
-                <label>Color:</label>
-
-                <div class="options">
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-                </div>
-
-            </div>
-
-            <div class="quantity">
-                <button onclick="changeProductQuantity(this,-1)">−</button>
-                <span>1</span>
-                <button onclick="changeProductQuantity(this,1)">+</button>
-            </div>
-
-            <button class="buy-button" onclick="addToCart(this)">
+            <button
+                class="buy-button"
+                onclick="addToCart('Zaven Style Shirt', 2499, 'shirt3.jpg')">
                 Add to Cart
             </button>
 
         </div>
 
-    </section>
+    </div>
 
 
-    <!-- PRODUCT 4 -->
+    <!-- SHIRT 4 -->
 
-    <section class="product" data-name="ZAVEN Signature T-Shirt" data-price="2299">
+    <div class="product">
 
         <div class="product-image">
-            <img
-                src="shirt4.jpg"
-                alt="ZAVEN Signature T-Shirt"
-            >
+            <img src="shirt4.jpg" alt="Zaven Shirt 4">
         </div>
 
         <div class="product-info">
 
-            <h2>ZAVEN Signature T-Shirt</h2>
+            <h2>Zaven Premium Style</h2>
 
-            <p class="price">
-                Rs. 2,299
-            </p>
+            <div class="price">
+                Rs. 2,499
+            </div>
 
             <p>
-                Premium ZAVEN design with a clean
-                and stylish look. Comfortable for
-                everyday wear.
+                Premium Zaven style with a smart modern design.
+                Comfortable and suitable for every occasion.
             </p>
 
-            <div class="option-group">
-
-                <label>Size:</label>
-
-                <div class="options">
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-                </div>
-
-            </div>
-
-            <div class="option-group">
-
-                <label>Color:</label>
-
-                <div class="options">
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-                </div>
-
-            </div>
-
-            <div class="quantity">
-                <button onclick="changeProductQuantity(this,-1)">−</button>
-                <span>1</span>
-                <button onclick="changeProductQuantity(this,1)">+</button>
-            </div>
-
-            <button class="buy-button" onclick="addToCart(this)">
+            <button
+                class="buy-button"
+                onclick="addToCart('Zaven Premium Style', 2499, 'shirt4.jpg')">
                 Add to Cart
             </button>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 </main>
 
 
 <!-- ================= CART ================= -->
 
-<div class="cart-overlay" id="cartOverlay">
+<div id="cartOverlay" class="overlay">
 
     <div class="cart-box">
 
-        <div class="cart-header">
+        <button class="close-button" onclick="closeCart()">×</button>
 
-            <h2>🛒 Your Cart</h2>
+        <h2>🛒 Your Cart</h2>
 
-            <button
-                class="close-cart"
-                onclick="closeCart()"
-            >
-                ×
-            </button>
-
-        </div>
-
-
-        <div id="cartItems" class="cart-items">
-
-            <p class="empty-cart">
-                Your cart is empty.
-            </p>
-
-        </div>
-
-
-        <!-- TOTAL ONLY INSIDE CART -->
+        <div id="cartItems"></div>
 
         <div class="cart-summary">
 
             <div>
                 <span>Products Total:</span>
-
-                <strong id="productsTotal">
-                    Rs. 0
-                </strong>
+                <strong>Rs. <span id="productsTotal">0</span></strong>
             </div>
 
             <div>
-                <span>Delivery Charges:</span>
-
-                <strong>
-                    Rs. 200
-                </strong>
+                <span>Delivery:</span>
+                <strong>Rs. <span id="delivery">200</span></strong>
             </div>
 
+            <hr>
+
             <div class="grand-total">
-
                 <span>Grand Total:</span>
-
-                <strong id="cartTotal">
-                    Rs. 0
-                </strong>
-
+                <strong>Rs. <span id="grandTotal">200</span></strong>
             </div>
 
         </div>
 
-
-        <button
-            class="checkout-button"
-            onclick="checkout()"
-        >
-            Checkout
+        <button class="checkout-button" onclick="openCheckout()">
+            📦 Checkout
         </button>
 
     </div>
@@ -2438,248 +1570,136 @@ updateCart();
 </div>
 
 
-<!-- ================= ORDER ================= -->
+<!-- ================= CHECKOUT ================= -->
 
-<section class="order-section" id="order">
+<div id="checkoutOverlay" class="overlay">
 
-    <div class="order-box">
+    <div class="checkout-box">
 
-        <h2>
-            Complete Your Order
-        </h2>
+        <button class="close-button" onclick="closeCheckout()">×</button>
 
-        <p class="order-note">
-            Payment Method:
-            <strong>Cash on Delivery</strong>
-        </p>
+        <h2>📦 Complete Your Order</h2>
 
-        <p class="order-note">
-            Delivery Charges:
-            <strong>Rs. 200</strong>
-        </p>
-
-
-        <div class="final-summary">
+        <div class="payment-info">
 
             <p>
-                Products Total:
-
-                <strong id="orderProductsTotal">
-                    Rs. 0
-                </strong>
+                <strong>Payment Method:</strong>
+                Cash on Delivery
             </p>
 
             <p>
-                Delivery:
-
-                <strong>
-                    Rs. 200
-                </strong>
-            </p>
-
-            <p class="final-total">
-
-                Grand Total:
-
-                <strong id="orderGrandTotal">
-                    Rs. 0
-                </strong>
-
+                <strong>Delivery Charges:</strong>
+                Rs. 200
             </p>
 
         </div>
 
 
-        <form onsubmit="sendOrder(event)">
+        <div class="checkout-summary">
 
-            <label>
-                Full Name
-            </label>
+            <div>
+                <span>Products Total:</span>
+                <strong>Rs. <span id="checkoutProductsTotal">0</span></strong>
+            </div>
+
+            <div>
+                <span>Delivery:</span>
+                <strong>Rs. 200</strong>
+            </div>
+
+            <hr>
+
+            <div class="grand-total">
+                <span>Grand Total:</span>
+                <strong>Rs. <span id="checkoutGrandTotal">200</span></strong>
+            </div>
+
+        </div>
+
+
+        <!-- ORDER FORM -->
+
+        <form id="orderForm" onsubmit="sendOrder(event)">
+
+            <label>Full Name</label>
 
             <input
                 type="text"
                 id="customerName"
                 placeholder="Enter your name"
-                required
-            >
+                required>
 
 
-            <label>
-                Phone Number
-            </label>
+            <label>Phone Number</label>
 
             <input
                 type="tel"
                 id="customerPhone"
                 placeholder="03XXXXXXXXX"
-                required
-            >
+                required>
 
 
-            <label>
-                City
-            </label>
+            <label>City</label>
 
             <input
                 type="text"
                 id="customerCity"
                 placeholder="Enter your city"
-                required
-            >
+                required>
 
 
-            <label>
-                Delivery Address
-            </label>
+            <label>Delivery Address</label>
 
             <textarea
                 id="customerAddress"
                 placeholder="Enter complete delivery address"
-                rows="4"
-                required
-            ></textarea>
+                required></textarea>
 
 
-            <label>
-                Payment Method
-            </label>
+            <label>Payment Method</label>
 
-            <div class="cod-box">
+            <select id="paymentMethod">
 
-                <input
-                    type="radio"
-                    checked
-                    disabled
-                >
+                <option value="Cash on Delivery">
+                    Cash on Delivery
+                </option>
 
-                <span>
-                    💵 Cash on Delivery
-                </span>
-
-            </div>
+            </select>
 
 
-            <button
-                type="submit"
-                class="order-button"
-            >
-                Confirm Order on WhatsApp
+            <button type="submit" class="whatsapp-button">
+                📲 Place Order on WhatsApp
             </button>
 
         </form>
 
     </div>
 
-</section>
+</div>
 
+
+<!-- ================= JAVASCRIPT ================= -->
 
 <script>
 
 let cart = [];
 
-const DELIVERY_CHARGES = 200;
+const deliveryCharge = 200;
+
+const whatsappNumber = "923374521644";
 
 
-/* PRODUCT QUANTITY */
+/* ================= ADD TO CART ================= */
 
-function changeProductQuantity(button, amount) {
+function addToCart(name, price, image) {
 
-    const quantity =
-        button.parentElement.querySelector("span");
+    const existingProduct = cart.find(
+        item => item.name === name
+    );
 
-    let value =
-        parseInt(quantity.innerText);
+    if (existingProduct) {
 
-    value += amount;
-
-    if (value < 1) {
-        value = 1;
-    }
-
-    quantity.innerText = value;
-}
-
-
-/* SIZE / COLOR */
-
-document.querySelectorAll(".option").forEach(function(option) {
-
-    option.addEventListener("click", function() {
-
-        const group = this.parentElement;
-
-        group.querySelectorAll(".option").forEach(function(item) {
-            item.classList.remove("selected");
-        });
-
-        this.classList.add("selected");
-
-    });
-
-});
-
-
-/* ADD TO CART */
-
-function addToCart(button) {
-
-    const product =
-        button.closest(".product");
-
-    const name =
-        product.dataset.name;
-
-    const price =
-        parseInt(product.dataset.price);
-
-    const image =
-        product.querySelector("img").src;
-
-    const quantity =
-        parseInt(
-            product.querySelector(
-                ".quantity span"
-            ).innerText
-        );
-
-
-    const selectedSize =
-        product.querySelector(
-            ".size-option.selected"
-        );
-
-    const size =
-        selectedSize
-            ? selectedSize.innerText
-            : "Not selected";
-
-
-    const selectedColor =
-        product.querySelector(
-            ".color-option.selected"
-        );
-
-    const color =
-        selectedColor
-            ? selectedColor.innerText
-            : "Not selected";
-
-
-    const existing =
-        cart.find(function(item) {
-
-            return (
-                item.name === name &&
-                item.size === size &&
-                item.color === color
-            );
-
-        });
-
-
-    if (existing) {
-
-        existing.quantity += quantity;
+        existingProduct.quantity++;
 
     } else {
 
@@ -2687,49 +1707,29 @@ function addToCart(button) {
             name: name,
             price: price,
             image: image,
-            size: size,
-            color: color,
-            quantity: quantity
+            quantity: 1
         });
 
     }
 
-
-    product.querySelector(
-        ".quantity span"
-    ).innerText = "1";
-
-
     updateCart();
 
-    openCart();
+    alert(name + " added to cart!");
 
 }
 
 
-/* UPDATE CART */
+/* ================= UPDATE CART ================= */
 
 function updateCart() {
 
-    const cartItems =
-        document.getElementById("cartItems");
-
-    const cartCount =
-        document.getElementById("cartCount");
-
-    const productsTotalElement =
-        document.getElementById("productsTotal");
-
-    const cartTotalElement =
-        document.getElementById("cartTotal");
-
+    const cartItems = document.getElementById("cartItems");
 
     cartItems.innerHTML = "";
 
-
     let productsTotal = 0;
 
-    let count = 0;
+    let totalQuantity = 0;
 
 
     if (cart.length === 0) {
@@ -2740,62 +1740,40 @@ function updateCart() {
     }
 
 
-    cart.forEach(function(item, index) {
+    cart.forEach((item, index) => {
 
         const itemTotal =
             item.price * item.quantity;
 
         productsTotal += itemTotal;
 
-        count += item.quantity;
+        totalQuantity += item.quantity;
 
 
-        const div =
-            document.createElement("div");
+        const cartItem = document.createElement("div");
 
-        div.className = "cart-item";
+        cartItem.className = "cart-item";
 
 
-        div.innerHTML = `
+        cartItem.innerHTML = `
 
-            <img
-                src="${item.image}"
-                alt="${item.name}"
-            >
+            <img src="${item.image}" alt="${item.name}">
 
             <div class="cart-item-info">
 
-                <h3>
-                    ${item.name}
-                </h3>
+                <h3>${item.name}</h3>
 
-                <p>
-                    Rs. ${item.price.toLocaleString()}
-                </p>
+                <p>Rs. ${item.price.toLocaleString()}</p>
 
-                <p>
-                    Size: ${item.size}
-                </p>
+                <div class="quantity">
 
-                <p>
-                    Color: ${item.color}
-                </p>
-
-                <div class="cart-quantity">
-
-                    <button
-                        onclick="changeCartQuantity(${index},-1)"
-                    >
+                    <button onclick="changeQuantity(${index}, -1)">
                         −
                     </button>
 
-                    <span>
-                        ${item.quantity}
-                    </span>
+                    <span>${item.quantity}</span>
 
-                    <button
-                        onclick="changeCartQuantity(${index},1)"
-                    >
+                    <button onclick="changeQuantity(${index}, 1)">
                         +
                     </button>
 
@@ -2803,70 +1781,69 @@ function updateCart() {
 
                 <button
                     class="remove-button"
-                    onclick="removeFromCart(${index})"
-                >
-                    Remove
+                    onclick="removeFromCart(${index})">
+
+                    ❌ Remove
+
                 </button>
 
             </div>
+
+            <strong>
+                Rs. ${itemTotal.toLocaleString()}
+            </strong>
+
         `;
 
 
-        cartItems.appendChild(div);
+        cartItems.appendChild(cartItem);
 
     });
 
 
     const grandTotal =
-        productsTotal + DELIVERY_CHARGES;
+        productsTotal + deliveryCharge;
 
 
-    cartCount.innerText =
-        count;
+    document.getElementById("cartCount").textContent =
+        totalQuantity;
 
-
-    productsTotalElement.innerText =
-        "Rs. " +
+    document.getElementById("productsTotal").textContent =
         productsTotal.toLocaleString();
 
-
-    cartTotalElement.innerText =
-        "Rs. " +
+    document.getElementById("grandTotal").textContent =
         grandTotal.toLocaleString();
 
 
-    document.getElementById(
-        "orderProductsTotal"
-    ).innerText =
-        "Rs. " +
+    document.getElementById("checkoutProductsTotal").textContent =
         productsTotal.toLocaleString();
 
-
-    document.getElementById(
-        "orderGrandTotal"
-    ).innerText =
-        "Rs. " +
+    document.getElementById("checkoutGrandTotal").textContent =
         grandTotal.toLocaleString();
 
 }
 
 
-/* CART QUANTITY */
+/* ================= CHANGE QUANTITY ================= */
 
-function changeCartQuantity(index, amount) {
+function changeQuantity(index, amount) {
 
     cart[index].quantity += amount;
 
+
     if (cart[index].quantity <= 0) {
+
         cart.splice(index, 1);
+
     }
+
 
     updateCart();
 
 }
 
 
-/* REMOVE */
+/* ================= REMOVE ================= */
 
 function removeFromCart(index) {
 
@@ -2877,56 +1854,62 @@ function removeFromCart(index) {
 }
 
 
-/* OPEN CART */
+/* ================= OPEN CART ================= */
 
 function openCart() {
 
-    document
-        .getElementById("cartOverlay")
+    updateCart();
+
+    document.getElementById("cartOverlay")
         .classList.add("show");
 
 }
 
 
-/* CLOSE CART */
+/* ================= CLOSE CART ================= */
 
 function closeCart() {
 
-    document
-        .getElementById("cartOverlay")
+    document.getElementById("cartOverlay")
         .classList.remove("show");
 
 }
 
 
-/* CHECKOUT */
+/* ================= OPEN CHECKOUT ================= */
 
-function checkout() {
+function openCheckout() {
 
     if (cart.length === 0) {
 
-        alert(
-            "Your cart is empty. Please add a product first."
-        );
+        alert("Please add a product to cart first.");
 
         return;
 
     }
 
 
+    updateCart();
+
     closeCart();
 
-
-    document
-        .getElementById("order")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
+    document.getElementById("checkoutOverlay")
+        .classList.add("show");
 
 }
 
 
-/* WHATSAPP */
+/* ================= CLOSE CHECKOUT ================= */
+
+function closeCheckout() {
+
+    document.getElementById("checkoutOverlay")
+        .classList.remove("show");
+
+}
+
+
+/* ================= SEND WHATSAPP ORDER ================= */
 
 function sendOrder(event) {
 
@@ -2935,9 +1918,7 @@ function sendOrder(event) {
 
     if (cart.length === 0) {
 
-        alert(
-            "Please add a product to cart first."
-        );
+        alert("Your cart is empty.");
 
         return;
 
@@ -2945,36 +1926,48 @@ function sendOrder(event) {
 
 
     const name =
-        document.getElementById(
-            "customerName"
-        ).value;
+        document.getElementById("customerName").value;
 
     const phone =
-        document.getElementById(
-            "customerPhone"
-        ).value;
+        document.getElementById("customerPhone").value;
 
     const city =
-        document.getElementById(
-            "customerCity"
-        ).value;
+        document.getElementById("customerCity").value;
 
     const address =
-        document.getElementById(
-            "customerAddress"
-        ).value;
+        document.getElementById("customerAddress").value;
+
+    const payment =
+        document.getElementById("paymentMethod").value;
 
 
     let productsTotal = 0;
 
-
-    let message =
-        "Hello ZAVEN!%0A%0A" +
-        "NEW ORDER%0A" +
-        "====================%0A";
+    let orderText =
+        "🛍️ *NEW ZAVEN STORE ORDER*%0A%0A";
 
 
-    cart.forEach(function(item, index) {
+    orderText +=
+        "*Customer Information*%0A";
+
+    orderText +=
+        "Name: " + encodeURIComponent(name) + "%0A";
+
+    orderText +=
+        "Phone: " + encodeURIComponent(phone) + "%0A";
+
+    orderText +=
+        "City: " + encodeURIComponent(city) + "%0A";
+
+    orderText +=
+        "Address: " + encodeURIComponent(address) + "%0A%0A";
+
+
+    orderText +=
+        "*Products*%0A";
+
+
+    cart.forEach((item) => {
 
         const itemTotal =
             item.price * item.quantity;
@@ -2982,2176 +1975,60 @@ function sendOrder(event) {
         productsTotal += itemTotal;
 
 
-        message +=
-
-            "%0A" +
-
-            (index + 1) +
-            ". " +
-            item.name +
-
-            "%0A" +
-
-            "Price: Rs. " +
-            item.price.toLocaleString() +
-
-            "%0A" +
-
-            "Size: " +
-            item.size +
-
-            "%0A" +
-
-            "Color: " +
-            item.color +
-
-            "%0A" +
-
-            "Quantity: " +
+        orderText +=
+            "• " +
+            encodeURIComponent(item.name) +
+            " × " +
             item.quantity +
-
-            "%0A" +
-
-            "Item Total: Rs. " +
-            itemTotal.toLocaleString() +
-
+            " = Rs. " +
+            itemTotal +
             "%0A";
 
     });
 
 
     const grandTotal =
-        productsTotal + DELIVERY_CHARGES;
+        productsTotal + deliveryCharge;
 
 
-    message +=
+    orderText += "%0A";
 
-        "%0A====================%0A" +
-
+    orderText +=
         "Products Total: Rs. " +
-        productsTotal.toLocaleString() +
+        productsTotal +
+        "%0A";
 
-        "%0A" +
+    orderText +=
+        "Delivery Charges: Rs. " +
+        deliveryCharge +
+        "%0A";
 
-        "Delivery Charges: Rs. 200" +
+    orderText +=
+        "*Grand Total: Rs. " +
+        grandTotal +
+        "*%0A%0A";
 
-        "%0A" +
-
-        "GRAND TOTAL: Rs. " +
-        grandTotal.toLocaleString() +
-
-        "%0A%0A" +
-
-        "Payment Method: Cash on Delivery" +
-
-        "%0A%0A" +
-
-        "CUSTOMER DETAILS" +
-
-        "%0A====================%0A" +
-
-        "Name: " +
-        name +
-
-        "%0A" +
-
-        "Phone: " +
-        phone +
-
-        "%0A" +
-
-        "City: " +
-        city +
-
-        "%0A" +
-
-        "Address: " +
-        address;
+    orderText +=
+        "Payment: " +
+        encodeURIComponent(payment);
 
 
-    /* APNA WHATSAPP NUMBER */
-
-    const whatsappNumber =
-        "923001234567";
-
-
-    window.open(
-
+    const whatsappURL =
         "https://wa.me/" +
         whatsappNumber +
         "?text=" +
-        message,
+        orderText;
 
+
+    window.open(
+        whatsappURL,
         "_blank"
-
     );
 
 }
 
 
-updateCart();
-
-</script>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ZAVEN - Wear Different</title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<header>
-
-    <div class="brand">
-        <img
-            src="zaven-logo.png"
-            alt="ZAVEN Logo"
-            class="logo"
-        >
-    </div>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#shop">Shop</a>
-        <a href="#order">Order</a>
-
-        <button class="cart-button" onclick="openCart()">
-            🛒 Cart
-            <span id="cartCount">0</span>
-        </button>
-    </nav>
-
-</header>
-
-
-<main class="products" id="shop">
-
-
-    <!-- PRODUCT 1 -->
-
-    <section class="product" data-name="Premium T-Shirt" data-price="2499">
-
-        <div class="product-image">
-            <img
-                src="shirt-new.jpg"
-                alt="ZAVEN Premium T-Shirt"
-            >
-        </div>
-
-        <div class="product-info">
-
-            <h2>Premium T-Shirt</h2>
-
-            <p class="price">
-                Rs. 2,499
-            </p>
-
-            <p>
-                Premium quality T-shirt.
-                Comfortable, stylish and perfect
-                for everyday wear.
-            </p>
-
-            <div class="option-group">
-
-                <label>Size:</label>
-
-                <div class="options">
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-                </div>
-
-            </div>
-
-            <div class="option-group">
-
-                <label>Color:</label>
-
-                <div class="options">
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-                </div>
-
-            </div>
-
-            <div class="quantity">
-                <button onclick="changeProductQuantity(this,-1)">−</button>
-                <span>1</span>
-                <button onclick="changeProductQuantity(this,1)">+</button>
-            </div>
-
-            <button class="buy-button" onclick="addToCart(this)">
-                Add to Cart
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- PRODUCT 2 -->
-
-    <section class="product" data-name="Classic T-Shirt" data-price="1999">
-
-        <div class="product-image">
-            <img
-                src="shirt2.jpg"
-                alt="ZAVEN Classic T-Shirt"
-            >
-        </div>
-
-        <div class="product-info">
-
-            <h2>Classic T-Shirt</h2>
-
-            <p class="price">
-                Rs. 1,999
-            </p>
-
-            <p>
-                Clean, comfortable and stylish.
-                A classic everyday T-shirt
-                made for your look.
-            </p>
-
-            <div class="option-group">
-
-                <label>Size:</label>
-
-                <div class="options">
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-                </div>
-
-            </div>
-
-            <div class="option-group">
-
-                <label>Color:</label>
-
-                <div class="options">
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-                </div>
-
-            </div>
-
-            <div class="quantity">
-                <button onclick="changeProductQuantity(this,-1)">−</button>
-                <span>1</span>
-                <button onclick="changeProductQuantity(this,1)">+</button>
-            </div>
-
-            <button class="buy-button" onclick="addToCart(this)">
-                Add to Cart
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- PRODUCT 3 -->
-
-    <section class="product" data-name="ZAVEN T-Shirt" data-price="2199">
-
-        <div class="product-image">
-            <img
-                src="shirt3.jpg"
-                alt="ZAVEN T-Shirt"
-            >
-        </div>
-
-        <div class="product-info">
-
-            <h2>ZAVEN T-Shirt</h2>
-
-            <p class="price">
-                Rs. 2,199
-            </p>
-
-            <p>
-                Stylish and comfortable.
-                Perfect for everyday wear.
-            </p>
-
-            <div class="option-group">
-
-                <label>Size:</label>
-
-                <div class="options">
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-                </div>
-
-            </div>
-
-            <div class="option-group">
-
-                <label>Color:</label>
-
-                <div class="options">
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-                </div>
-
-            </div>
-
-            <div class="quantity">
-                <button onclick="changeProductQuantity(this,-1)">−</button>
-                <span>1</span>
-                <button onclick="changeProductQuantity(this,1)">+</button>
-            </div>
-
-            <button class="buy-button" onclick="addToCart(this)">
-                Add to Cart
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- PRODUCT 4 -->
-
-    <section class="product" data-name="ZAVEN Signature T-Shirt" data-price="2299">
-
-        <div class="product-image">
-            <img
-                src="shirt4.jpg"
-                alt="ZAVEN Signature T-Shirt"
-            >
-        </div>
-
-        <div class="product-info">
-
-            <h2>ZAVEN Signature T-Shirt</h2>
-
-            <p class="price">
-                Rs. 2,299
-            </p>
-
-            <p>
-                Premium ZAVEN design with a clean
-                and stylish look. Comfortable for
-                everyday wear.
-            </p>
-
-            <div class="option-group">
-
-                <label>Size:</label>
-
-                <div class="options">
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-                </div>
-
-            </div>
-
-            <div class="option-group">
-
-                <label>Color:</label>
-
-                <div class="options">
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-                </div>
-
-            </div>
-
-            <div class="quantity">
-                <button onclick="changeProductQuantity(this,-1)">−</button>
-                <span>1</span>
-                <button onclick="changeProductQuantity(this,1)">+</button>
-            </div>
-
-            <button class="buy-button" onclick="addToCart(this)">
-                Add to Cart
-            </button>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<!-- ================= CART ================= -->
-
-<div class="cart-overlay" id="cartOverlay">
-
-    <div class="cart-box">
-
-        <div class="cart-header">
-
-            <h2>🛒 Your Cart</h2>
-
-            <button
-                class="close-cart"
-                onclick="closeCart()"
-            >
-                ×
-            </button>
-
-        </div>
-
-
-        <div id="cartItems" class="cart-items">
-
-            <p class="empty-cart">
-                Your cart is empty.
-            </p>
-
-        </div>
-
-
-        <!-- TOTAL ONLY INSIDE CART -->
-
-        <div class="cart-summary">
-
-            <div>
-                <span>Products Total:</span>
-
-                <strong id="productsTotal">
-                    Rs. 0
-                </strong>
-            </div>
-
-            <div>
-                <span>Delivery Charges:</span>
-
-                <strong>
-                    Rs. 200
-                </strong>
-            </div>
-
-            <div class="grand-total">
-
-                <span>Grand Total:</span>
-
-                <strong id="cartTotal">
-                    Rs. 0
-                </strong>
-
-            </div>
-
-        </div>
-
-
-        <button
-            class="checkout-button"
-            onclick="checkout()"
-        >
-            Checkout
-        </button>
-
-    </div>
-
-</div>
-
-
-<!-- ================= ORDER ================= -->
-
-<section class="order-section" id="order">
-
-    <div class="order-box">
-
-        <h2>
-            Complete Your Order
-        </h2>
-
-        <p class="order-note">
-            Payment Method:
-            <strong>Cash on Delivery</strong>
-        </p>
-
-        <p class="order-note">
-            Delivery Charges:
-            <strong>Rs. 200</strong>
-        </p>
-
-
-        <div class="final-summary">
-
-            <p>
-                Products Total:
-
-                <strong id="orderProductsTotal">
-                    Rs. 0
-                </strong>
-            </p>
-
-            <p>
-                Delivery:
-
-                <strong>
-                    Rs. 200
-                </strong>
-            </p>
-
-            <p class="final-total">
-
-                Grand Total:
-
-                <strong id="orderGrandTotal">
-                    Rs. 0
-                </strong>
-
-            </p>
-
-        </div>
-
-
-        <form onsubmit="sendOrder(event)">
-
-            <label>
-                Full Name
-            </label>
-
-            <input
-                type="text"
-                id="customerName"
-                placeholder="Enter your name"
-                required
-            >
-
-
-            <label>
-                Phone Number
-            </label>
-
-            <input
-                type="tel"
-                id="customerPhone"
-                placeholder="03XXXXXXXXX"
-                required
-            >
-
-
-            <label>
-                City
-            </label>
-
-            <input
-                type="text"
-                id="customerCity"
-                placeholder="Enter your city"
-                required
-            >
-
-
-            <label>
-                Delivery Address
-            </label>
-
-            <textarea
-                id="customerAddress"
-                placeholder="Enter complete delivery address"
-                rows="4"
-                required
-            ></textarea>
-
-
-            <label>
-                Payment Method
-            </label>
-
-            <div class="cod-box">
-
-                <input
-                    type="radio"
-                    checked
-                    disabled
-                >
-
-                <span>
-                    💵 Cash on Delivery
-                </span>
-
-            </div>
-
-
-            <button
-                type="submit"
-                class="order-button"
-            >
-                Confirm Order on WhatsApp
-            </button>
-
-        </form>
-
-    </div>
-
-</section>
-
-
-<script>
-
-let cart = [];
-
-const DELIVERY_CHARGES = 200;
-
-
-/* PRODUCT QUANTITY */
-
-function changeProductQuantity(button, amount) {
-
-    const quantity =
-        button.parentElement.querySelector("span");
-
-    let value =
-        parseInt(quantity.innerText);
-
-    value += amount;
-
-    if (value < 1) {
-        value = 1;
-    }
-
-    quantity.innerText = value;
-}
-
-
-/* SIZE / COLOR */
-
-document.querySelectorAll(".option").forEach(function(option) {
-
-    option.addEventListener("click", function() {
-
-        const group = this.parentElement;
-
-        group.querySelectorAll(".option").forEach(function(item) {
-            item.classList.remove("selected");
-        });
-
-        this.classList.add("selected");
-
-    });
-
-});
-
-
-/* ADD TO CART */
-
-function addToCart(button) {
-
-    const product =
-        button.closest(".product");
-
-    const name =
-        product.dataset.name;
-
-    const price =
-        parseInt(product.dataset.price);
-
-    const image =
-        product.querySelector("img").src;
-
-    const quantity =
-        parseInt(
-            product.querySelector(
-                ".quantity span"
-            ).innerText
-        );
-
-
-    const selectedSize =
-        product.querySelector(
-            ".size-option.selected"
-        );
-
-    const size =
-        selectedSize
-            ? selectedSize.innerText
-            : "Not selected";
-
-
-    const selectedColor =
-        product.querySelector(
-            ".color-option.selected"
-        );
-
-    const color =
-        selectedColor
-            ? selectedColor.innerText
-            : "Not selected";
-
-
-    const existing =
-        cart.find(function(item) {
-
-            return (
-                item.name === name &&
-                item.size === size &&
-                item.color === color
-            );
-
-        });
-
-
-    if (existing) {
-
-        existing.quantity += quantity;
-
-    } else {
-
-        cart.push({
-            name: name,
-            price: price,
-            image: image,
-            size: size,
-            color: color,
-            quantity: quantity
-        });
-
-    }
-
-
-    product.querySelector(
-        ".quantity span"
-    ).innerText = "1";
-
-
-    updateCart();
-
-    openCart();
-
-}
-
-
-/* UPDATE CART */
-
-function updateCart() {
-
-    const cartItems =
-        document.getElementById("cartItems");
-
-    const cartCount =
-        document.getElementById("cartCount");
-
-    const productsTotalElement =
-        document.getElementById("productsTotal");
-
-    const cartTotalElement =
-        document.getElementById("cartTotal");
-
-
-    cartItems.innerHTML = "";
-
-
-    let productsTotal = 0;
-
-    let count = 0;
-
-
-    if (cart.length === 0) {
-
-        cartItems.innerHTML =
-            '<p class="empty-cart">Your cart is empty.</p>';
-
-    }
-
-
-    cart.forEach(function(item, index) {
-
-        const itemTotal =
-            item.price * item.quantity;
-
-        productsTotal += itemTotal;
-
-        count += item.quantity;
-
-
-        const div =
-            document.createElement("div");
-
-        div.className = "cart-item";
-
-
-        div.innerHTML = `
-
-            <img
-                src="${item.image}"
-                alt="${item.name}"
-            >
-
-            <div class="cart-item-info">
-
-                <h3>
-                    ${item.name}
-                </h3>
-
-                <p>
-                    Rs. ${item.price.toLocaleString()}
-                </p>
-
-                <p>
-                    Size: ${item.size}
-                </p>
-
-                <p>
-                    Color: ${item.color}
-                </p>
-
-                <div class="cart-quantity">
-
-                    <button
-                        onclick="changeCartQuantity(${index},-1)"
-                    >
-                        −
-                    </button>
-
-                    <span>
-                        ${item.quantity}
-                    </span>
-
-                    <button
-                        onclick="changeCartQuantity(${index},1)"
-                    >
-                        +
-                    </button>
-
-                </div>
-
-                <button
-                    class="remove-button"
-                    onclick="removeFromCart(${index})"
-                >
-                    Remove
-                </button>
-
-            </div>
-        `;
-
-
-        cartItems.appendChild(div);
-
-    });
-
-
-    const grandTotal =
-        productsTotal + DELIVERY_CHARGES;
-
-
-    cartCount.innerText =
-        count;
-
-
-    productsTotalElement.innerText =
-        "Rs. " +
-        productsTotal.toLocaleString();
-
-
-    cartTotalElement.innerText =
-        "Rs. " +
-        grandTotal.toLocaleString();
-
-
-    document.getElementById(
-        "orderProductsTotal"
-    ).innerText =
-        "Rs. " +
-        productsTotal.toLocaleString();
-
-
-    document.getElementById(
-        "orderGrandTotal"
-    ).innerText =
-        "Rs. " +
-        grandTotal.toLocaleString();
-
-}
-
-
-/* CART QUANTITY */
-
-function changeCartQuantity(index, amount) {
-
-    cart[index].quantity += amount;
-
-    if (cart[index].quantity <= 0) {
-        cart.splice(index, 1);
-    }
-
-    updateCart();
-
-}
-
-
-/* REMOVE */
-
-function removeFromCart(index) {
-
-    cart.splice(index, 1);
-
-    updateCart();
-
-}
-
-
-/* OPEN CART */
-
-function openCart() {
-
-    document
-        .getElementById("cartOverlay")
-        .classList.add("show");
-
-}
-
-
-/* CLOSE CART */
-
-function closeCart() {
-
-    document
-        .getElementById("cartOverlay")
-        .classList.remove("show");
-
-}
-
-
-/* CHECKOUT */
-
-function checkout() {
-
-    if (cart.length === 0) {
-
-        alert(
-            "Your cart is empty. Please add a product first."
-        );
-
-        return;
-
-    }
-
-
-    closeCart();
-
-
-    document
-        .getElementById("order")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
-
-}
-
-
-/* WHATSAPP */
-
-function sendOrder(event) {
-
-    event.preventDefault();
-
-
-    if (cart.length === 0) {
-
-        alert(
-            "Please add a product to cart first."
-        );
-
-        return;
-
-    }
-
-
-    const name =
-        document.getElementById(
-            "customerName"
-        ).value;
-
-    const phone =
-        document.getElementById(
-            "customerPhone"
-        ).value;
-
-    const city =
-        document.getElementById(
-            "customerCity"
-        ).value;
-
-    const address =
-        document.getElementById(
-            "customerAddress"
-        ).value;
-
-
-    let productsTotal = 0;
-
-
-    let message =
-        "Hello ZAVEN!%0A%0A" +
-        "NEW ORDER%0A" +
-        "====================%0A";
-
-
-    cart.forEach(function(item, index) {
-
-        const itemTotal =
-            item.price * item.quantity;
-
-        productsTotal += itemTotal;
-
-
-        message +=
-
-            "%0A" +
-
-            (index + 1) +
-            ". " +
-            item.name +
-
-            "%0A" +
-
-            "Price: Rs. " +
-            item.price.toLocaleString() +
-
-            "%0A" +
-
-            "Size: " +
-            item.size +
-
-            "%0A" +
-
-            "Color: " +
-            item.color +
-
-            "%0A" +
-
-            "Quantity: " +
-            item.quantity +
-
-            "%0A" +
-
-            "Item Total: Rs. " +
-            itemTotal.toLocaleString() +
-
-            "%0A";
-
-    });
-
-
-    const grandTotal =
-        productsTotal + DELIVERY_CHARGES;
-
-
-    message +=
-
-        "%0A====================%0A" +
-
-        "Products Total: Rs. " +
-        productsTotal.toLocaleString() +
-
-        "%0A" +
-
-        "Delivery Charges: Rs. 200" +
-
-        "%0A" +
-
-        "GRAND TOTAL: Rs. " +
-        grandTotal.toLocaleString() +
-
-        "%0A%0A" +
-
-        "Payment Method: Cash on Delivery" +
-
-        "%0A%0A" +
-
-        "CUSTOMER DETAILS" +
-
-        "%0A====================%0A" +
-
-        "Name: " +
-        name +
-
-        "%0A" +
-
-        "Phone: " +
-        phone +
-
-        "%0A" +
-
-        "City: " +
-        city +
-
-        "%0A" +
-
-        "Address: " +
-        address;
-
-
-    /* APNA WHATSAPP NUMBER */
-
-    const whatsappNumber =
-        "923001234567";
-
-
-    window.open(
-
-        "https://wa.me/" +
-        whatsappNumber +
-        "?text=" +
-        message,
-
-        "_blank"
-
-    );
-
-}
-
-
-updateCart();
-
-</script>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ZAVEN - Wear Different</title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<header>
-
-    <div class="brand">
-        <img
-            src="zaven-logo.png"
-            alt="ZAVEN Logo"
-            class="logo"
-        >
-    </div>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#shop">Shop</a>
-        <a href="#order">Order</a>
-
-        <button class="cart-button" onclick="openCart()">
-            🛒 Cart
-            <span id="cartCount">0</span>
-        </button>
-    </nav>
-
-</header>
-
-
-<main class="products" id="shop">
-
-
-    <!-- PRODUCT 1 -->
-
-    <section class="product" data-name="Premium T-Shirt" data-price="2499">
-
-        <div class="product-image">
-            <img
-                src="shirt-new.jpg"
-                alt="ZAVEN Premium T-Shirt"
-            >
-        </div>
-
-        <div class="product-info">
-
-            <h2>Premium T-Shirt</h2>
-
-            <p class="price">
-                Rs. 2,499
-            </p>
-
-            <p>
-                Premium quality T-shirt.
-                Comfortable, stylish and perfect
-                for everyday wear.
-            </p>
-
-            <div class="option-group">
-
-                <label>Size:</label>
-
-                <div class="options">
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-                </div>
-
-            </div>
-
-            <div class="option-group">
-
-                <label>Color:</label>
-
-                <div class="options">
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-                </div>
-
-            </div>
-
-            <div class="quantity">
-                <button onclick="changeProductQuantity(this,-1)">−</button>
-                <span>1</span>
-                <button onclick="changeProductQuantity(this,1)">+</button>
-            </div>
-
-            <button class="buy-button" onclick="addToCart(this)">
-                Add to Cart
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- PRODUCT 2 -->
-
-    <section class="product" data-name="Classic T-Shirt" data-price="1999">
-
-        <div class="product-image">
-            <img
-                src="shirt2.jpg"
-                alt="ZAVEN Classic T-Shirt"
-            >
-        </div>
-
-        <div class="product-info">
-
-            <h2>Classic T-Shirt</h2>
-
-            <p class="price">
-                Rs. 1,999
-            </p>
-
-            <p>
-                Clean, comfortable and stylish.
-                A classic everyday T-shirt
-                made for your look.
-            </p>
-
-            <div class="option-group">
-
-                <label>Size:</label>
-
-                <div class="options">
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-                </div>
-
-            </div>
-
-            <div class="option-group">
-
-                <label>Color:</label>
-
-                <div class="options">
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-                </div>
-
-            </div>
-
-            <div class="quantity">
-                <button onclick="changeProductQuantity(this,-1)">−</button>
-                <span>1</span>
-                <button onclick="changeProductQuantity(this,1)">+</button>
-            </div>
-
-            <button class="buy-button" onclick="addToCart(this)">
-                Add to Cart
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- PRODUCT 3 -->
-
-    <section class="product" data-name="ZAVEN T-Shirt" data-price="2199">
-
-        <div class="product-image">
-            <img
-                src="shirt3.jpg"
-                alt="ZAVEN T-Shirt"
-            >
-        </div>
-
-        <div class="product-info">
-
-            <h2>ZAVEN T-Shirt</h2>
-
-            <p class="price">
-                Rs. 2,199
-            </p>
-
-            <p>
-                Stylish and comfortable.
-                Perfect for everyday wear.
-            </p>
-
-            <div class="option-group">
-
-                <label>Size:</label>
-
-                <div class="options">
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-                </div>
-
-            </div>
-
-            <div class="option-group">
-
-                <label>Color:</label>
-
-                <div class="options">
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-                </div>
-
-            </div>
-
-            <div class="quantity">
-                <button onclick="changeProductQuantity(this,-1)">−</button>
-                <span>1</span>
-                <button onclick="changeProductQuantity(this,1)">+</button>
-            </div>
-
-            <button class="buy-button" onclick="addToCart(this)">
-                Add to Cart
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- PRODUCT 4 -->
-
-    <section class="product" data-name="ZAVEN Signature T-Shirt" data-price="2299">
-
-        <div class="product-image">
-            <img
-                src="shirt4.jpg"
-                alt="ZAVEN Signature T-Shirt"
-            >
-        </div>
-
-        <div class="product-info">
-
-            <h2>ZAVEN Signature T-Shirt</h2>
-
-            <p class="price">
-                Rs. 2,299
-            </p>
-
-            <p>
-                Premium ZAVEN design with a clean
-                and stylish look. Comfortable for
-                everyday wear.
-            </p>
-
-            <div class="option-group">
-
-                <label>Size:</label>
-
-                <div class="options">
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-                </div>
-
-            </div>
-
-            <div class="option-group">
-
-                <label>Color:</label>
-
-                <div class="options">
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-                </div>
-
-            </div>
-
-            <div class="quantity">
-                <button onclick="changeProductQuantity(this,-1)">−</button>
-                <span>1</span>
-                <button onclick="changeProductQuantity(this,1)">+</button>
-            </div>
-
-            <button class="buy-button" onclick="addToCart(this)">
-                Add to Cart
-            </button>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<!-- ================= CART ================= -->
-
-<div class="cart-overlay" id="cartOverlay">
-
-    <div class="cart-box">
-
-        <div class="cart-header">
-
-            <h2>🛒 Your Cart</h2>
-
-            <button
-                class="close-cart"
-                onclick="closeCart()"
-            >
-                ×
-            </button>
-
-        </div>
-
-
-        <div id="cartItems" class="cart-items">
-
-            <p class="empty-cart">
-                Your cart is empty.
-            </p>
-
-        </div>
-
-
-        <!-- TOTAL ONLY INSIDE CART -->
-
-        <div class="cart-summary">
-
-            <div>
-                <span>Products Total:</span>
-
-                <strong id="productsTotal">
-                    Rs. 0
-                </strong>
-            </div>
-
-            <div>
-                <span>Delivery Charges:</span>
-
-                <strong>
-                    Rs. 200
-                </strong>
-            </div>
-
-            <div class="grand-total">
-
-                <span>Grand Total:</span>
-
-                <strong id="cartTotal">
-                    Rs. 0
-                </strong>
-
-            </div>
-
-        </div>
-
-
-        <button
-            class="checkout-button"
-            onclick="checkout()"
-        >
-            Checkout
-        </button>
-
-    </div>
-
-</div>
-
-
-<!-- ================= ORDER ================= -->
-
-<section class="order-section" id="order">
-
-    <div class="order-box">
-
-        <h2>
-            Complete Your Order
-        </h2>
-
-        <p class="order-note">
-            Payment Method:
-            <strong>Cash on Delivery</strong>
-        </p>
-
-        <p class="order-note">
-            Delivery Charges:
-            <strong>Rs. 200</strong>
-        </p>
-
-
-        <div class="final-summary">
-
-            <p>
-                Products Total:
-
-                <strong id="orderProductsTotal">
-                    Rs. 0
-                </strong>
-            </p>
-
-            <p>
-                Delivery:
-
-                <strong>
-                    Rs. 200
-                </strong>
-            </p>
-
-            <p class="final-total">
-
-                Grand Total:
-
-                <strong id="orderGrandTotal">
-                    Rs. 0
-                </strong>
-
-            </p>
-
-        </div>
-
-
-        <form onsubmit="sendOrder(event)">
-
-            <label>
-                Full Name
-            </label>
-
-            <input
-                type="text"
-                id="customerName"
-                placeholder="Enter your name"
-                required
-            >
-
-
-            <label>
-                Phone Number
-            </label>
-
-            <input
-                type="tel"
-                id="customerPhone"
-                placeholder="03XXXXXXXXX"
-                required
-            >
-
-
-            <label>
-                City
-            </label>
-
-            <input
-                type="text"
-                id="customerCity"
-                placeholder="Enter your city"
-                required
-            >
-
-
-            <label>
-                Delivery Address
-            </label>
-
-            <textarea
-                id="customerAddress"
-                placeholder="Enter complete delivery address"
-                rows="4"
-                required
-            ></textarea>
-
-
-            <label>
-                Payment Method
-            </label>
-
-            <div class="cod-box">
-
-                <input
-                    type="radio"
-                    checked
-                    disabled
-                >
-
-                <span>
-                    💵 Cash on Delivery
-                </span>
-
-            </div>
-
-
-            <button
-                type="submit"
-                class="order-button"
-            >
-                Confirm Order on WhatsApp
-            </button>
-
-        </form>
-
-    </div>
-
-</section>
-
-
-<script>
-
-let cart = [];
-
-const DELIVERY_CHARGES = 200;
-
-
-/* PRODUCT QUANTITY */
-
-function changeProductQuantity(button, amount) {
-
-    const quantity =
-        button.parentElement.querySelector("span");
-
-    let value =
-        parseInt(quantity.innerText);
-
-    value += amount;
-
-    if (value < 1) {
-        value = 1;
-    }
-
-    quantity.innerText = value;
-}
-
-
-/* SIZE / COLOR */
-
-document.querySelectorAll(".option").forEach(function(option) {
-
-    option.addEventListener("click", function() {
-
-        const group = this.parentElement;
-
-        group.querySelectorAll(".option").forEach(function(item) {
-            item.classList.remove("selected");
-        });
-
-        this.classList.add("selected");
-
-    });
-
-});
-
-
-/* ADD TO CART */
-
-function addToCart(button) {
-
-    const product =
-        button.closest(".product");
-
-    const name =
-        product.dataset.name;
-
-    const price =
-        parseInt(product.dataset.price);
-
-    const image =
-        product.querySelector("img").src;
-
-    const quantity =
-        parseInt(
-            product.querySelector(
-                ".quantity span"
-            ).innerText
-        );
-
-
-    const selectedSize =
-        product.querySelector(
-            ".size-option.selected"
-        );
-
-    const size =
-        selectedSize
-            ? selectedSize.innerText
-            : "Not selected";
-
-
-    const selectedColor =
-        product.querySelector(
-            ".color-option.selected"
-        );
-
-    const color =
-        selectedColor
-            ? selectedColor.innerText
-            : "Not selected";
-
-
-    const existing =
-        cart.find(function(item) {
-
-            return (
-                item.name === name &&
-                item.size === size &&
-                item.color === color
-            );
-
-        });
-
-
-    if (existing) {
-
-        existing.quantity += quantity;
-
-    } else {
-
-        cart.push({
-            name: name,
-            price: price,
-            image: image,
-            size: size,
-            color: color,
-            quantity: quantity
-        });
-
-    }
-
-
-    product.querySelector(
-        ".quantity span"
-    ).innerText = "1";
-
-
-    updateCart();
-
-    openCart();
-
-}
-
-
-/* UPDATE CART */
-
-function updateCart() {
-
-    const cartItems =
-        document.getElementById("cartItems");
-
-    const cartCount =
-        document.getElementById("cartCount");
-
-    const productsTotalElement =
-        document.getElementById("productsTotal");
-
-    const cartTotalElement =
-        document.getElementById("cartTotal");
-
-
-    cartItems.innerHTML = "";
-
-
-    let productsTotal = 0;
-
-    let count = 0;
-
-
-    if (cart.length === 0) {
-
-        cartItems.innerHTML =
-            '<p class="empty-cart">Your cart is empty.</p>';
-
-    }
-
-
-    cart.forEach(function(item, index) {
-
-        const itemTotal =
-            item.price * item.quantity;
-
-        productsTotal += itemTotal;
-
-        count += item.quantity;
-
-
-        const div =
-            document.createElement("div");
-
-        div.className = "cart-item";
-
-
-        div.innerHTML = `
-
-            <img
-                src="${item.image}"
-                alt="${item.name}"
-            >
-
-            <div class="cart-item-info">
-
-                <h3>
-                    ${item.name}
-                </h3>
-
-                <p>
-                    Rs. ${item.price.toLocaleString()}
-                </p>
-
-                <p>
-                    Size: ${item.size}
-                </p>
-
-                <p>
-                    Color: ${item.color}
-                </p>
-
-                <div class="cart-quantity">
-
-                    <button
-                        onclick="changeCartQuantity(${index},-1)"
-                    >
-                        −
-                    </button>
-
-                    <span>
-                        ${item.quantity}
-                    </span>
-
-                    <button
-                        onclick="changeCartQuantity(${index},1)"
-                    >
-                        +
-                    </button>
-
-                </div>
-
-                <button
-                    class="remove-button"
-                    onclick="removeFromCart(${index})"
-                >
-                    Remove
-                </button>
-
-            </div>
-        `;
-
-
-        cartItems.appendChild(div);
-
-    });
-
-
-    const grandTotal =
-        productsTotal + DELIVERY_CHARGES;
-
-
-    cartCount.innerText =
-        count;
-
-
-    productsTotalElement.innerText =
-        "Rs. " +
-        productsTotal.toLocaleString();
-
-
-    cartTotalElement.innerText =
-        "Rs. " +
-        grandTotal.toLocaleString();
-
-
-    document.getElementById(
-        "orderProductsTotal"
-    ).innerText =
-        "Rs. " +
-        productsTotal.toLocaleString();
-
-
-    document.getElementById(
-        "orderGrandTotal"
-    ).innerText =
-        "Rs. " +
-        grandTotal.toLocaleString();
-
-}
-
-
-/* CART QUANTITY */
-
-function changeCartQuantity(index, amount) {
-
-    cart[index].quantity += amount;
-
-    if (cart[index].quantity <= 0) {
-        cart.splice(index, 1);
-    }
-
-    updateCart();
-
-}
-
-
-/* REMOVE */
-
-function removeFromCart(index) {
-
-    cart.splice(index, 1);
-
-    updateCart();
-
-}
-
-
-/* OPEN CART */
-
-function openCart() {
-
-    document
-        .getElementById("cartOverlay")
-        .classList.add("show");
-
-}
-
-
-/* CLOSE CART */
-
-function closeCart() {
-
-    document
-        .getElementById("cartOverlay")
-        .classList.remove("show");
-
-}
-
-
-/* CHECKOUT */
-
-function checkout() {
-
-    if (cart.length === 0) {
-
-        alert(
-            "Your cart is empty. Please add a product first."
-        );
-
-        return;
-
-    }
-
-
-    closeCart();
-
-
-    document
-        .getElementById("order")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
-
-}
-
-
-/* WHATSAPP */
-
-function sendOrder(event) {
-
-    event.preventDefault();
-
-
-    if (cart.length === 0) {
-
-        alert(
-            "Please add a product to cart first."
-        );
-
-        return;
-
-    }
-
-
-    const name =
-        document.getElementById(
-            "customerName"
-        ).value;
-
-    const phone =
-        document.getElementById(
-            "customerPhone"
-        ).value;
-
-    const city =
-        document.getElementById(
-            "customerCity"
-        ).value;
-
-    const address =
-        document.getElementById(
-            "customerAddress"
-        ).value;
-
-
-    let productsTotal = 0;
-
-
-    let message =
-        "Hello ZAVEN!%0A%0A" +
-        "NEW ORDER%0A" +
-        "====================%0A";
-
-
-    cart.forEach(function(item, index) {
-
-        const itemTotal =
-            item.price * item.quantity;
-
-        productsTotal += itemTotal;
-
-
-        message +=
-
-            "%0A" +
-
-            (index + 1) +
-            ". " +
-            item.name +
-
-            "%0A" +
-
-            "Price: Rs. " +
-            item.price.toLocaleString() +
-
-            "%0A" +
-
-            "Size: " +
-            item.size +
-
-            "%0A" +
-
-            "Color: " +
-            item.color +
-
-            "%0A" +
-
-            "Quantity: " +
-            item.quantity +
-
-            "%0A" +
-
-            "Item Total: Rs. " +
-            itemTotal.toLocaleString() +
-
-            "%0A";
-
-    });
-
-
-    const grandTotal =
-        productsTotal + DELIVERY_CHARGES;
-
-
-    message +=
-
-        "%0A====================%0A" +
-
-        "Products Total: Rs. " +
-        productsTotal.toLocaleString() +
-
-        "%0A" +
-
-        "Delivery Charges: Rs. 200" +
-
-        "%0A" +
-
-        "GRAND TOTAL: Rs. " +
-        grandTotal.toLocaleString() +
-
-        "%0A%0A" +
-
-        "Payment Method: Cash on Delivery" +
-
-        "%0A%0A" +
-
-        "CUSTOMER DETAILS" +
-
-        "%0A====================%0A" +
-
-        "Name: " +
-        name +
-
-        "%0A" +
-
-        "Phone: " +
-        phone +
-
-        "%0A" +
-
-        "City: " +
-        city +
-
-        "%0A" +
-
-        "Address: " +
-        address;
-
-
-    /* APNA WHATSAPP NUMBER */
-
-    const whatsappNumber =
-        "923001234567";
-
-
-    window.open(
-
-        "https://wa.me/" +
-        whatsappNumber +
-        "?text=" +
-        message,
-
-        "_blank"
-
-    );
-
-}
-
+/* ================= INITIAL ================= */
 
 updateCart();
 
