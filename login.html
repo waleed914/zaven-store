@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>ZAVEN - Login / Signup</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+        }
+
+        .login-box {
+
+            width: 100%;
+            max-width: 430px;
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .logo {
+
+            text-align: center;
+
+            margin-bottom: 25px;
+        }
+
+        .logo h1 {
+
+            font-size: 42px;
+
+            letter-spacing: 6px;
+        }
+
+        .logo p {
+
+            margin-top: 5px;
+
+            color: #777;
+
+            letter-spacing: 3px;
+        }
+
+        .tabs {
+
+            display: flex;
+
+            margin-bottom: 25px;
+
+            border-bottom: 2px solid #ddd;
+        }
+
+        .tab {
+
+            width: 50%;
+
+            padding: 12px;
+
+            border: none;
+
+            background: transparent;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .tab.active {
+
+            border-bottom: 3px solid black;
+
+            color: black;
+        }
+
+        .form {
+
+            display: none;
+        }
+
+        .form.active {
+
+            display: block;
+        }
+
+        label {
+
+            display: block;
+
+            margin-top: 15px;
+
+            margin-bottom: 7px;
+
+            font-weight: bold;
+        }
+
+        input {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 8px;
+
+            font-size: 16px;
+
+            outline: none;
+        }
+
+        input:focus {
+
+            border-color: black;
+        }
+
+        .submit-button {
+
+            width: 100%;
+
+            margin-top: 25px;
+
+            padding: 15px;
+
+            background: black;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 8px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+
+            background: #333;
+        }
+
+        .back {
+
+            display: block;
+
+            text-align: center;
+
+            margin-top: 20px;
+
+            color: #111;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+        .back:hover {
+
+            text-decoration: underline;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="login-box">
+
+
+    <div class="logo">
+
+        <h1>ZAVEN</h1>
+
+        <p>WEAR DIFFERENT</p>
+
+    </div>
+
+
+    <div class="tabs">
+
+        <button
+            class="tab active"
+            onclick="showForm('login')">
+
+            LOGIN
+
+        </button>
+
+        <button
+            class="tab"
+            onclick="showForm('signup')">
+
+            SIGN UP
+
+        </button>
+
+    </div>
+
+
+    <!-- LOGIN -->
+
+    <form
+        id="login"
+        class="form active"
+        onsubmit="loginUser(event)">
+
+        <label>Email</label>
+
+        <input
+            type="email"
+            id="loginEmail"
+            placeholder="Enter your email"
+            required>
+
+
+        <label>Password</label>
+
+        <input
+            type="password"
+            id="loginPassword"
+            placeholder="Enter your password"
+            required>
+
+
+        <button
+            type="submit"
+            class="submit-button">
+
+            LOGIN
+
+        </button>
+
+    </form>
+
+
+    <!-- SIGN UP -->
+
+    <form
+        id="signup"
+        class="form"
+        onsubmit="signupUser(event)">
+
+        <label>Full Name</label>
+
+        <input
+            type="text"
+            id="signupName"
+            placeholder="Enter your name"
+            required>
+
+
+        <label>Email</label>
+
+        <input
+            type="email"
+            id="signupEmail"
+            placeholder="Enter your email"
+            required>
+
+
+        <label>Password</label>
+
+        <input
+            type="password"
+            id="signupPassword"
+            placeholder="Create a password"
+            required>
+
+
+        <label>Confirm Password</label>
+
+        <input
+            type="password"
+            id="signupConfirm"
+            placeholder="Confirm your password"
+            required>
+
+
+        <button
+            type="submit"
+            class="submit-button">
+
+            CREATE ACCOUNT
+
+        </button>
+
+    </form>
+
+
+    <a
+        href="index.html"
+        class="back">
+
+        ← Back to ZAVEN Store
+
+    </a>
+
+
+</div>
+
+
+<script>
+
+
+function showForm(formName) {
+
+
+    document
+        .querySelectorAll(".form")
+        .forEach(form => {
+
+            form.classList.remove("active");
+
+        });
+
+
+    document
+        .querySelectorAll(".tab")
+        .forEach(tab => {
+
+            tab.classList.remove("active");
+
+        });
+
+
+    document
+        .getElementById(formName)
+        .classList.add("active");
+
+
+    if (formName === "login") {
+
+        document
+            .querySelectorAll(".tab")[0]
+            .classList.add("active");
+
+    } else {
+
+        document
+            .querySelectorAll(".tab")[1]
+            .classList.add("active");
+
+    }
+
+}
+
+
+function signupUser(event) {
+
+    event.preventDefault();
+
+
+    const name =
+        document.getElementById(
+            "signupName"
+        ).value;
+
+    const email =
+        document.getElementById(
+            "signupEmail"
+        ).value;
+
+    const password =
+        document.getElementById(
+            "signupPassword"
+        ).value;
+
+    const confirm =
+        document.getElementById(
+            "signupConfirm"
+        ).value;
+
+
+    if (password !== confirm) {
+
+        alert(
+            "Passwords do not match."
+        );
+
+        return;
+
+    }
+
+
+    alert(
+        "Account created successfully!"
+    );
+
+
+    showForm("login");
+
+
+    document.getElementById(
+        "loginEmail"
+    ).value = email;
+
+}
+
+
+function loginUser(event) {
+
+    event.preventDefault();
+
+
+    const email =
+        document.getElementById(
+            "loginEmail"
+        ).value;
+
+    alert(
+        "Welcome to ZAVEN, " +
+        email
+    );
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

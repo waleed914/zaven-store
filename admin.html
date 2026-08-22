@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>ZAVEN - Admin Panel</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #111;
+        }
+
+        header {
+            background: #000;
+            color: white;
+
+            padding: 20px 40px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            letter-spacing: 4px;
+        }
+
+        .back-button {
+            background: white;
+            color: black;
+
+            border: none;
+
+            padding: 10px 18px;
+
+            border-radius: 7px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1100px;
+
+            margin: 40px auto;
+
+            padding: 0 20px;
+        }
+
+        .card {
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            margin-bottom: 25px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .stat {
+            background: #000;
+            color: white;
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            text-align: center;
+        }
+
+        .stat strong {
+            display: block;
+
+            font-size: 32px;
+
+            margin-top: 10px;
+        }
+
+        .product-form {
+            display: grid;
+
+            gap: 12px;
+        }
+
+        .product-form input,
+        .product-form textarea {
+            width: 100%;
+
+            padding: 13px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 7px;
+
+            font-size: 15px;
+        }
+
+        .product-form textarea {
+            min-height: 100px;
+        }
+
+        .add-button {
+            background: black;
+            color: white;
+
+            border: none;
+
+            padding: 14px;
+
+            border-radius: 7px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .products-list {
+            display: grid;
+
+            gap: 15px;
+        }
+
+        .product-item {
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            padding: 15px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 10px;
+        }
+
+        .product-item img {
+            width: 80px;
+            height: 80px;
+
+            object-fit: cover;
+
+            border-radius: 8px;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .delete-button {
+            background: #d00;
+            color: white;
+
+            border: none;
+
+            padding: 9px 14px;
+
+            border-radius: 6px;
+
+            cursor: pointer;
+        }
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 15px;
+
+                flex-direction: column;
+
+                gap: 15px;
+
+                text-align: center;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .product-item {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<header>
+
+    <h1>ZAVEN ADMIN</h1>
+
+    <button
+        class="back-button"
+        onclick="location.href='index.html'">
+
+        ← Store
+
+    </button>
+
+</header>
+
+
+<div class="container">
+
+
+    <!-- DASHBOARD -->
+
+    <div class="card">
+
+        <h2>Dashboard</h2>
+
+        <div class="stats">
+
+            <div class="stat">
+
+                Products
+
+                <strong id="productCount">
+                    0
+                </strong>
+
+            </div>
+
+            <div class="stat">
+
+                Orders
+
+                <strong id="orderCount">
+                    0
+                </strong>
+
+            </div>
+
+            <div class="stat">
+
+                Customers
+
+                <strong id="customerCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ADD PRODUCT -->
+
+    <div class="card">
+
+        <h2>Add Product</h2>
+
+        <form
+            class="product-form"
+            onsubmit="addProduct(event)">
+
+            <input
+                type="text"
+                id="productName"
+                placeholder="Product name"
+                required>
+
+            <input
+                type="number"
+                id="productPrice"
+                placeholder="Price"
+                required>
+
+            <input
+                type="text"
+                id="productImage"
+                placeholder="Image filename e.g. shirt5.jpg"
+                required>
+
+            <textarea
+                id="productDescription"
+                placeholder="Product description"
+                required></textarea>
+
+            <button
+                type="submit"
+                class="add-button">
+
+                + ADD PRODUCT
+
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- PRODUCTS -->
+
+    <div class="card">
+
+        <h2>Products</h2>
+
+        <div
+            class="products-list"
+            id="productsList">
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<script>
+
+
+let products =
+    JSON.parse(
+        localStorage.getItem(
+            "zavenProducts"
+        )
+    ) || [];
+
+
+function updateDashboard() {
+
+    document.getElementById(
+        "productCount"
+    ).innerText =
+        products.length;
+
+
+    document.getElementById(
+        "orderCount"
+    ).innerText =
+        JSON.parse(
+            localStorage.getItem(
+                "zavenOrders"
+            )
+        )?.length || 0;
+
+
+    document.getElementById(
+        "customerCount"
+    ).innerText =
+        JSON.parse(
+            localStorage.getItem(
+                "zavenCustomers"
+            )
+        )?.length || 0;
+
+}
+
+
+function displayProducts() {
+
+    const container =
+        document.getElementById(
+            "productsList"
+        );
+
+
+    container.innerHTML = "";
+
+
+    if (products.length === 0) {
+
+        container.innerHTML =
+            "<p>No products added yet.</p>";
+
+        return;
+
+    }
+
+
+    products.forEach(
+        (product, index) => {
+
+            container.innerHTML += `
+
+                <div class="product-item">
+
+                    <img
+                        src="${product.image}"
+                        alt="${product.name}">
+
+                    <div class="product-info">
+
+                        <h3>
+                            ${product.name}
+                        </h3>
+
+                        <p>
+                            Rs.
+                            ${Number(product.price).toLocaleString()}
+                        </p>
+
+                        <p>
+                            ${product.description}
+                        </p>
+
+                    </div>
+
+                    <button
+                        class="delete-button"
+                        onclick="deleteProduct(${index})">
+
+                        Delete
+
+                    </button>
+
+                </div>
+
+            `;
+
+        }
+    );
+
+}
+
+
+function addProduct(event) {
+
+    event.preventDefault();
+
+
+    const name =
+        document.getElementById(
+            "productName"
+        ).value;
+
+
+    const price =
+        document.getElementById(
+            "productPrice"
+        ).value;
+
+
+    const image =
+        document.getElementById(
+            "productImage"
+        ).value;
+
+
+    const description =
+        document.getElementById(
+            "productDescription"
+        ).value;
+
+
+    products.push({
+
+        name: name,
+
+        price: price,
+
+        image: image,
+
+        description: description
+
+    });
+
+
+    localStorage.setItem(
+        "zavenProducts",
+        JSON.stringify(products)
+    );
+
+
+    event.target.reset();
+
+
+    displayProducts();
+
+    updateDashboard();
+
+
+    alert(
+        "Product added successfully!"
+    );
+
+}
+
+
+function deleteProduct(index) {
+
+    const confirmDelete =
+        confirm(
+            "Delete this product?"
+        );
+
+
+    if (!confirmDelete) {
+
+        return;
+
+    }
+
+
+    products.splice(index, 1);
+
+
+    localStorage.setItem(
+        "zavenProducts",
+        JSON.stringify(products)
+    );
+
+
+    displayProducts();
+
+    updateDashboard();
+
+}
+
+
+displayProducts();
+
+updateDashboard();
+
+
+</script>
+
+
+</body>
+
+</html>
