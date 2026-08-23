@@ -8,137 +8,89 @@
     <title>ZAVEN - Wear Different</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* ================= WELCOME ANIMATION ================= */
-
-        #welcomeScreen {
-            position: fixed;
-            inset: 0;
-            background: #000;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            z-index: 99999;
-            animation: welcomeOut 1s ease 2.5s forwards;
-        }
-
-        #welcomeScreen h1 {
-            font-size: 60px;
-            letter-spacing: 8px;
-            margin: 0;
-            animation: welcomeText 1.5s ease;
-        }
-
-        #welcomeScreen p {
-            font-size: 18px;
-            letter-spacing: 5px;
-            margin-top: 12px;
-            opacity: 0;
-            animation: subtitleIn 1s ease 0.7s forwards;
-        }
-
-        @keyframes welcomeText {
-            from {
-                opacity: 0;
-                transform: scale(0.7);
-                letter-spacing: 20px;
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1);
-                letter-spacing: 8px;
-            }
-        }
-
-        @keyframes subtitleIn {
-            from {
-                opacity: 0;
-                transform: translateY(15px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes welcomeOut {
-            to {
-                opacity: 0;
-                visibility: hidden;
-                pointer-events: none;
-            }
-        }
-
-        @media (max-width: 600px) {
-
-            #welcomeScreen h1 {
-                font-size: 42px;
-                letter-spacing: 5px;
-            }
-
-            #welcomeScreen p {
-                font-size: 14px;
-                letter-spacing: 3px;
-            }
-        }
-    </style>
-
 </head>
 
 <body>
 
+<!-- ================= WELCOME ================= -->
 
-<!-- ================= WELCOME SCREEN ================= -->
+<div class="welcome-screen" id="welcomeScreen">
 
-<div id="welcomeScreen">
+    <div class="welcome-content">
 
-    <h1>WELCOME</h1>
+        <img
+            src="shirt5.jpg"
+            alt="ZAVEN"
+            class="welcome-shirt"
+        >
 
-    <p>TO ZAVEN</p>
+        <h1>WELCOME TO ZAVEN</h1>
+
+        <p>WEAR DIFFERENT</p>
+
+    </div>
 
 </div>
 
 
+<!-- ================= HEADER ================= -->
+
 <header>
 
     <div class="brand">
-        <img src="zaven-logo.png" alt="ZAVEN Logo" class="logo">
+
+        <img
+            src="zaven-logo.png"
+            alt="ZAVEN Logo"
+            class="logo">
+
     </div>
 
+
     <nav>
+
         <a href="#">Home</a>
         <a href="#shop">Shop</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
+
     </nav>
 
-    <button class="cart-button" onclick="openCart()">
+
+    <button
+        class="cart-button"
+        onclick="openCart()">
+
         🛒 CART
+
         <span id="cartCount">0</span>
+
     </button>
 
 </header>
 
 
+<!-- ================= PRODUCTS ================= -->
+
 <main class="products" id="shop">
 
 
-<!-- ================= PRODUCT 1 ================= -->
+<!-- PRODUCT 1 -->
 
-<section class="product" data-name="Premium T-Shirt" data-price="2499">
+<section
+    class="product"
+    data-name="Premium T-Shirt"
+    data-price="2499">
 
     <div class="product-image">
 
         <img
             src="shirt-new.jpg"
-            alt="ZAVEN Premium T-Shirt">
+            alt="ZAVEN Premium T-Shirt"
+            onclick="openImageZoom(this)">
 
     </div>
+
 
     <div class="product-info">
 
@@ -152,6 +104,7 @@
             for everyday wear.
         </p>
 
+
         <div class="choice">
 
             <label>Size</label>
@@ -167,6 +120,7 @@
 
         </div>
 
+
         <div class="choice">
 
             <label>Color</label>
@@ -181,22 +135,24 @@
 
         </div>
 
+
         <div class="product-quantity">
 
-            <button onclick="changeProductQty(this,-1)">
-                −
-            </button>
+            <button onclick="changeProductQty(this,-1)">−</button>
 
             <span>1</span>
 
-            <button onclick="changeProductQty(this,1)">
-                +
-            </button>
+            <button onclick="changeProductQty(this,1)">+</button>
 
         </div>
 
-        <button class="buy-button" onclick="addProduct(this)">
+
+        <button
+            class="buy-button"
+            onclick="addProduct(this)">
+
             🛒 Add to Cart
+
         </button>
 
     </div>
@@ -204,29 +160,35 @@
 </section>
 
 
-<!-- ================= PRODUCT 2 ================= -->
+<!-- PRODUCT 2 -->
 
-<section class="product" data-name="ZAVEN New T-Shirt" data-price="1999">
+<section
+    class="product"
+    data-name="Classic T-Shirt"
+    data-price="1999">
 
     <div class="product-image">
 
         <img
-            src="shirt5.jpg"
-            alt="ZAVEN New T-Shirt">
+            src="shirt2.jpg"
+            alt="ZAVEN Classic T-Shirt"
+            onclick="openImageZoom(this)">
 
     </div>
 
+
     <div class="product-info">
 
-        <h2>ZAVEN New T-Shirt</h2>
+        <h2>Classic T-Shirt</h2>
 
         <p class="price">Rs. 1,999</p>
 
         <p>
             Clean, comfortable and stylish.
-            A fresh ZAVEN design made for
-            everyday wear.
+            A classic everyday T-shirt
+            made for your look.
         </p>
+
 
         <div class="choice">
 
@@ -243,6 +205,7 @@
 
         </div>
 
+
         <div class="choice">
 
             <label>Color</label>
@@ -257,22 +220,24 @@
 
         </div>
 
+
         <div class="product-quantity">
 
-            <button onclick="changeProductQty(this,-1)">
-                −
-            </button>
+            <button onclick="changeProductQty(this,-1)">−</button>
 
             <span>1</span>
 
-            <button onclick="changeProductQty(this,1)">
-                +
-            </button>
+            <button onclick="changeProductQty(this,1)">+</button>
 
         </div>
 
-        <button class="buy-button" onclick="addProduct(this)">
+
+        <button
+            class="buy-button"
+            onclick="addProduct(this)">
+
             🛒 Add to Cart
+
         </button>
 
     </div>
@@ -280,17 +245,22 @@
 </section>
 
 
-<!-- ================= PRODUCT 3 ================= -->
+<!-- PRODUCT 3 -->
 
-<section class="product" data-name="ZAVEN T-Shirt" data-price="2199">
+<section
+    class="product"
+    data-name="ZAVEN T-Shirt"
+    data-price="2199">
 
     <div class="product-image">
 
         <img
             src="shirt3.jpg"
-            alt="ZAVEN T-Shirt">
+            alt="ZAVEN T-Shirt"
+            onclick="openImageZoom(this)">
 
     </div>
+
 
     <div class="product-info">
 
@@ -303,6 +273,7 @@
             Perfect for everyday wear.
         </p>
 
+
         <div class="choice">
 
             <label>Size</label>
@@ -318,6 +289,7 @@
 
         </div>
 
+
         <div class="choice">
 
             <label>Color</label>
@@ -332,22 +304,24 @@
 
         </div>
 
+
         <div class="product-quantity">
 
-            <button onclick="changeProductQty(this,-1)">
-                −
-            </button>
+            <button onclick="changeProductQty(this,-1)">−</button>
 
             <span>1</span>
 
-            <button onclick="changeProductQty(this,1)">
-                +
-            </button>
+            <button onclick="changeProductQty(this,1)">+</button>
 
         </div>
 
-        <button class="buy-button" onclick="addProduct(this)">
+
+        <button
+            class="buy-button"
+            onclick="addProduct(this)">
+
             🛒 Add to Cart
+
         </button>
 
     </div>
@@ -355,17 +329,22 @@
 </section>
 
 
-<!-- ================= PRODUCT 4 ================= -->
+<!-- PRODUCT 4 -->
 
-<section class="product" data-name="ZAVEN Signature T-Shirt" data-price="2299">
+<section
+    class="product"
+    data-name="ZAVEN Signature T-Shirt"
+    data-price="2299">
 
     <div class="product-image">
 
         <img
             src="shirt4.jpg"
-            alt="ZAVEN Signature T-Shirt">
+            alt="ZAVEN Signature T-Shirt"
+            onclick="openImageZoom(this)">
 
     </div>
+
 
     <div class="product-info">
 
@@ -379,6 +358,7 @@
             everyday wear.
         </p>
 
+
         <div class="choice">
 
             <label>Size</label>
@@ -394,6 +374,7 @@
 
         </div>
 
+
         <div class="choice">
 
             <label>Color</label>
@@ -408,47 +389,80 @@
 
         </div>
 
+
         <div class="product-quantity">
 
-            <button onclick="changeProductQty(this,-1)">
-                −
-            </button>
+            <button onclick="changeProductQty(this,-1)">−</button>
 
             <span>1</span>
 
-            <button onclick="changeProductQty(this,1)">
-                +
-            </button>
+            <button onclick="changeProductQty(this,1)">+</button>
 
         </div>
 
-        <button class="buy-button" onclick="addProduct(this)">
+
+        <button
+            class="buy-button"
+            onclick="addProduct(this)">
+
             🛒 Add to Cart
+
         </button>
 
     </div>
 
 </section>
 
-
 </main>
+
+
+<!-- ================= IMAGE BIG VIEW ================= -->
+
+<div
+    class="image-zoom-overlay"
+    id="imageZoomOverlay"
+    onclick="closeImageZoom()">
+
+    <button
+        class="image-zoom-close"
+        onclick="event.stopPropagation(); closeImageZoom()">
+
+        ×
+
+    </button>
+
+
+    <img
+        id="zoomedProductImage"
+        src=""
+        alt="Product Image"
+        onclick="event.stopPropagation()">
+
+</div>
 
 
 <!-- ================= CART ================= -->
 
-<div class="overlay" id="cartOverlay">
+<div
+    class="overlay"
+    id="cartOverlay">
 
     <div class="cart-box">
 
         <button
             class="close-button"
             onclick="closeCart()">
+
             ×
+
         </button>
+
 
         <h2>🛒 Your Cart</h2>
 
+
         <div id="cartItems"></div>
+
 
         <div class="cart-summary">
 
@@ -463,6 +477,7 @@
             </div>
 
         </div>
+
 
         <button
             class="checkout-button"
@@ -480,17 +495,23 @@
 
 <!-- ================= CHECKOUT ================= -->
 
-<div class="overlay" id="checkoutOverlay">
+<div
+    class="overlay"
+    id="checkoutOverlay">
 
     <div class="checkout-box">
 
         <button
             class="close-button"
             onclick="closeCheckout()">
+
             ×
+
         </button>
 
+
         <h2>📦 Complete Your Order</h2>
+
 
         <div class="final-total">
 
@@ -504,17 +525,18 @@
 
             </div>
 
+
             <div>
 
                 <span>Delivery Charges</span>
 
-                <strong>
-                    Rs. 200
-                </strong>
+                <strong>Rs. 200</strong>
 
             </div>
 
+
             <hr>
+
 
             <div class="grand-total">
 
@@ -528,9 +550,11 @@
 
         </div>
 
+
         <div class="cod">
             💵 Cash on Delivery
         </div>
+
 
         <form onsubmit="placeOrder(event)">
 
@@ -540,8 +564,8 @@
                 type="text"
                 id="customerName"
                 placeholder="Enter your name"
-                required
-            >
+                required>
+
 
             <label>Phone Number</label>
 
@@ -549,8 +573,8 @@
                 type="tel"
                 id="customerPhone"
                 placeholder="03XXXXXXXXX"
-                required
-            >
+                required>
+
 
             <label>City</label>
 
@@ -558,16 +582,16 @@
                 type="text"
                 id="customerCity"
                 placeholder="Enter your city"
-                required
-            >
+                required>
+
 
             <label>Delivery Address</label>
 
             <textarea
                 id="customerAddress"
                 placeholder="Enter complete delivery address"
-                required
-            ></textarea>
+                required></textarea>
+
 
             <button
                 type="submit"
@@ -584,17 +608,96 @@
 </div>
 
 
+<!-- ================= JAVASCRIPT ================= -->
+
 <script>
 
 const DELIVERY = 200;
 
-
-/* ================= WHATSAPP NUMBER ================= */
-
 const WHATSAPP_NUMBER = "923374521644";
 
-
 let cart = [];
+
+
+/* ================= WELCOME ================= */
+
+window.addEventListener("load", function() {
+
+    setTimeout(function() {
+
+        const welcome =
+            document.getElementById("welcomeScreen");
+
+        welcome.classList.add("hide");
+
+        setTimeout(function() {
+
+            welcome.style.display = "none";
+
+        }, 700);
+
+    }, 2500);
+
+});
+
+
+/* ================= IMAGE CLICK ================= */
+
+function openImageZoom(image) {
+
+    const overlay =
+        document.getElementById(
+            "imageZoomOverlay"
+        );
+
+    const zoomedImage =
+        document.getElementById(
+            "zoomedProductImage"
+        );
+
+    zoomedImage.src = image.src;
+
+    zoomedImage.alt = image.alt;
+
+    overlay.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+function closeImageZoom() {
+
+    const overlay =
+        document.getElementById(
+            "imageZoomOverlay"
+        );
+
+    overlay.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+}
+
+
+/* ESC KEY */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Escape") {
+
+            closeImageZoom();
+
+            closeCart();
+
+            closeCheckout();
+
+        }
+
+    }
+);
 
 
 /* ================= SIZE + COLOR ================= */
@@ -603,7 +706,7 @@ document.querySelectorAll(".choice").forEach(choice => {
 
     choice.querySelectorAll(".option").forEach(button => {
 
-        button.addEventListener("click", () => {
+        button.addEventListener("click", function() {
 
             choice.querySelectorAll(".option")
                 .forEach(x =>
@@ -632,9 +735,7 @@ function changeProductQty(button, amount) {
     qty += amount;
 
     if (qty < 1) {
-
         qty = 1;
-
     }
 
     span.innerText = qty;
@@ -676,6 +777,7 @@ function addProduct(button) {
             ? sizeButton.innerText
             : "Not selected";
 
+
     const color =
         colorButton
             ? colorButton.innerText
@@ -707,15 +809,10 @@ function addProduct(button) {
         cart.push({
 
             name: name,
-
             price: price,
-
             image: image,
-
             size: size,
-
             color: color,
-
             quantity: quantity
 
         });
@@ -727,7 +824,7 @@ function addProduct(button) {
         "✓ Added to Cart";
 
 
-    setTimeout(() => {
+    setTimeout(function() {
 
         button.innerText =
             "🛒 Add to Cart";
@@ -750,14 +847,10 @@ function addProduct(button) {
 function updateCart() {
 
     const container =
-        document.getElementById(
-            "cartItems"
-        );
+        document.getElementById("cartItems");
 
     const count =
-        document.getElementById(
-            "cartCount"
-        );
+        document.getElementById("cartCount");
 
 
     container.innerHTML = "";
@@ -776,11 +869,10 @@ function updateCart() {
     }
 
 
-    cart.forEach((item, index) => {
+    cart.forEach(function(item, index) {
 
         const itemTotal =
-            item.price *
-            item.quantity;
+            item.price * item.quantity;
 
 
         total += itemTotal;
@@ -792,7 +884,10 @@ function updateCart() {
 
         <div class="cart-item">
 
-            <img src="${item.image}">
+            <img
+                src="${item.image}"
+                alt="${item.name}"
+            >
 
             <div class="cart-info">
 
@@ -809,6 +904,7 @@ function updateCart() {
                 <p>
                     Color: ${item.color}
                 </p>
+
 
                 <div class="cart-qty">
 
@@ -830,16 +926,20 @@ function updateCart() {
 
             </div>
 
+
             <div class="cart-right">
 
                 <strong>
                     Rs. ${itemTotal.toLocaleString()}
                 </strong>
 
+
                 <button
                     class="remove"
                     onclick="removeProduct(${index})">
+
                     ❌
+
                 </button>
 
             </div>
@@ -851,15 +951,13 @@ function updateCart() {
     });
 
 
-    count.innerText =
-        items;
+    count.innerText = items;
 
 
     document.getElementById(
         "cartProductsTotal"
     ).innerText =
-        "Rs. " +
-        total.toLocaleString();
+        "Rs. " + total.toLocaleString();
 
 
     document.getElementById(
@@ -906,7 +1004,6 @@ function openCart() {
 
     updateCart();
 
-
     document
         .getElementById("cartOverlay")
         .classList.add("active");
@@ -931,9 +1028,7 @@ function openCheckout() {
 
     if (cart.length === 0) {
 
-        alert(
-            "Please add a product first."
-        );
+        alert("Please add a product first.");
 
         return;
 
@@ -943,18 +1038,16 @@ function openCheckout() {
     let productsTotal = 0;
 
 
-    cart.forEach(item => {
+    cart.forEach(function(item) {
 
         productsTotal +=
-            item.price *
-            item.quantity;
+            item.price * item.quantity;
 
     });
 
 
     const grandTotal =
-        productsTotal +
-        DELIVERY;
+        productsTotal + DELIVERY;
 
 
     document.getElementById(
@@ -975,9 +1068,7 @@ function openCheckout() {
 
 
     document
-        .getElementById(
-            "checkoutOverlay"
-        )
+        .getElementById("checkoutOverlay")
         .classList.add("active");
 
 }
@@ -988,9 +1079,7 @@ function openCheckout() {
 function closeCheckout() {
 
     document
-        .getElementById(
-            "checkoutOverlay"
-        )
+        .getElementById("checkoutOverlay")
         .classList.remove("active");
 
 }
@@ -1005,9 +1094,7 @@ function placeOrder(event) {
 
     if (cart.length === 0) {
 
-        alert(
-            "Your cart is empty."
-        );
+        alert("Your cart is empty.");
 
         return;
 
@@ -1019,15 +1106,18 @@ function placeOrder(event) {
             "customerName"
         ).value;
 
+
     const phone =
         document.getElementById(
             "customerPhone"
         ).value;
 
+
     const city =
         document.getElementById(
             "customerCity"
         ).value;
+
 
     const address =
         document.getElementById(
@@ -1070,20 +1160,17 @@ function placeOrder(event) {
         "ORDER DETAILS:\n\n";
 
 
-    cart.forEach(item => {
+    cart.forEach(function(item) {
 
         const itemTotal =
-            item.price *
-            item.quantity;
+            item.price * item.quantity;
 
 
-        productsTotal +=
-            itemTotal;
+        productsTotal += itemTotal;
 
 
         message +=
-            item.name +
-            "\n";
+            item.name + "\n";
 
 
         message +=
@@ -1113,8 +1200,7 @@ function placeOrder(event) {
 
 
     const grandTotal =
-        productsTotal +
-        DELIVERY;
+        productsTotal + DELIVERY;
 
 
     message +=
@@ -1143,9 +1229,7 @@ function placeOrder(event) {
         "https://wa.me/" +
         WHATSAPP_NUMBER +
         "?text=" +
-        encodeURIComponent(
-            message
-        );
+        encodeURIComponent(message);
 
 
     window.open(
