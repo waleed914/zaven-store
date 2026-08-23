@@ -15,23 +15,18 @@ body {
 
 .welcome-screen {
     position: fixed;
-
     inset: 0;
 
     background: #000;
-
     color: white;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     z-index: 20000;
 
     opacity: 1;
-
     visibility: visible;
 
     transition:
@@ -39,12 +34,10 @@ body {
         visibility 0.7s ease;
 }
 
-
 .welcome-screen.hide {
     opacity: 0;
     visibility: hidden;
 }
-
 
 .welcome-content {
     text-align: center;
@@ -53,34 +46,26 @@ body {
         welcomeAnimation 1.2s ease;
 }
 
-
 .welcome-content h1 {
     font-size: 48px;
-
     letter-spacing: 5px;
-
     margin-bottom: 15px;
 }
 
-
 .welcome-content p {
     font-size: 20px;
-
     letter-spacing: 7px;
 }
-
 
 @keyframes welcomeAnimation {
 
     from {
         opacity: 0;
-
         transform: scale(0.8);
     }
 
     to {
         opacity: 1;
-
         transform: scale(1);
     }
 }
@@ -90,37 +75,28 @@ body {
 
 header {
     width: 100%;
-
     min-height: 130px;
 
     padding: 20px 50px;
 
     background: #000;
-
     color: white;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     gap: 25px;
 }
 
-
 .brand {
     display: flex;
-
     align-items: center;
 }
 
-
 .logo {
     width: 200px;
-
     height: auto;
-
     display: block;
 }
 
@@ -129,21 +105,15 @@ header {
 
 nav {
     display: flex;
-
     align-items: center;
-
     gap: 30px;
 }
 
-
 nav a {
     color: white;
-
     text-decoration: none;
-
     font-size: 18px;
 }
-
 
 nav a:hover {
     text-decoration: underline;
@@ -156,7 +126,6 @@ nav a:hover {
     position: relative;
 
     background: white;
-
     color: black;
 
     border: 3px solid white;
@@ -166,7 +135,6 @@ nav a:hover {
     border-radius: 10px;
 
     font-size: 18px;
-
     font-weight: bold;
 
     cursor: pointer;
@@ -177,7 +145,6 @@ nav a:hover {
 
     transition: 0.2s;
 }
-
 
 .cart-button:hover {
     transform: scale(1.05);
@@ -190,17 +157,14 @@ nav a:hover {
     position: absolute;
 
     top: -12px;
-
     right: -12px;
 
     min-width: 30px;
-
     height: 30px;
 
     padding: 4px;
 
     background: red;
-
     color: white;
 
     border: 3px solid white;
@@ -208,13 +172,10 @@ nav a:hover {
     border-radius: 50%;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     font-size: 14px;
-
     font-weight: bold;
 }
 
@@ -223,7 +184,6 @@ nav a:hover {
 
 .products {
     width: 100%;
-
     max-width: 1400px;
 
     margin: 50px auto;
@@ -263,10 +223,8 @@ nav a:hover {
 
 .product-image {
     width: 55%;
-
     text-align: center;
 }
-
 
 .product-image img {
     width: 100%;
@@ -287,13 +245,12 @@ nav a:hover {
         transform 0.2s ease;
 }
 
-
 .product-image img:hover {
     transform: scale(1.02);
 }
 
 
-/* ================= IMAGE BIG VIEW ================= */
+/* ================= BIG IMAGE VIEW ================= */
 
 .image-zoom-overlay {
     position: fixed;
@@ -306,7 +263,6 @@ nav a:hover {
     display: none;
 
     align-items: center;
-
     justify-content: center;
 
     padding: 25px;
@@ -314,19 +270,15 @@ nav a:hover {
     z-index: 99999;
 }
 
-
 .image-zoom-overlay.active {
     display: flex;
 }
 
-
 .image-zoom-overlay img {
     max-width: 92vw;
-
     max-height: 90vh;
 
     width: auto;
-
     height: auto;
 
     object-fit: contain;
@@ -340,16 +292,13 @@ nav a:hover {
         rgba(0,0,0,0.5);
 }
 
-
 .image-zoom-close {
     position: absolute;
 
     top: 20px;
-
     right: 25px;
 
     width: 50px;
-
     height: 50px;
 
     border: none;
@@ -357,7 +306,6 @@ nav a:hover {
     border-radius: 50%;
 
     background: white;
-
     color: black;
 
     font-size: 32px;
@@ -366,7 +314,6 @@ nav a:hover {
 
     z-index: 100000;
 }
-
 
 .image-zoom-close:hover {
     background: #ddd;
@@ -379,7 +326,6 @@ nav a:hover {
     width: 45%;
 }
 
-
 .product-info h2 {
     font-size: 46px;
 
@@ -388,7 +334,6 @@ nav a:hover {
     margin-bottom: 18px;
 }
 
-
 .price {
     font-size: 34px;
 
@@ -396,7 +341,6 @@ nav a:hover {
 
     margin-bottom: 18px;
 }
-
 
 .product-info > p {
     font-size: 21px;
@@ -413,7 +357,6 @@ nav a:hover {
     margin-bottom: 18px;
 }
 
-
 .choice label {
     display: block;
 
@@ -424,7 +367,6 @@ nav a:hover {
     margin-bottom: 8px;
 }
 
-
 .options {
     display: flex;
 
@@ -432,7 +374,6 @@ nav a:hover {
 
     gap: 8px;
 }
-
 
 .option {
     background: white;
@@ -450,11 +391,9 @@ nav a:hover {
     cursor: pointer;
 }
 
-
 .option:hover {
     border-color: black;
 }
-
 
 .option.selected {
     background: black;
@@ -477,16 +416,13 @@ nav a:hover {
     margin: 18px 0;
 }
 
-
 .product-quantity button {
     width: 35px;
-
     height: 35px;
 
     border: none;
 
     background: black;
-
     color: white;
 
     border-radius: 6px;
@@ -495,7 +431,6 @@ nav a:hover {
 
     cursor: pointer;
 }
-
 
 .product-quantity span {
     font-size: 18px;
@@ -510,7 +445,6 @@ nav a:hover {
     display: inline-block;
 
     background: black;
-
     color: white;
 
     border: none;
@@ -525,7 +459,6 @@ nav a:hover {
 
     cursor: pointer;
 }
-
 
 .buy-button:hover {
     background: #333;
@@ -545,14 +478,12 @@ nav a:hover {
     display: none;
 
     align-items: center;
-
     justify-content: center;
 
     padding: 15px;
 
     z-index: 9999;
 }
-
 
 .overlay.active {
     display: flex;
@@ -580,7 +511,6 @@ nav a:hover {
     position: relative;
 }
 
-
 .cart-box h2,
 .checkout-box h2 {
     font-size: 30px;
@@ -595,11 +525,9 @@ nav a:hover {
     position: absolute;
 
     top: 15px;
-
     right: 18px;
 
     width: 38px;
-
     height: 38px;
 
     border: none;
@@ -628,10 +556,8 @@ nav a:hover {
     border-bottom: 1px solid #ddd;
 }
 
-
 .cart-item img {
     width: 85px;
-
     height: 85px;
 
     object-fit: cover;
@@ -639,23 +565,19 @@ nav a:hover {
     border-radius: 10px;
 }
 
-
 .cart-info {
     flex: 1;
 }
 
-
 .cart-info h3 {
     margin-bottom: 7px;
 }
-
 
 .cart-info p {
     margin: 4px 0;
 
     font-size: 14px;
 }
-
 
 .cart-right {
     display: flex;
@@ -680,14 +602,11 @@ nav a:hover {
     margin-top: 10px;
 }
 
-
 .cart-qty button {
     width: 30px;
-
     height: 30px;
 
     background: black;
-
     color: white;
 
     border: none;
@@ -698,7 +617,6 @@ nav a:hover {
 
     cursor: pointer;
 }
-
 
 .cart-qty span {
     font-weight: bold;
@@ -743,7 +661,6 @@ nav a:hover {
     border-radius: 10px;
 }
 
-
 .cart-summary div {
     display: flex;
 
@@ -765,7 +682,6 @@ nav a:hover {
     padding: 17px;
 
     background: black;
-
     color: white;
 
     border: none;
@@ -778,7 +694,6 @@ nav a:hover {
 
     cursor: pointer;
 }
-
 
 .checkout-button:disabled {
     background: #aaa;
@@ -799,7 +714,6 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-
 .final-total > div {
     display: flex;
 
@@ -810,7 +724,6 @@ nav a:hover {
     margin-bottom: 12px;
 }
 
-
 .final-total hr {
     border: none;
 
@@ -818,7 +731,6 @@ nav a:hover {
 
     margin: 18px 0;
 }
-
 
 .final-total .grand-total {
     font-size: 27px;
@@ -854,13 +766,11 @@ nav a:hover {
     flex-direction: column;
 }
 
-
 .checkout-box label {
     font-weight: bold;
 
     margin: 12px 0 7px;
 }
-
 
 .checkout-box input,
 .checkout-box textarea {
@@ -877,7 +787,6 @@ nav a:hover {
     font-family: Arial, sans-serif;
 }
 
-
 .checkout-box textarea {
     min-height: 120px;
 
@@ -885,7 +794,7 @@ nav a:hover {
 }
 
 
-/* ================= WHATSAPP BUTTON ================= */
+/* ================= WHATSAPP ================= */
 
 .place-order {
     width: 100%;
@@ -899,7 +808,6 @@ nav a:hover {
     border-radius: 8px;
 
     background: black;
-
     color: white;
 
     font-size: 17px;
@@ -908,7 +816,6 @@ nav a:hover {
 
     cursor: pointer;
 }
-
 
 .place-order:hover {
     background: #333;
@@ -923,21 +830,17 @@ nav a:hover {
         padding: 20px 30px;
     }
 
-
     .logo {
         width: 160px;
     }
-
 
     nav {
         gap: 18px;
     }
 
-
     nav a {
         font-size: 16px;
     }
-
 
     .product {
         gap: 35px;
@@ -945,11 +848,9 @@ nav a:hover {
         padding: 35px;
     }
 
-
     .product-info h2 {
         font-size: 36px;
     }
-
 
     .price {
         font-size: 28px;
@@ -974,11 +875,9 @@ nav a:hover {
         text-align: center;
     }
 
-
     .logo {
         width: 90px;
     }
-
 
     nav {
         width: 100%;
@@ -990,11 +889,9 @@ nav a:hover {
         gap: 12px;
     }
 
-
     nav a {
         font-size: 14px;
     }
-
 
     .cart-button {
         font-size: 17px;
@@ -1002,13 +899,11 @@ nav a:hover {
         padding: 13px 22px;
     }
 
-
     .products {
         margin: 20px auto;
 
         padding: 0 10px;
     }
-
 
     .product {
         min-height: auto;
@@ -1022,36 +917,29 @@ nav a:hover {
         text-align: center;
     }
 
-
     .product-image {
         width: 100%;
     }
-
 
     .product-image img {
         max-width: 330px;
     }
 
-
     .product-info {
         width: 100%;
     }
-
 
     .product-info h2 {
         font-size: 25px;
     }
 
-
     .price {
         font-size: 22px;
     }
 
-
     .product-info > p {
         font-size: 15px;
     }
-
 
     .choice {
         width: 100%;
@@ -1059,18 +947,15 @@ nav a:hover {
         text-align: left;
     }
 
-
     .product-quantity {
         justify-content: center;
     }
-
 
     .buy-button {
         width: 100%;
 
         max-width: 300px;
     }
-
 
     .cart-box,
     .checkout-box {
@@ -1079,28 +964,22 @@ nav a:hover {
         max-height: 94vh;
     }
 
-
     .cart-item img {
         width: 65px;
-
         height: 65px;
     }
-
 
     .cart-info h3 {
         font-size: 15px;
     }
 
-
     .cart-info p {
         font-size: 13px;
     }
 
-
     .final-total .grand-total {
         font-size: 23px;
     }
-
 
     .welcome-content h1 {
         font-size: 30px;
@@ -1108,18 +987,15 @@ nav a:hover {
         letter-spacing: 3px;
     }
 
-
     .welcome-content p {
         font-size: 15px;
 
         letter-spacing: 4px;
     }
 
-
     .image-zoom-overlay {
         padding: 15px;
     }
-
 
     .image-zoom-overlay img {
         max-width: 95vw;
@@ -1138,26 +1014,21 @@ nav a:hover {
         width: 80px;
     }
 
-
     .product {
         padding: 15px;
     }
-
 
     .product-image img {
         max-width: 290px;
     }
 
-
     .product-info h2 {
         font-size: 23px;
     }
 
-
     .price {
         font-size: 20px;
     }
-
 
     .welcome-content h1 {
         font-size: 24px;
