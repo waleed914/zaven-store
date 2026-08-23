@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>ZAVEN - Wear Different</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,11 +15,8 @@
 <div class="welcome-screen" id="welcomeScreen">
 
     <div class="welcome-content">
-
         <h1>WELCOME TO ZAVEN</h1>
-
         <p>WEAR DIFFERENT</p>
-
     </div>
 
 </div>
@@ -32,33 +27,19 @@
 <header>
 
     <div class="brand">
-
-        <img
-            src="zaven-logo.png"
-            alt="ZAVEN Logo"
-            class="logo">
-
+        <img src="zaven-logo.png" alt="ZAVEN Logo" class="logo">
     </div>
 
-
     <nav>
-
         <a href="#">Home</a>
         <a href="#shop">Shop</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-
     </nav>
 
-
-    <button
-        class="cart-button"
-        onclick="openCart()">
-
+    <button class="cart-button" onclick="openCart()">
         🛒 CART
-
         <span id="cartCount">0</span>
-
     </button>
 
 </header>
@@ -69,343 +50,283 @@
 <main class="products" id="shop">
 
 
-    <!-- PRODUCT 1 -->
+<!-- PRODUCT 1 -->
 
-    <section
-        class="product"
-        data-name="Premium T-Shirt"
-        data-price="2499">
+<section class="product" data-name="Premium T-Shirt" data-price="2499">
 
-        <div class="product-image">
+    <div class="product-image">
 
-            <img
-                src="shirt-new.jpg"
-                alt="ZAVEN Premium T-Shirt"
-                onclick="openImageZoom(this)">
+        <img
+            src="shirt-new.jpg"
+            alt="ZAVEN Premium T-Shirt"
+            onclick="openImageZoom(this)"
+        >
+
+    </div>
+
+    <div class="product-info">
+
+        <h2>Premium T-Shirt</h2>
+
+        <p class="price">Rs. 2,499</p>
+
+        <p>
+            Premium quality T-shirt.
+            Comfortable, stylish and perfect
+            for everyday wear.
+        </p>
+
+        <div class="choice">
+
+            <label>Size</label>
+
+            <div class="options">
+                <button class="option size-option">S</button>
+                <button class="option size-option">M</button>
+                <button class="option size-option">L</button>
+                <button class="option size-option">XL</button>
+            </div>
 
         </div>
 
+        <div class="choice">
 
-        <div class="product-info">
+            <label>Color</label>
 
-            <h2>Premium T-Shirt</h2>
-
-            <p class="price">Rs. 2,499</p>
-
-            <p>
-                Premium quality T-shirt.
-                Comfortable, stylish and perfect
-                for everyday wear.
-            </p>
-
-
-            <div class="choice">
-
-                <label>Size</label>
-
-                <div class="options">
-
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-
-                </div>
-
+            <div class="options">
+                <button class="option color-option">Black</button>
+                <button class="option color-option">White</button>
+                <button class="option color-option">Blue</button>
             </div>
-
-
-            <div class="choice">
-
-                <label>Color</label>
-
-                <div class="options">
-
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-
-                </div>
-
-            </div>
-
-
-            <div class="product-quantity">
-
-                <button onclick="changeProductQty(this, -1)">−</button>
-
-                <span>1</span>
-
-                <button onclick="changeProductQty(this, 1)">+</button>
-
-            </div>
-
-
-            <button
-                class="buy-button"
-                onclick="addProduct(this)">
-
-                🛒 Add to Cart
-
-            </button>
 
         </div>
 
-    </section>
+        <div class="product-quantity">
 
+            <button onclick="changeProductQty(this,-1)">−</button>
 
-    <!-- PRODUCT 2 -->
+            <span>1</span>
 
-    <section
-        class="product"
-        data-name="Classic T-Shirt"
-        data-price="1999">
-
-        <div class="product-image">
-
-            <img
-                src="shirt2.jpg"
-                alt="ZAVEN Classic T-Shirt"
-                onclick="openImageZoom(this)">
+            <button onclick="changeProductQty(this,1)">+</button>
 
         </div>
 
+        <button class="buy-button" onclick="addProduct(this)">
+            🛒 Add to Cart
+        </button>
 
-        <div class="product-info">
+    </div>
 
-            <h2>Classic T-Shirt</h2>
-
-            <p class="price">Rs. 1,999</p>
-
-            <p>
-                Clean, comfortable and stylish.
-                A classic everyday T-shirt
-                made for your look.
-            </p>
+</section>
 
 
-            <div class="choice">
+<!-- PRODUCT 2 - SHIRT 5 -->
 
-                <label>Size</label>
+<section class="product" data-name="ZAVEN T-Shirt" data-price="1999">
 
-                <div class="options">
+    <div class="product-image">
 
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
+        <img
+            src="shirt5.jpg"
+            alt="ZAVEN T-Shirt"
+            onclick="openImageZoom(this)"
+        >
 
-                </div>
+    </div>
 
+    <div class="product-info">
+
+        <h2>ZAVEN T-Shirt</h2>
+
+        <p class="price">Rs. 1,999</p>
+
+        <p>
+            Clean, comfortable and stylish.
+            A perfect everyday T-shirt
+            made for your look.
+        </p>
+
+        <div class="choice">
+
+            <label>Size</label>
+
+            <div class="options">
+                <button class="option size-option">S</button>
+                <button class="option size-option">M</button>
+                <button class="option size-option">L</button>
+                <button class="option size-option">XL</button>
             </div>
-
-
-            <div class="choice">
-
-                <label>Color</label>
-
-                <div class="options">
-
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-
-                </div>
-
-            </div>
-
-
-            <div class="product-quantity">
-
-                <button onclick="changeProductQty(this, -1)">−</button>
-
-                <span>1</span>
-
-                <button onclick="changeProductQty(this, 1)">+</button>
-
-            </div>
-
-
-            <button
-                class="buy-button"
-                onclick="addProduct(this)">
-
-                🛒 Add to Cart
-
-            </button>
 
         </div>
 
-    </section>
+        <div class="choice">
 
+            <label>Color</label>
 
-    <!-- PRODUCT 3 -->
-
-    <section
-        class="product"
-        data-name="ZAVEN T-Shirt"
-        data-price="2199">
-
-        <div class="product-image">
-
-            <img
-                src="shirt3.jpg"
-                alt="ZAVEN T-Shirt"
-                onclick="openImageZoom(this)">
+            <div class="options">
+                <button class="option color-option">Black</button>
+                <button class="option color-option">White</button>
+                <button class="option color-option">Blue</button>
+            </div>
 
         </div>
 
+        <div class="product-quantity">
 
-        <div class="product-info">
+            <button onclick="changeProductQty(this,-1)">−</button>
 
-            <h2>ZAVEN T-Shirt</h2>
+            <span>1</span>
 
-            <p class="price">Rs. 2,199</p>
-
-            <p>
-                Stylish and comfortable.
-                Perfect for everyday wear.
-            </p>
-
-
-            <div class="choice">
-
-                <label>Size</label>
-
-                <div class="options">
-
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-
-                </div>
-
-            </div>
-
-
-            <div class="choice">
-
-                <label>Color</label>
-
-                <div class="options">
-
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-
-                </div>
-
-            </div>
-
-
-            <div class="product-quantity">
-
-                <button onclick="changeProductQty(this, -1)">−</button>
-
-                <span>1</span>
-
-                <button onclick="changeProductQty(this, 1)">+</button>
-
-            </div>
-
-
-            <button
-                class="buy-button"
-                onclick="addProduct(this)">
-
-                🛒 Add to Cart
-
-            </button>
+            <button onclick="changeProductQty(this,1)">+</button>
 
         </div>
 
-    </section>
+        <button class="buy-button" onclick="addProduct(this)">
+            🛒 Add to Cart
+        </button>
+
+    </div>
+
+</section>
 
 
-    <!-- PRODUCT 4 -->
+<!-- PRODUCT 3 -->
 
-    <section
-        class="product"
-        data-name="ZAVEN Signature T-Shirt"
-        data-price="2299">
+<section class="product" data-name="ZAVEN T-Shirt 3" data-price="2199">
 
-        <div class="product-image">
+    <div class="product-image">
 
-            <img
-                src="shirt4.jpg"
-                alt="ZAVEN Signature T-Shirt"
-                onclick="openImageZoom(this)">
+        <img
+            src="shirt3.jpg"
+            alt="ZAVEN T-Shirt 3"
+            onclick="openImageZoom(this)"
+        >
+
+    </div>
+
+    <div class="product-info">
+
+        <h2>ZAVEN T-Shirt</h2>
+
+        <p class="price">Rs. 2,199</p>
+
+        <p>
+            Stylish and comfortable.
+            Perfect for everyday wear.
+        </p>
+
+        <div class="choice">
+
+            <label>Size</label>
+
+            <div class="options">
+                <button class="option size-option">S</button>
+                <button class="option size-option">M</button>
+                <button class="option size-option">L</button>
+                <button class="option size-option">XL</button>
+            </div>
 
         </div>
 
+        <div class="choice">
 
-        <div class="product-info">
+            <label>Color</label>
 
-            <h2>ZAVEN Signature T-Shirt</h2>
-
-            <p class="price">Rs. 2,299</p>
-
-            <p>
-                Premium ZAVEN design with a clean
-                and stylish look. Comfortable for
-                everyday wear.
-            </p>
-
-
-            <div class="choice">
-
-                <label>Size</label>
-
-                <div class="options">
-
-                    <button class="option size-option">S</button>
-                    <button class="option size-option">M</button>
-                    <button class="option size-option">L</button>
-                    <button class="option size-option">XL</button>
-
-                </div>
-
+            <div class="options">
+                <button class="option color-option">Black</button>
+                <button class="option color-option">White</button>
+                <button class="option color-option">Blue</button>
             </div>
-
-
-            <div class="choice">
-
-                <label>Color</label>
-
-                <div class="options">
-
-                    <button class="option color-option">Black</button>
-                    <button class="option color-option">White</button>
-                    <button class="option color-option">Blue</button>
-
-                </div>
-
-            </div>
-
-
-            <div class="product-quantity">
-
-                <button onclick="changeProductQty(this, -1)">−</button>
-
-                <span>1</span>
-
-                <button onclick="changeProductQty(this, 1)">+</button>
-
-            </div>
-
-
-            <button
-                class="buy-button"
-                onclick="addProduct(this)">
-
-                🛒 Add to Cart
-
-            </button>
 
         </div>
 
-    </section>
+        <div class="product-quantity">
+
+            <button onclick="changeProductQty(this,-1)">−</button>
+
+            <span>1</span>
+
+            <button onclick="changeProductQty(this,1)">+</button>
+
+        </div>
+
+        <button class="buy-button" onclick="addProduct(this)">
+            🛒 Add to Cart
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUCT 4 -->
+
+<section class="product" data-name="ZAVEN Signature T-Shirt" data-price="2299">
+
+    <div class="product-image">
+
+        <img
+            src="shirt4.jpg"
+            alt="ZAVEN Signature T-Shirt"
+            onclick="openImageZoom(this)"
+        >
+
+    </div>
+
+    <div class="product-info">
+
+        <h2>ZAVEN Signature T-Shirt</h2>
+
+        <p class="price">Rs. 2,299</p>
+
+        <p>
+            Premium ZAVEN design with a clean
+            and stylish look. Comfortable for
+            everyday wear.
+        </p>
+
+        <div class="choice">
+
+            <label>Size</label>
+
+            <div class="options">
+                <button class="option size-option">S</button>
+                <button class="option size-option">M</button>
+                <button class="option size-option">L</button>
+                <button class="option size-option">XL</button>
+            </div>
+
+        </div>
+
+        <div class="choice">
+
+            <label>Color</label>
+
+            <div class="options">
+                <button class="option color-option">Black</button>
+                <button class="option color-option">White</button>
+                <button class="option color-option">Blue</button>
+            </div>
+
+        </div>
+
+        <div class="product-quantity">
+
+            <button onclick="changeProductQty(this,-1)">−</button>
+
+            <span>1</span>
+
+            <button onclick="changeProductQty(this,1)">+</button>
+
+        </div>
+
+        <button class="buy-button" onclick="addProduct(this)">
+            🛒 Add to Cart
+        </button>
+
+    </div>
+
+</section>
 
 </main>
 
@@ -415,71 +336,53 @@
 <div
     class="image-zoom-overlay"
     id="imageZoomOverlay"
-    onclick="closeImageZoom()">
+    onclick="closeImageZoom()"
+>
 
     <button
         class="image-zoom-close"
-        onclick="event.stopPropagation(); closeImageZoom()">
-
+        onclick="event.stopPropagation(); closeImageZoom()"
+    >
         ×
-
     </button>
-
 
     <img
         id="zoomedProductImage"
         src=""
         alt="Product Image"
-        onclick="event.stopPropagation()">
+        onclick="event.stopPropagation()"
+    >
 
 </div>
 
 
 <!-- ================= CART ================= -->
 
-<div
-    class="overlay"
-    id="cartOverlay">
+<div class="overlay" id="cartOverlay">
 
     <div class="cart-box">
 
-        <button
-            class="close-button"
-            onclick="closeCart()">
-
-            ×
-
-        </button>
-
+        <button class="close-button" onclick="closeCart()">×</button>
 
         <h2>🛒 Your Cart</h2>
 
-
         <div id="cartItems"></div>
-
 
         <div class="cart-summary">
 
             <div>
-
                 <span>Products Total</span>
-
-                <strong id="cartProductsTotal">
-                    Rs. 0
-                </strong>
-
+                <strong id="cartProductsTotal">Rs. 0</strong>
             </div>
 
         </div>
 
-
         <button
             class="checkout-button"
             id="checkoutButton"
-            onclick="openCheckout()">
-
+            onclick="openCheckout()"
+        >
             CHECKOUT
-
         </button>
 
     </div>
@@ -489,66 +392,38 @@
 
 <!-- ================= CHECKOUT ================= -->
 
-<div
-    class="overlay"
-    id="checkoutOverlay">
+<div class="overlay" id="checkoutOverlay">
 
     <div class="checkout-box">
 
-        <button
-            class="close-button"
-            onclick="closeCheckout()">
-
-            ×
-
-        </button>
-
+        <button class="close-button" onclick="closeCheckout()">×</button>
 
         <h2>📦 Complete Your Order</h2>
-
 
         <div class="final-total">
 
             <div>
-
                 <span>Products Total</span>
-
-                <strong id="finalProductsTotal">
-                    Rs. 0
-                </strong>
-
+                <strong id="finalProductsTotal">Rs. 0</strong>
             </div>
-
 
             <div>
-
                 <span>Delivery Charges</span>
-
                 <strong>Rs. 200</strong>
-
             </div>
-
 
             <hr>
 
-
             <div class="grand-total">
-
                 <span>Grand Total</span>
-
-                <strong id="grandTotal">
-                    Rs. 0
-                </strong>
-
+                <strong id="grandTotal">Rs. 0</strong>
             </div>
 
         </div>
-
 
         <div class="cod">
             💵 Cash on Delivery
         </div>
-
 
         <form onsubmit="placeOrder(event)">
 
@@ -558,8 +433,8 @@
                 type="text"
                 id="customerName"
                 placeholder="Enter your name"
-                required>
-
+                required
+            >
 
             <label>Phone Number</label>
 
@@ -567,8 +442,8 @@
                 type="tel"
                 id="customerPhone"
                 placeholder="03XXXXXXXXX"
-                required>
-
+                required
+            >
 
             <label>City</label>
 
@@ -576,23 +451,19 @@
                 type="text"
                 id="customerCity"
                 placeholder="Enter your city"
-                required>
-
+                required
+            >
 
             <label>Delivery Address</label>
 
             <textarea
                 id="customerAddress"
                 placeholder="Enter complete delivery address"
-                required></textarea>
+                required
+            ></textarea>
 
-
-            <button
-                type="submit"
-                class="place-order">
-
+            <button type="submit" class="place-order">
                 📲 Place Order on WhatsApp
-
             </button>
 
         </form>
@@ -675,9 +546,7 @@ document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
 
         closeImageZoom();
-
         closeCart();
-
         closeCheckout();
 
     }
@@ -723,9 +592,7 @@ function changeProductQty(button, amount) {
     quantity += amount;
 
     if (quantity < 1) {
-
         quantity = 1;
-
     }
 
     span.innerText = quantity;
@@ -747,20 +614,14 @@ function addProduct(button) {
         Number(product.dataset.price);
 
     const image =
-        product
-            .querySelector("img")
-            .getAttribute("src");
+        product.querySelector("img").getAttribute("src");
 
 
     const sizeButton =
-        product.querySelector(
-            ".size-option.selected"
-        );
+        product.querySelector(".size-option.selected");
 
     const colorButton =
-        product.querySelector(
-            ".color-option.selected"
-        );
+        product.querySelector(".color-option.selected");
 
 
     const size =
@@ -777,9 +638,7 @@ function addProduct(button) {
     const quantity =
         Number(
             product
-                .querySelector(
-                    ".product-quantity span"
-                )
+                .querySelector(".product-quantity span")
                 .innerText
         );
 
@@ -816,22 +675,18 @@ function addProduct(button) {
     }
 
 
-    button.innerText =
-        "✓ Added to Cart";
+    button.innerText = "✓ Added to Cart";
 
 
     setTimeout(function () {
 
-        button.innerText =
-            "🛒 Add to Cart";
+        button.innerText = "🛒 Add to Cart";
 
     }, 1200);
 
 
     product
-        .querySelector(
-            ".product-quantity span"
-        )
+        .querySelector(".product-quantity span")
         .innerText = "1";
 
 
@@ -904,23 +759,22 @@ function updateCart() {
                 <div class="cart-qty">
 
                     <button
-                        onclick="changeCartQty(${index}, -1)">
+                        onclick="changeCartQty(${index},-1)"
+                    >
                         −
                     </button>
 
-                    <span>
-                        ${item.quantity}
-                    </span>
+                    <span>${item.quantity}</span>
 
                     <button
-                        onclick="changeCartQty(${index}, 1)">
+                        onclick="changeCartQty(${index},1)"
+                    >
                         +
                     </button>
 
                 </div>
 
             </div>
-
 
             <div class="cart-right">
 
@@ -930,10 +784,9 @@ function updateCart() {
 
                 <button
                     class="remove"
-                    onclick="removeProduct(${index})">
-
+                    onclick="removeProduct(${index})"
+                >
                     ❌
-
                 </button>
 
             </div>
@@ -956,8 +809,7 @@ function updateCart() {
 
     document.getElementById(
         "checkoutButton"
-    ).disabled =
-        cart.length === 0;
+    ).disabled = cart.length === 0;
 
 }
 
@@ -968,13 +820,11 @@ function changeCartQty(index, amount) {
 
     cart[index].quantity += amount;
 
-
     if (cart[index].quantity <= 0) {
 
         cart.splice(index, 1);
 
     }
-
 
     updateCart();
 
@@ -1096,31 +946,19 @@ function placeOrder(event) {
 
 
     const name =
-        document.getElementById(
-            "customerName"
-        ).value;
-
+        document.getElementById("customerName").value;
 
     const phone =
-        document.getElementById(
-            "customerPhone"
-        ).value;
-
+        document.getElementById("customerPhone").value;
 
     const city =
-        document.getElementById(
-            "customerCity"
-        ).value;
-
+        document.getElementById("customerCity").value;
 
     const address =
-        document.getElementById(
-            "customerAddress"
-        ).value;
+        document.getElementById("customerAddress").value;
 
 
     let productsTotal = 0;
-
 
     let message =
         "ZAVEN NEW ORDER\n\n";
@@ -1131,24 +969,20 @@ function placeOrder(event) {
         name +
         "\n";
 
-
     message +=
         "Phone: " +
         phone +
         "\n";
-
 
     message +=
         "City: " +
         city +
         "\n";
 
-
     message +=
         "Address: " +
         address +
         "\n\n";
-
 
     message +=
         "ORDER DETAILS:\n\n";
@@ -1163,7 +997,8 @@ function placeOrder(event) {
 
 
         message +=
-            item.name + "\n";
+            item.name +
+            "\n";
 
         message +=
             "Size: " +
@@ -1197,18 +1032,15 @@ function placeOrder(event) {
         productsTotal.toLocaleString() +
         "\n";
 
-
     message +=
         "Delivery Charges: Rs. " +
         DELIVERY.toLocaleString() +
         "\n";
 
-
     message +=
         "GRAND TOTAL: Rs. " +
         grandTotal.toLocaleString() +
         "\n";
-
 
     message +=
         "Payment: Cash on Delivery";
@@ -1234,5 +1066,4 @@ updateCart();
 </script>
 
 </body>
-
 </html>
