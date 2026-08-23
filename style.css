@@ -11,61 +11,226 @@ body {
 }
 
 
+/* ================= WELCOME ================= */
+
+.welcome-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: #000;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 20000;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transition:
+        opacity 0.7s ease,
+        visibility 0.7s ease;
+
+}
+
+
+.welcome-screen.hide {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+}
+
+
+.welcome-content {
+
+    text-align: center;
+
+    animation:
+        welcomeAnimation 1.2s ease;
+
+}
+
+
+.welcome-shirt {
+
+    width: 260px;
+
+    max-width: 70vw;
+
+    max-height: 55vh;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0 auto 25px;
+
+    animation:
+        shirtWelcome 1.5s ease;
+
+}
+
+
+.welcome-content h1 {
+
+    font-size: 42px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.welcome-content p {
+
+    font-size: 18px;
+
+    letter-spacing: 6px;
+
+}
+
+
+@keyframes welcomeAnimation {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0.8);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+@keyframes shirtWelcome {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(0.8);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
 /* ================= HEADER ================= */
 
 header {
+
     width: 100%;
+
     min-height: 130px;
 
     padding: 20px 50px;
 
     background: #000;
+
     color: white;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     gap: 25px;
+
 }
+
 
 .brand {
+
     display: flex;
+
     align-items: center;
+
 }
 
+
 .logo {
+
     width: 200px;
+
     height: auto;
+
     display: block;
+
 }
 
 
 /* ================= NAVIGATION ================= */
 
 nav {
+
     display: flex;
+
     align-items: center;
+
     gap: 30px;
+
 }
+
 
 nav a {
+
     color: white;
+
     text-decoration: none;
+
     font-size: 18px;
+
 }
 
+
 nav a:hover {
+
     text-decoration: underline;
+
 }
 
 
 /* ================= CART BUTTON ================= */
 
 .cart-button {
+
     position: relative;
 
     background: white;
+
     color: black;
 
     border: 3px solid white;
@@ -75,35 +240,45 @@ nav a:hover {
     border-radius: 10px;
 
     font-size: 18px;
+
     font-weight: bold;
 
     cursor: pointer;
 
     box-shadow:
-        0 4px 15px rgba(255,255,255,0.3);
+        0 4px 15px
+        rgba(255,255,255,0.3);
 
     transition: 0.2s;
+
 }
 
+
 .cart-button:hover {
+
     transform: scale(1.05);
+
 }
 
 
 /* ================= CART NUMBER ================= */
 
 #cartCount {
+
     position: absolute;
 
     top: -12px;
+
     right: -12px;
 
     min-width: 30px;
+
     height: 30px;
 
     padding: 4px;
 
     background: red;
+
     color: white;
 
     border: 3px solid white;
@@ -111,29 +286,37 @@ nav a:hover {
     border-radius: 50%;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     font-size: 14px;
+
     font-weight: bold;
+
 }
 
 
 /* ================= PRODUCTS ================= */
 
 .products {
+
     width: 100%;
+
     max-width: 1400px;
 
     margin: 50px auto;
 
     padding: 0 40px;
+
 }
 
 
 /* ================= PRODUCT CARD ================= */
 
 .product {
+
     width: 100%;
 
     min-height: 520px;
@@ -153,19 +336,25 @@ nav a:hover {
     border-radius: 15px;
 
     box-shadow:
-        0 5px 20px rgba(0,0,0,0.12);
+        0 5px 20px
+        rgba(0,0,0,0.12);
+
 }
 
 
 /* ================= PRODUCT IMAGE ================= */
 
 .product-image {
+
     width: 55%;
 
     text-align: center;
+
 }
 
+
 .product-image img {
+
     width: 100%;
 
     max-width: 550px;
@@ -177,47 +366,165 @@ nav a:hover {
     margin: auto;
 
     border-radius: 12px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease;
+
+}
+
+
+.product-image img:hover {
+
+    transform: scale(1.02);
+
+}
+
+
+/* ================= IMAGE BIG VIEW ================= */
+
+.image-zoom-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0,0,0,0.90);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    z-index: 99999;
+
+}
+
+
+.image-zoom-overlay.active {
+
+    display: flex;
+
+}
+
+
+.image-zoom-overlay img {
+
+    max-width: 92vw;
+
+    max-height: 90vh;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 40px
+        rgba(0,0,0,0.5);
+
+}
+
+
+.image-zoom-close {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 25px;
+
+    width: 50px;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: black;
+
+    font-size: 32px;
+
+    cursor: pointer;
+
+    z-index: 100000;
+
+}
+
+
+.image-zoom-close:hover {
+
+    background: #ddd;
+
 }
 
 
 /* ================= PRODUCT INFO ================= */
 
 .product-info {
+
     width: 45%;
+
 }
 
+
 .product-info h2 {
+
     font-size: 46px;
 
     font-weight: 700;
 
     margin-bottom: 18px;
+
 }
 
+
 .price {
+
     font-size: 34px;
 
     font-weight: bold;
 
     margin-bottom: 18px;
+
 }
 
+
 .product-info > p {
+
     font-size: 21px;
 
     line-height: 1.6;
 
     margin-bottom: 22px;
+
 }
 
 
 /* ================= SIZE / COLOR ================= */
 
 .choice {
+
     margin-bottom: 18px;
+
 }
 
+
 .choice label {
+
     display: block;
 
     font-size: 18px;
@@ -225,17 +532,23 @@ nav a:hover {
     font-weight: bold;
 
     margin-bottom: 8px;
+
 }
 
+
 .options {
+
     display: flex;
 
     flex-wrap: wrap;
 
     gap: 8px;
+
 }
 
+
 .option {
+
     background: white;
 
     color: black;
@@ -249,24 +562,32 @@ nav a:hover {
     font-size: 15px;
 
     cursor: pointer;
+
 }
+
 
 .option:hover {
+
     border-color: black;
+
 }
 
+
 .option.selected {
+
     background: black;
 
     color: white;
 
     border-color: black;
+
 }
 
 
 /* ================= PRODUCT QUANTITY ================= */
 
 .product-quantity {
+
     display: flex;
 
     align-items: center;
@@ -274,15 +595,20 @@ nav a:hover {
     gap: 12px;
 
     margin: 18px 0;
+
 }
 
+
 .product-quantity button {
+
     width: 35px;
+
     height: 35px;
 
     border: none;
 
     background: black;
+
     color: white;
 
     border-radius: 6px;
@@ -290,21 +616,27 @@ nav a:hover {
     font-size: 20px;
 
     cursor: pointer;
+
 }
 
+
 .product-quantity span {
+
     font-size: 18px;
 
     font-weight: bold;
+
 }
 
 
 /* ================= ADD TO CART ================= */
 
 .buy-button {
+
     display: inline-block;
 
     background: black;
+
     color: white;
 
     border: none;
@@ -318,34 +650,45 @@ nav a:hover {
     font-weight: bold;
 
     cursor: pointer;
+
 }
 
+
 .buy-button:hover {
+
     background: #333;
+
 }
 
 
 /* ================= OVERLAY ================= */
 
 .overlay {
+
     position: fixed;
 
     inset: 0;
 
-    background: rgba(0,0,0,0.7);
+    background:
+        rgba(0,0,0,0.7);
 
     display: none;
 
     align-items: center;
+
     justify-content: center;
 
     padding: 15px;
 
     z-index: 9999;
+
 }
 
+
 .overlay.active {
+
     display: flex;
+
 }
 
 
@@ -353,6 +696,7 @@ nav a:hover {
 
 .cart-box,
 .checkout-box {
+
     width: 100%;
 
     max-width: 750px;
@@ -368,25 +712,32 @@ nav a:hover {
     border-radius: 18px;
 
     position: relative;
+
 }
+
 
 .cart-box h2,
 .checkout-box h2 {
+
     font-size: 30px;
 
     margin-bottom: 25px;
+
 }
 
 
 /* ================= CLOSE BUTTON ================= */
 
 .close-button {
+
     position: absolute;
 
     top: 15px;
+
     right: 18px;
 
     width: 38px;
+
     height: 38px;
 
     border: none;
@@ -398,12 +749,14 @@ nav a:hover {
     font-size: 20px;
 
     cursor: pointer;
+
 }
 
 
 /* ================= CART ITEM ================= */
 
 .cart-item {
+
     display: flex;
 
     align-items: center;
@@ -413,32 +766,48 @@ nav a:hover {
     padding: 18px 0;
 
     border-bottom: 1px solid #ddd;
+
 }
 
+
 .cart-item img {
+
     width: 85px;
+
     height: 85px;
 
     object-fit: cover;
 
     border-radius: 10px;
+
 }
+
 
 .cart-info {
+
     flex: 1;
+
 }
+
 
 .cart-info h3 {
+
     margin-bottom: 7px;
+
 }
 
+
 .cart-info p {
+
     margin: 4px 0;
 
     font-size: 14px;
+
 }
 
+
 .cart-right {
+
     display: flex;
 
     flex-direction: column;
@@ -446,12 +815,14 @@ nav a:hover {
     align-items: flex-end;
 
     gap: 12px;
+
 }
 
 
 /* ================= CART QUANTITY ================= */
 
 .cart-qty {
+
     display: flex;
 
     align-items: center;
@@ -459,13 +830,18 @@ nav a:hover {
     gap: 10px;
 
     margin-top: 10px;
+
 }
 
+
 .cart-qty button {
+
     width: 30px;
+
     height: 30px;
 
     background: black;
+
     color: white;
 
     border: none;
@@ -475,16 +851,21 @@ nav a:hover {
     font-size: 18px;
 
     cursor: pointer;
+
 }
 
+
 .cart-qty span {
+
     font-weight: bold;
+
 }
 
 
 /* ================= REMOVE ================= */
 
 .remove {
+
     border: none;
 
     background: transparent;
@@ -492,12 +873,14 @@ nav a:hover {
     cursor: pointer;
 
     font-size: 16px;
+
 }
 
 
 /* ================= EMPTY CART ================= */
 
 .empty-cart {
+
     text-align: center;
 
     padding: 40px;
@@ -505,12 +888,14 @@ nav a:hover {
     color: #777;
 
     font-size: 19px;
+
 }
 
 
 /* ================= CART SUMMARY ================= */
 
 .cart-summary {
+
     margin-top: 25px;
 
     padding: 20px;
@@ -518,9 +903,12 @@ nav a:hover {
     background: #f5f5f5;
 
     border-radius: 10px;
+
 }
 
+
 .cart-summary div {
+
     display: flex;
 
     justify-content: space-between;
@@ -528,12 +916,14 @@ nav a:hover {
     font-size: 20px;
 
     font-weight: bold;
+
 }
 
 
 /* ================= CHECKOUT BUTTON ================= */
 
 .checkout-button {
+
     width: 100%;
 
     margin-top: 20px;
@@ -541,6 +931,7 @@ nav a:hover {
     padding: 17px;
 
     background: black;
+
     color: white;
 
     border: none;
@@ -552,18 +943,23 @@ nav a:hover {
     font-weight: bold;
 
     cursor: pointer;
+
 }
 
+
 .checkout-button:disabled {
+
     background: #aaa;
 
     cursor: not-allowed;
+
 }
 
 
 /* ================= CHECKOUT TOTAL ================= */
 
 .final-total {
+
     background: #f5f5f5;
 
     padding: 22px;
@@ -571,9 +967,12 @@ nav a:hover {
     border-radius: 12px;
 
     margin-bottom: 20px;
+
 }
 
+
 .final-total > div {
+
     display: flex;
 
     justify-content: space-between;
@@ -581,28 +980,36 @@ nav a:hover {
     font-size: 19px;
 
     margin-bottom: 12px;
+
 }
 
+
 .final-total hr {
+
     border: none;
 
     border-top: 1px solid #ccc;
 
     margin: 18px 0;
+
 }
 
+
 .final-total .grand-total {
+
     font-size: 27px;
 
     font-weight: bold;
 
     margin-bottom: 0;
+
 }
 
 
 /* ================= CASH ON DELIVERY ================= */
 
 .cod {
+
     padding: 15px;
 
     margin-bottom: 20px;
@@ -614,25 +1021,33 @@ nav a:hover {
     font-weight: bold;
 
     text-align: center;
+
 }
 
 
 /* ================= CHECKOUT FORM ================= */
 
 .checkout-box form {
+
     display: flex;
 
     flex-direction: column;
+
 }
 
+
 .checkout-box label {
+
     font-weight: bold;
 
     margin: 12px 0 7px;
+
 }
+
 
 .checkout-box input,
 .checkout-box textarea {
+
     width: 100%;
 
     padding: 14px;
@@ -644,18 +1059,23 @@ nav a:hover {
     font-size: 16px;
 
     font-family: Arial, sans-serif;
+
 }
 
+
 .checkout-box textarea {
+
     min-height: 120px;
 
     resize: vertical;
+
 }
 
 
 /* ================= WHATSAPP BUTTON ================= */
 
 .place-order {
+
     width: 100%;
 
     margin-top: 22px;
@@ -667,6 +1087,7 @@ nav a:hover {
     border-radius: 8px;
 
     background: black;
+
     color: white;
 
     font-size: 17px;
@@ -674,58 +1095,80 @@ nav a:hover {
     font-weight: bold;
 
     cursor: pointer;
+
 }
+
 
 .place-order:hover {
+
     background: #333;
+
 }
 
 
-/* ==================================================
-   TABLET
-   ================================================== */
+/* ================= TABLET ================= */
 
 @media screen and (max-width: 900px) {
 
     header {
+
         padding: 20px 30px;
+
     }
+
 
     .logo {
+
         width: 160px;
+
     }
+
 
     nav {
+
         gap: 18px;
+
     }
+
 
     nav a {
+
         font-size: 16px;
+
     }
 
+
     .product {
+
         gap: 35px;
 
         padding: 35px;
+
     }
+
 
     .product-info h2 {
+
         font-size: 36px;
+
     }
 
+
     .price {
+
         font-size: 28px;
+
     }
+
 }
 
 
-/* ==================================================
-   MOBILE
-   ================================================== */
+/* ================= MOBILE ================= */
 
 @media screen and (max-width: 768px) {
 
     header {
+
         padding: 15px;
 
         min-height: auto;
@@ -735,13 +1178,19 @@ nav a:hover {
         gap: 12px;
 
         text-align: center;
+
     }
+
 
     .logo {
+
         width: 90px;
+
     }
 
+
     nav {
+
         width: 100%;
 
         justify-content: center;
@@ -749,27 +1198,37 @@ nav a:hover {
         flex-wrap: wrap;
 
         gap: 12px;
+
     }
+
 
     nav a {
+
         font-size: 14px;
+
     }
 
+
     .cart-button {
+
         font-size: 17px;
 
         padding: 13px 22px;
+
     }
 
 
     .products {
+
         margin: 20px auto;
 
         padding: 0 10px;
+
     }
 
 
     .product {
+
         min-height: auto;
 
         flex-direction: column;
@@ -779,108 +1238,212 @@ nav a:hover {
         padding: 20px;
 
         text-align: center;
+
     }
 
 
     .product-image {
+
         width: 100%;
+
     }
 
+
     .product-image img {
+
         max-width: 330px;
+
     }
 
 
     .product-info {
+
         width: 100%;
+
     }
 
 
     .product-info h2 {
+
         font-size: 25px;
+
     }
+
 
     .price {
+
         font-size: 22px;
+
     }
 
+
     .product-info > p {
+
         font-size: 15px;
+
     }
 
 
     .choice {
+
         width: 100%;
 
         text-align: left;
+
     }
 
 
     .product-quantity {
+
         justify-content: center;
+
     }
 
 
     .buy-button {
+
         width: 100%;
 
         max-width: 300px;
+
     }
 
 
     .cart-box,
     .checkout-box {
+
         padding: 25px 18px;
 
         max-height: 94vh;
+
     }
 
 
     .cart-item img {
+
         width: 65px;
+
         height: 65px;
+
     }
 
 
     .cart-info h3 {
+
         font-size: 15px;
+
     }
 
 
     .cart-info p {
+
         font-size: 13px;
+
     }
 
 
     .final-total .grand-total {
+
         font-size: 23px;
+
     }
+
+
+    .welcome-shirt {
+
+        width: 210px;
+
+        max-width: 75vw;
+
+    }
+
+
+    .welcome-content h1 {
+
+        font-size: 28px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .welcome-content p {
+
+        font-size: 14px;
+
+        letter-spacing: 4px;
+
+    }
+
+
+    .image-zoom-overlay {
+
+        padding: 15px;
+
+    }
+
+
+    .image-zoom-overlay img {
+
+        max-width: 95vw;
+
+        max-height: 85vh;
+
+    }
+
 }
 
 
-/* ==================================================
-   SMALL MOBILE
-   ================================================== */
+/* ================= SMALL MOBILE ================= */
 
 @media screen and (max-width: 400px) {
 
     .logo {
+
         width: 80px;
+
     }
+
 
     .product {
+
         padding: 15px;
+
     }
+
 
     .product-image img {
+
         max-width: 290px;
+
     }
+
 
     .product-info h2 {
+
         font-size: 23px;
+
     }
 
+
     .price {
+
         font-size: 20px;
+
     }
+
+
+    .welcome-shirt {
+
+        width: 180px;
+
+    }
+
+
+    .welcome-content h1 {
+
+        font-size: 24px;
+
+    }
+
 }
